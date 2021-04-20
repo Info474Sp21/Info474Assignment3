@@ -1,0 +1,14 @@
+import React from "react";
+
+const App = () => {
+    return (
+        <div>
+            <h1>Clayton Novotney</h1>
+            <h2>Info 474</h2>
+            <h2>April 20th, 2021</h2>
+            <h3>Exploratory Data Analysis, Assignment 2</h3>
+        </div>
+    );
+};
+
+export default App;

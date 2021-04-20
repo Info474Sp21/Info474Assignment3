@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "parcel": "^2.0.0-beta.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "vega": "^5.20.2",
+    "vega-lite": "^5.1.0",
+    "vega-lite-api": "^5.0.0",
+    "vega-tooltip": "^0.25.1"
+  },
+  "name": "Info474Assignment2",
+  "description": "",
+  "version": "1.0.0",
+  "main": "dist/index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --public-url https://cnovotn.github.io/Info474Assignment2/; rm -rf docs; mv dist docs;",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cnovotn/Info474Assignment2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cnovotn/Info474Assignment2/issues"
+  },
+  "homepage": "https://github.com/Cnovotn/Info474Assignment2#readme"
+}
