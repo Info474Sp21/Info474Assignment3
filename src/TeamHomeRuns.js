@@ -12,7 +12,7 @@ function TeamHomerunsVisual() {
     var vegaVariables = {
         "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
         "description": "A simple bar chart looking at all of the MLB franchises salary for 2001.",
-        "title":"2001 Total Homeruns Per Homeruns Franchise",
+        "title":"2001 Total Homeruns Per Franchise",
         "width" : screen.width / 1.5,
         "height": "400",
         "data": {"values": data},
@@ -29,7 +29,10 @@ function TeamHomerunsVisual() {
                 <p>{loading && "Loading the data!!!" }</p>
                 <svg></svg>
             </div>
-            <p className="vis-description">Description for the team salarys of 2001</p>
+            <p className="vis-description">
+                This visualization was surprising to see that the San Fransisco Giants led the league by a landslide for homeruns throughout the entire
+                season even though they had a very insiginicant season as a whole.
+            </p>
         </div>
     )
 }

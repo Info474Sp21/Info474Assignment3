@@ -30,7 +30,11 @@ function TeamSalaryVisual() {
                 <p>{loading && "Loading the data!!!" }</p>
                 <svg width="600" height="500"></svg>
             </div>
-            <p className="vis-description">Description for the team salarys of 2001</p>
+            <p className="vis-description">
+                This visualiziton will be the same looking at any season since the amount of money each program has every year is proportionate to inflation and the seasons before.
+                The Yankees, Dodgers and Boston Redsox always have the highest salaries and are able to buy the best players from other teams once their contracts are up and cant afford
+                to pay their new found star contracts.
+            </p>
         </div>
     )
 }

@@ -30,7 +30,13 @@ function TeamHitsVisual() {
                 <p>{loading && "Loading the data!!!" }</p>
                 <svg></svg>
             </div>
-            <p className="vis-description">Description for the team salarys of 2001</p>
+            <p className="vis-description">
+                This visualization was fun to look at knowing that it was a very historic season for a handful of mariner players in regards to hits.
+                Seeing that they let the league in hits made a lot of sense in comparison to the other charts that we were looking at. Hits result in RBI's, Homeruns, Wins, and the general score!
+            </p>
+            <p className="vis-description">
+                I was surprised to see how yet again the Arizona Diamondbacks were lumped in the average group of total hits for the season even though they won the whole thing.
+            </p>
         </div>
     )
 }

@@ -30,7 +30,10 @@ function TeamStrikeoutVisual() {
                 <p>{loading && "Loading the data!!!" }</p>
                 <svg></svg>
             </div>
-            <p className="vis-description">Description for the team salarys of 2001</p>
+            <p className="vis-description">
+                Teams that get more hits, and more at bats, will also have more strikeouts due to the fact that they have more opportunites
+                to do something at the plate.
+            </p>
         </div>
     )
 }

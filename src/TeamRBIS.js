@@ -31,7 +31,9 @@ function TeamRBIsVisual() {
                 <p>{loading && "Loading the data!!!" }</p>
                 <svg></svg>
             </div>
-            <p className="vis-description">Description for the team salarys of 2001</p>
+            <p className="vis-description">
+                This visualization was surprising in the fact that the New York Yankees were very high in the RBI's compared to hits and Homeruns. Meaing that they were scoring runs efficiently via walks or past balls.
+            </p>
         </div>
     )
 }

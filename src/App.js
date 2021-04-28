@@ -1,17 +1,14 @@
 import React, {useState} from "react";
-import { scaleLinear } from "d3-scale";
-import { extent, max, min, bin } from "d3-array";
-import { scale } from "vega";
-import vegaEmbed from 'vega-embed';
 import TeamWinsVisual from "./TeamWins";
 import TeamSalaryVisual from "./TeamSalary";
 import TeamHitsVisual from "./TeamHits";
-import TeamRBIsVisual from "./TeamRBIS"
-import TeamHomerunsVisual from "./TeamHomeRuns"
+import TeamPricePerHitVisual from './TeamPricePerHit';
+import TeamRBIsVisual from "./TeamRBIS";
+import TeamHomerunsVisual from "./TeamHomeRuns";
 import TeamPricePerHomerunVisual from './TeamPricePerHomerun';
-import TeamStrikeoutVisual from './TeamStrikeouts'
+import TeamStrikeoutVisual from './TeamStrikeouts';
 import Intro from "./Intro";
-import CreateVisual from "./CreateVisual"
+import Conclusion from './Conclusion';
 
 
 const App = () => {
@@ -20,6 +17,7 @@ const App = () => {
         <TeamWinsVisual/>,
         <TeamSalaryVisual/>,
         <TeamHitsVisual/>,
+        <TeamPricePerHitVisual/>,
         <TeamRBIsVisual/>,
         <TeamHomerunsVisual/>,
         <TeamPricePerHomerunVisual/>,
@@ -35,7 +33,7 @@ const App = () => {
         }
     }
     function lastVis(){
-        if(index == 0) {
+        if(index == -1) {
             setIndex(comps.length - 1);
         } else {
             setIndex(index--);
@@ -55,6 +53,7 @@ const App = () => {
                     <button onClick={nextVis}>Next</button>
                 </div>
             </div>
+            <Conclusion/>
         </div>
     );
 };

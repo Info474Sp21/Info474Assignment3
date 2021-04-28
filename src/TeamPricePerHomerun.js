@@ -43,7 +43,11 @@ function TeamPricePerHomerunVisual() {
                 <p>{loading && "Loading the data!!!" }</p>
                 <svg></svg>
             </div>
-            <p className="vis-description">Description for the team salarys of 2001</p>
+            <p className="vis-description">
+                Again, this makes a lot of sense knowing that the teams that pay the most for their players are in result still paying proportitely more for each of their hits and Homeruns
+                that they are getting during the season. This just goes to show that the success within the MLB league is significantly biased towards programs that are capable
+                of shelling out more money than other programs who don't have as much money to spend on players.
+            </p>
         </div>
     )
 }
