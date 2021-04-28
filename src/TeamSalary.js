@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './style.css'
 import { useFetch } from "../hooks/useFetch"
 import vegaEmbed from 'vega-embed';
@@ -9,22 +9,23 @@ function TeamSalaryVisual() {
     const [data, loading] = useFetch(
         githubDataURL
     );
-
     var vegaVariables = {
         "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
         "description": "A simple bar chart looking at all of the MLB franchises salary for 2001.",
         "title":"2001 Total Salarys Per MLB Franchise",
+        "width" : screen.width / 1.5,
+        "height": "400",
         "data": {"values": data},
         "mark": {"type": "bar", "cornerRadiusEnd": 1},
         "encoding": {
-            "x": {"field": "franchise", "type": "nominal", "axis": {"labelAngle": -90}},
+            "x": {"field": "Franchise", "type": "nominal", "axis": {"labelAngle": -90}},
             "y": {"field": "TeamSalary", "type": "quantitative"}
         }
     }
     vegaEmbed('#team-salary', vegaVariables);
 
     return (
-        <div>
+        <div className="centered">
             <div id="team-salary">
                 <p>{loading && "Loading the data!!!" }</p>
                 <svg width="600" height="500"></svg>

@@ -3,15 +3,28 @@ import { scaleLinear } from "d3-scale";
 import { extent, max, min, bin } from "d3-array";
 import { scale } from "vega";
 import vegaEmbed from 'vega-embed';
-import TeamSalary from "./TeamSalary";
+import TeamWinsVisual from "./TeamWins";
+import TeamSalaryVisual from "./TeamSalary";
+import TeamHitsVisual from "./TeamHits";
+import TeamRBIsVisual from "./TeamRBIS"
+import TeamHomerunsVisual from "./TeamHomeRuns"
+import TeamPricePerHomerunVisual from './TeamPricePerHomerun';
 import Intro from "./Intro";
+import CreateVisual from "./CreateVisual"
 
 
 const App = () => {
+    
+
     return (
-        <div>
+        <div id="main" className="container">
             <Intro/>
-            <TeamSalary/>
+            <TeamWinsVisual/>
+            <TeamSalaryVisual/>
+            <TeamHitsVisual/>
+            <TeamRBIsVisual/>
+            <TeamHomerunsVisual/>
+            <TeamPricePerHomerunVisual/>
         </div>
     );
 };
