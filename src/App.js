@@ -9,6 +9,7 @@ import TeamPricePerHomerunVisual from './TeamPricePerHomerun';
 import TeamStrikeoutVisual from './TeamStrikeouts';
 import Intro from "./Intro";
 import Conclusion from './Conclusion';
+import TestingGraphic from "./TestingGraphic";
 
 
 const App = () => {
@@ -54,6 +55,8 @@ const App = () => {
                 </div>
             </div>
             <Conclusion/>
+            <h1 className="centered" style={{margin:30}}>Testing with different tools and interactive elements</h1>
+            <TestingGraphic/>
         </div>
     );
 };

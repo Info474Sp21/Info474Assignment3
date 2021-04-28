@@ -26292,6 +26292,8 @@ try {
   var _IntroDefault = _parcelHelpers.interopDefault(_Intro);
   var _Conclusion = require('./Conclusion');
   var _ConclusionDefault = _parcelHelpers.interopDefault(_Conclusion);
+  var _TestingGraphic = require("./TestingGraphic");
+  var _TestingGraphicDefault = _parcelHelpers.interopDefault(_TestingGraphic);
   var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/App.js", _s = $RefreshSig$();
   const App = () => {
     _s();
@@ -26299,56 +26301,56 @@ try {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 17,
+        lineNumber: 18,
         columnNumber: 9
       }
     }), /*#__PURE__*/_reactDefault.default.createElement(_TeamSalaryDefault.default, {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 18,
+        lineNumber: 19,
         columnNumber: 9
       }
     }), /*#__PURE__*/_reactDefault.default.createElement(_TeamHitsDefault.default, {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19,
+        lineNumber: 20,
         columnNumber: 9
       }
     }), /*#__PURE__*/_reactDefault.default.createElement(_TeamPricePerHitDefault.default, {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 20,
+        lineNumber: 21,
         columnNumber: 9
       }
     }), /*#__PURE__*/_reactDefault.default.createElement(_TeamRBISDefault.default, {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21,
+        lineNumber: 22,
         columnNumber: 9
       }
     }), /*#__PURE__*/_reactDefault.default.createElement(_TeamHomeRunsDefault.default, {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22,
+        lineNumber: 23,
         columnNumber: 9
       }
     }), /*#__PURE__*/_reactDefault.default.createElement(_TeamPricePerHomerunDefault.default, {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23,
+        lineNumber: 24,
         columnNumber: 9
       }
     }), /*#__PURE__*/_reactDefault.default.createElement(_TeamStrikeoutsDefault.default, {
       __self: undefined,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 24,
+        lineNumber: 25,
         columnNumber: 9
       }
     })];
@@ -26374,14 +26376,14 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43,
+          lineNumber: 44,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_IntroDefault.default, {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44,
+          lineNumber: 45,
           columnNumber: 13
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -26389,7 +26391,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45,
+          lineNumber: 46,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -26397,7 +26399,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46,
+          lineNumber: 47,
           columnNumber: 17
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("button", {
@@ -26405,7 +26407,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47,
+          lineNumber: 48,
           columnNumber: 21
         }
       }, "Back")), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -26413,7 +26415,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49,
+          lineNumber: 50,
           columnNumber: 17
         }
       }, comps[index]), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -26421,7 +26423,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52,
+          lineNumber: 53,
           columnNumber: 17
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("button", {
@@ -26429,14 +26431,32 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53,
+          lineNumber: 54,
           columnNumber: 21
         }
       }, "Next"))), /*#__PURE__*/_reactDefault.default.createElement(_ConclusionDefault.default, {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56,
+          lineNumber: 57,
+          columnNumber: 13
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        className: "centered",
+        style: {
+          margin: 30
+        },
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58,
+          columnNumber: 13
+        }
+      }, "Testing with different tools and interactive elements"), /*#__PURE__*/_reactDefault.default.createElement(_TestingGraphicDefault.default, {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59,
           columnNumber: 13
         }
       }))
@@ -26453,7 +26473,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./TeamWins":"5RpWr","./TeamSalary":"20ZRJ","./TeamHits":"5yr6L","./TeamRBIS":"4hkd9","./TeamHomeRuns":"65Czg","./TeamPricePerHomerun":"6DbgG","./Intro":"6WOVi","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./TeamStrikeouts":"46A44","./TeamPricePerHit":"5vH7E","./Conclusion":"6ORwS"}],"5RpWr":[function(require,module,exports) {
+},{"react":"3b2NM","./TeamWins":"5RpWr","./TeamSalary":"20ZRJ","./TeamHits":"5yr6L","./TeamRBIS":"4hkd9","./TeamHomeRuns":"65Czg","./TeamPricePerHomerun":"6DbgG","./Intro":"6WOVi","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./TeamStrikeouts":"46A44","./TeamPricePerHit":"5vH7E","./Conclusion":"6ORwS","./TestingGraphic":"4tWYM"}],"5RpWr":[function(require,module,exports) {
 var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -97365,6 +97385,8 @@ try {
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   require('./style.css');
+  var _BigGraphic = require("./BigGraphic");
+  var _BigGraphicDefault = _parcelHelpers.interopDefault(_BigGraphic);
   var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/Intro.js";
   class Intro extends _react.Component {
     render() {
@@ -97373,56 +97395,56 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 7,
+            lineNumber: 8,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 8,
+            lineNumber: 9,
             columnNumber: 17
           }
         }, "Clayton Novotney"), /*#__PURE__*/_reactDefault.default.createElement("h2", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 9,
+            lineNumber: 10,
             columnNumber: 17
           }
         }, "Info 474"), /*#__PURE__*/_reactDefault.default.createElement("h2", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 10,
+            lineNumber: 11,
             columnNumber: 17
           }
         }, "April 20th, 2021"), /*#__PURE__*/_reactDefault.default.createElement("h3", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 11,
+            lineNumber: 12,
             columnNumber: 17
           }
         }, "Exploratory Data Analysis, Assignment 2"), /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 12,
+            lineNumber: 13,
             columnNumber: 17
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("h2", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 13,
+            lineNumber: 14,
             columnNumber: 17
           }
         }, "Step 1: Data Selection"), /*#__PURE__*/_reactDefault.default.createElement("h4", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 14,
+            lineNumber: 15,
             columnNumber: 17
           }
         }, "Data Selected: MLB Statitistics from ", /*#__PURE__*/_reactDefault.default.createElement("a", {
@@ -97430,112 +97452,119 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 14,
+            lineNumber: 15,
             columnNumber: 58
           }
         }, "Data.World.com")), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 15,
+            lineNumber: 16,
             columnNumber: 17
           }
         }, "In this full raw data set, there are roughly ~28,000 rows of data including information about individuals players and statistics on each of their seasons from 1985-2016."), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 16,
+            lineNumber: 17,
             columnNumber: 17
           }
         }, "Since I am a big Seattle Mariners fan, and have been my entire life. I am curious about the statistics of the historic 2001 season where they were able to break the all time win record and set a new one at 116 wins in a single season."), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 17,
+            lineNumber: 18,
             columnNumber: 17
           }
         }, "I am also very interested to look at the statistics of the Arizona Diamondbacks who won the world series that season, as well as the New York Yankees who beat us 4-1 in the series to end our playoff run."), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 18,
+            lineNumber: 19,
             columnNumber: 17
           }
         }, "Unfortunately, the 2021 season underway right now is a promising season for the Los Angeles Dodgers and it is speculated that they might be able to take the throne away from the Mariners and beat the record of 116 wins."), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 19,
+            lineNumber: 20,
             columnNumber: 17
           }
         }, "The columns I am most interested in are:"), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20,
+            lineNumber: 21,
             columnNumber: 17
           }
         }, "Franchise, Season, Hits (H), Homeruns (HR), RBI, Salary, Wins, Strike-Outs (SO)"), /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21,
+            lineNumber: 22,
             columnNumber: 17
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("h4", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22,
+            lineNumber: 23,
             columnNumber: 17
           }
         }, "Questions: "), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23,
+            lineNumber: 24,
             columnNumber: 17
           }
         }, "1) How much are teams paying for each of their hits and homeruns?"), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24,
+            lineNumber: 25,
             columnNumber: 17
           }
         }, "2) What is the correlation between the number of wins each franchise has in comparison to the amount of money they spend on players?"), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 25,
+            lineNumber: 26,
             columnNumber: 17
           }
         }, "3) What is the cost effectiveness of certain teams per hit/homerun"), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26,
+            lineNumber: 27,
             columnNumber: 17
           }
         }, "4) How well did the Mariners do in total compared to the Yankees and Cardinals who ended their post season and won the world series?"), /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27,
+            lineNumber: 28,
+            columnNumber: 17
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_BigGraphicDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 29,
             columnNumber: 17
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("h2", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28,
+            lineNumber: 30,
             columnNumber: 17
           }
         }, "Step 2: Exploratory Visual Analysis"), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29,
+            lineNumber: 31,
             columnNumber: 17
           }
         }, "I got my data from a website called ", /*#__PURE__*/_reactDefault.default.createElement("a", {
@@ -97543,7 +97572,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 30,
+            lineNumber: 32,
             columnNumber: 57
           }
         }, "Data.World.com"), " and was able to execute certain SQL queries on the data set that was given. Since I was curious only about the 2001 season and particular statistics, I was able to reduce the data down to a much simpler set of csv files to begin visualizing and analyzing."))
@@ -97557,7 +97586,154 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./style.css":"6eQIz","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"46A44":[function(require,module,exports) {
+},{"react":"3b2NM","./style.css":"6eQIz","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./BigGraphic":"6af82"}],"6eQIz":[function() {},{}],"6af82":[function(require,module,exports) {
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('./style.css');
+  var _hooksUseFetch = require("../hooks/useFetch");
+  var _vegaEmbed = require('vega-embed');
+  var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/BigGraphic.js", _s = $RefreshSig$();
+  function BigGraphic() {
+    _s();
+    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchiseBasedData.csv';
+    const [data, loading] = _hooksUseFetch.useFetch(githubDataURL);
+    const dataValues = {
+      "Wins": "Wins",
+      "Salary": "Salary",
+      "Strikeouts": "NumStrikeouts",
+      "Hits": "Hits",
+      "Homeruns": "Homeruns",
+      "RBI's": "RBIs",
+      "PricePerHit": "PricePerHit",
+      "PricePerHomerun": "PricePerHomerun"
+    };
+    var allData = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "description": "A scatterplot showing the salary and wins for each of the franchises in the MLB.",
+      "data": {
+        "values": data
+      },
+      "mark": "circle",
+      "width": screen.width / 1.5,
+      "height": "400",
+      "padding": 5,
+      "layer": [{
+        "mark": 'circle'
+      }, {
+        "mark": {
+          "type": "text",
+          "align": "center",
+          "baseline": "line-bottom",
+          "tooltip": {
+            "content": "data"
+          }
+        },
+        "encoding": {
+          "text": {
+            "field": "Franchise",
+            "type": "nominal"
+          }
+        }
+      }],
+      "encoding": {
+        "x": {
+          "field": "Salary",
+          "type": "quantitative",
+          "scale": {
+            "domain": [25000000, 130000000]
+          }
+        },
+        "y": {
+          "field": "Wins",
+          "type": "quantitative",
+          "scale": {
+            "domain": [50, 130]
+          }
+        }
+      }
+    };
+    _vegaEmbedDefault.default('#big-graphic-2', allData);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "centered",
+        style: {
+          margin: 30
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        id: "big-graphic-2",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53,
+          columnNumber: 17
+        }
+      }, "Main Graphic With All Data"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54,
+          columnNumber: 17
+        }
+      }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55,
+          columnNumber: 17
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "vis-description",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57,
+          columnNumber: 13
+        }
+      }, "This Visualization was extremely helpful for simply looking at all of the data points that are associated with each team. Since I am most curious about how the salary of each team affects their performance throughout the season, I have included the salary as the x-axis label and included the hits/wins as the y-axis which can be seen as the biggest measure of success for a season."), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62,
+          columnNumber: 13
+        }
+      }, "I am especially excited to see within this graphic that the Seattle Mariners and Oakland Athletics were at the top of the wins spectrum even though they were middle and below the average salary for the season."))
+    );
+  }
+  _s(BigGraphic, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
+    return [_hooksUseFetch.useFetch];
+  });
+  _c = BigGraphic;
+  exports.default = BigGraphic;
+  var _c;
+  $RefreshReg$(_c, "BigGraphic");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"46A44":[function(require,module,exports) {
 var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -97886,6 +98062,217 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./style.css":"6eQIz","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}]},["1j6wU","3Imd1","5rkFb"], "5rkFb", "parcelRequire8ca7")
+},{"react":"3b2NM","./style.css":"6eQIz","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"4tWYM":[function(require,module,exports) {
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('./style.css');
+  var _hooksUseFetch = require("../hooks/useFetch");
+  var _vegaEmbed = require('vega-embed');
+  var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TestingGraphic.js", _s = $RefreshSig$();
+  function TestingGraphic() {
+    _s();
+    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchiseBasedData.csv';
+    const [data, loading] = _hooksUseFetch.useFetch(githubDataURL);
+    const dataValues = {
+      "Wins": "Wins",
+      "Salary": "Salary",
+      "Strikeouts": "NumStrikeouts",
+      "Hits": "Hits",
+      "Homeruns": "Homeruns",
+      "RBI's": "RBIs",
+      "PricePerHit": "PricePerHit",
+      "PricePerHomerun": "PricePerHomerun"
+    };
+    var example = {
+      "$schema": "https://vega.github.io/schema/vega/v5.json",
+      "description": "A basic bar chart example, with value labels shown upon mouse hover.",
+      "title": "Wins Per Franchise 2001",
+      "width": screen.width / 1.5,
+      "height": "400",
+      "padding": 5,
+      "data": [{
+        "name": "table",
+        "values": data
+      }],
+      "signals": [{
+        "name": "tooltip",
+        "value": {},
+        "on": [{
+          "events": "rect:mouseover",
+          "update": "datum"
+        }, {
+          "events": "rect:mouseout",
+          "update": "{}"
+        }]
+      }],
+      "scales": [{
+        "name": "xscale",
+        "type": "band",
+        "domain": {
+          "data": "table",
+          "field": "Franchise"
+        },
+        "range": "width",
+        "padding": 0.05,
+        "round": true
+      }, {
+        "name": "yscale",
+        "domain": {
+          "data": "table",
+          "field": "Wins"
+        },
+        "nice": true,
+        "range": "height"
+      }],
+      "axes": [{
+        "orient": "bottom",
+        "title": "Franchise",
+        "scale": "xscale",
+        "labelAngle": -75,
+        "zindex": 5,
+        "labelColor": "#FFCC00"
+      }, {
+        "orient": "left",
+        "title": "Wins",
+        "scale": "yscale"
+      }],
+      "marks": [{
+        "type": "rect",
+        "from": {
+          "data": "table"
+        },
+        "encode": {
+          "enter": {
+            "x": {
+              "scale": "xscale",
+              "field": "Franchise"
+            },
+            "width": {
+              "scale": "xscale",
+              "band": 1
+            },
+            "y": {
+              "scale": "yscale",
+              "field": "Wins"
+            },
+            "y2": {
+              "scale": "yscale",
+              "value": 0
+            }
+          },
+          "update": {
+            "fill": {
+              "value": "#002D72"
+            }
+          },
+          "hover": {
+            "fill": {
+              "value": "#D50032"
+            }
+          }
+        }
+      }, {
+        "type": "text",
+        "encode": {
+          "enter": {
+            "align": {
+              "value": "center"
+            },
+            "baseline": {
+              "value": "bottom"
+            },
+            "fill": {
+              "value": "#333"
+            }
+          },
+          "update": {
+            "x": {
+              "scale": "xscale",
+              "signal": "tooltip.Franchise",
+              "band": 0.5
+            },
+            "y": {
+              "scale": "yscale",
+              "signal": "tooltip.Wins",
+              "offset": 0
+            },
+            "text": {
+              "signal": "tooltip.Wins"
+            },
+            "fillOpacity": [{
+              "test": "datum === tooltip",
+              "value": 0
+            }, {
+              "value": 1
+            }]
+          }
+        }
+      }]
+    };
+    _vegaEmbedDefault.default('#big-graphic', example);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "centered",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 108,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        id: "big-graphic",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 109,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 110,
+          columnNumber: 17
+        }
+      }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 111,
+          columnNumber: 17
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "vis-description",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 113,
+          columnNumber: 13
+        }
+      }, "Working with different types of graphical tools and interactive elements"))
+    );
+  }
+  _s(TestingGraphic, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
+    return [_hooksUseFetch.useFetch];
+  });
+  _c = TestingGraphic;
+  exports.default = TestingGraphic;
+  var _c;
+  $RefreshReg$(_c, "TestingGraphic");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}]},["1j6wU","3Imd1","5rkFb"], "5rkFb", "parcelRequire8ca7")
 
 //# sourceMappingURL=index.3fafb3e2.js.map

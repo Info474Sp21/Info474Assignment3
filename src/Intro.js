@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './style.css'
+import BigGraphic from "./BigGraphic"
 
 export default class Intro extends Component {
     render() {
@@ -25,6 +26,7 @@ export default class Intro extends Component {
                 <p>3) What is the cost effectiveness of certain teams per hit/homerun</p>
                 <p>4) How well did the Mariners do in total compared to the Yankees and Cardinals who ended their post season and won the world series?</p>
                 <br></br>
+                <BigGraphic/>
                 <h2>Step 2: Exploratory Visual Analysis</h2>
                 <p>
                     I got my data from a website called <a href="https://data.world/cnovotn/info474/workspace/intro">Data.World.com</a> and was able to execute certain SQL queries on the data set that was given. Since I was curious only about the 
