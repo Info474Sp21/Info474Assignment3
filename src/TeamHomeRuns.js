@@ -22,9 +22,7 @@ function TeamHomerunsVisual() {
             "y": {"field": "Homeruns", "type": "quantitative"}
         }
     }
-    vegaVariables["data"]["values"]
     vegaEmbed('#team-homeruns', vegaVariables);
-
     return (
         <div className="centered">
             <div id="team-homeruns">

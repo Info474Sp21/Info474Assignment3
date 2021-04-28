@@ -5,7 +5,7 @@ import vegaEmbed from 'vega-embed';
 
 
 function TeamWinsVisual() {
-    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchisewins2001.csv'
+    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchiseBasedData.csv'
     const [data, loading] = useFetch(
         githubDataURL
     );

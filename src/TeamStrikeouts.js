@@ -5,14 +5,14 @@ import vegaEmbed from 'vega-embed';
 
 
 function TeamStrikeoutVisual() {
-    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data//Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/main/data/franchisestrikeouts-info474-QueryResult.csv';
+    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchisestrikeouts-info474-QueryResult.csv';
     const [data, loading] = useFetch(
         githubDataURL
     );
     var vegaVariables = {
         "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
         "description": "A simple bar chart looking at all of the MLB franchises salary for 2001.",
-        "title":"2001 Total RBI's Per MLB Franchise",
+        "title":"2001 Total Strikeouts Per MLB Franchise",
         "width" : screen.width / 1.5,
         "height": "400",
         "data": {"values": data},
@@ -22,7 +22,6 @@ function TeamStrikeoutVisual() {
             "y": {"field": "NumStrikeouts", "type": "quantitative"}
         }
     }
-    vegaVariables["data"]["values"]
     vegaEmbed('#team-strikeouts', vegaVariables);
 
     return (

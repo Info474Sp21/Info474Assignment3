@@ -22,7 +22,6 @@ function TeamHitsVisual() {
             "y": {"field": "Hits", "type": "quantitative"}
         }
     }
-    vegaVariables["data"]["values"]
     vegaEmbed('#team-hits', vegaVariables);
 
     return (

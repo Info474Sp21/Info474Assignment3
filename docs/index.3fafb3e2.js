@@ -26288,11 +26288,79 @@ try {
   var _TeamHomeRunsDefault = _parcelHelpers.interopDefault(_TeamHomeRuns);
   var _TeamPricePerHomerun = require('./TeamPricePerHomerun');
   var _TeamPricePerHomerunDefault = _parcelHelpers.interopDefault(_TeamPricePerHomerun);
+  var _TeamStrikeouts = require('./TeamStrikeouts');
+  var _TeamStrikeoutsDefault = _parcelHelpers.interopDefault(_TeamStrikeouts);
   var _Intro = require("./Intro");
   var _IntroDefault = _parcelHelpers.interopDefault(_Intro);
   require("./CreateVisual");
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/App.js";
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/App.js", _s = $RefreshSig$();
   const App = () => {
+    _s();
+    const comps = [/*#__PURE__*/_reactDefault.default.createElement(_TeamWinsDefault.default, {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20,
+        columnNumber: 9
+      }
+    }), /*#__PURE__*/_reactDefault.default.createElement(_TeamSalaryDefault.default, {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21,
+        columnNumber: 9
+      }
+    }), /*#__PURE__*/_reactDefault.default.createElement(_TeamHitsDefault.default, {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22,
+        columnNumber: 9
+      }
+    }), /*#__PURE__*/_reactDefault.default.createElement(_TeamRBISDefault.default, {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23,
+        columnNumber: 9
+      }
+    }), /*#__PURE__*/_reactDefault.default.createElement(_TeamHomeRunsDefault.default, {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24,
+        columnNumber: 9
+      }
+    }), /*#__PURE__*/_reactDefault.default.createElement(_TeamPricePerHomerunDefault.default, {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25,
+        columnNumber: 9
+      }
+    }), /*#__PURE__*/_reactDefault.default.createElement(_TeamStrikeoutsDefault.default, {
+      __self: undefined,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26,
+        columnNumber: 9
+      }
+    })];
+    var [index, setIndex] = _react.useState(0);
+    function nextVis() {
+      if (index == comps.length) {
+        setIndex(0);
+      } else {
+        setIndex(index++);
+      }
+    }
+    function lastVis() {
+      if (index == 0) {
+        setIndex(comps.length - 1);
+      } else {
+        setIndex(index--);
+      }
+    }
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
         id: "main",
@@ -26300,61 +26368,68 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20,
+          lineNumber: 45,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_IntroDefault.default, {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21,
+          lineNumber: 46,
           columnNumber: 13
         }
-      }), /*#__PURE__*/_reactDefault.default.createElement(_TeamWinsDefault.default, {
+      }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "flexed",
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22,
+          lineNumber: 47,
           columnNumber: 13
         }
-      }), /*#__PURE__*/_reactDefault.default.createElement(_TeamSalaryDefault.default, {
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "left-side",
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23,
-          columnNumber: 13
+          lineNumber: 48,
+          columnNumber: 17
         }
-      }), /*#__PURE__*/_reactDefault.default.createElement(_TeamHitsDefault.default, {
+      }, /*#__PURE__*/_reactDefault.default.createElement("button", {
+        onClick: lastVis,
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24,
-          columnNumber: 13
+          lineNumber: 49,
+          columnNumber: 21
         }
-      }), /*#__PURE__*/_reactDefault.default.createElement(_TeamRBISDefault.default, {
+      }, "Back")), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "data-center",
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25,
-          columnNumber: 13
+          lineNumber: 51,
+          columnNumber: 17
         }
-      }), /*#__PURE__*/_reactDefault.default.createElement(_TeamHomeRunsDefault.default, {
+      }, comps[index]), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "right-side",
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26,
-          columnNumber: 13
+          lineNumber: 54,
+          columnNumber: 17
         }
-      }), /*#__PURE__*/_reactDefault.default.createElement(_TeamPricePerHomerunDefault.default, {
+      }, /*#__PURE__*/_reactDefault.default.createElement("button", {
+        onClick: nextVis,
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27,
-          columnNumber: 13
+          lineNumber: 55,
+          columnNumber: 21
         }
-      }))
+      }, "Next"))))
     );
   };
+  _s(App, "x2oTrUAHknTo02Ld7gcDOqaxQ8E=");
   _c = App;
   exports.default = App;
   var _c;
@@ -26365,7 +26440,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","d3-scale":"2UZ4X","d3-array":"7CLUA","vega":"4modi","vega-embed":"4V7Ot","./TeamWins":"5RpWr","./TeamSalary":"20ZRJ","./TeamHits":"5yr6L","./Intro":"6WOVi","./CreateVisual":"3VsPH","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./TeamRBIS":"4hkd9","./TeamHomeRuns":"65Czg","./TeamPricePerHomerun":"6DbgG"}],"2UZ4X":[function(require,module,exports) {
+},{"react":"3b2NM","d3-scale":"2UZ4X","d3-array":"7CLUA","vega":"4modi","vega-embed":"4V7Ot","./TeamWins":"5RpWr","./TeamSalary":"20ZRJ","./TeamHits":"5yr6L","./TeamRBIS":"4hkd9","./TeamHomeRuns":"65Czg","./TeamPricePerHomerun":"6DbgG","./Intro":"6WOVi","./CreateVisual":"3VsPH","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./TeamStrikeouts":"46A44"}],"2UZ4X":[function(require,module,exports) {
 var define;
 // https://d3js.org/d3-scale/ v3.3.0 Copyright 2021 Mike Bostock
 (function (global, factory) {
@@ -96045,7 +96120,7 @@ try {
   var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TeamWins.js", _s = $RefreshSig$();
   function TeamWinsVisual() {
     _s();
-    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchisewins2001.csv';
+    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchiseBasedData.csv';
     const [data, loading] = _hooksUseFetch.useFetch(githubDataURL);
     var vegaVariables = {
       "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
@@ -96781,8 +96856,110 @@ try {
         }
       }
     };
-    vegaVariables["data"]["values"];
     _vegaEmbedDefault.default('#team-hits', vegaVariables);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "centered",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        id: "team-hits",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30,
+          columnNumber: 17
+        }
+      }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31,
+          columnNumber: 17
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "vis-description",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33,
+          columnNumber: 13
+        }
+      }, "Description for the team salarys of 2001"))
+    );
+  }
+  _s(TeamHitsVisual, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
+    return [_hooksUseFetch.useFetch];
+  });
+  _c = TeamHitsVisual;
+  exports.default = TeamHitsVisual;
+  var _c;
+  $RefreshReg$(_c, "TeamHitsVisual");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"4hkd9":[function(require,module,exports) {
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('./style.css');
+  var _hooksUseFetch = require("../hooks/useFetch");
+  var _vegaEmbed = require('vega-embed');
+  var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TeamRBIS.js", _s = $RefreshSig$();
+  function TeamRBIsVisual() {
+    _s();
+    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchise-rbis-data--info474-QueryResult.csv';
+    const [data, loading] = _hooksUseFetch.useFetch(githubDataURL);
+    var vegaVariables = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "description": "A simple bar chart looking at all of the MLB franchises salary for 2001.",
+      "title": "2001 Total RBI's Per MLB Franchise",
+      "width": screen.width / 1.5,
+      "height": "400",
+      "data": {
+        "values": data
+      },
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "Franchise",
+          "type": "nominal",
+          "axis": {
+            "labelAngle": -90
+          }
+        },
+        "y": {
+          "field": "RBIs",
+          "type": "quantitative"
+        }
+      }
+    };
+    vegaVariables["data"]["values"];
+    _vegaEmbedDefault.default('#team-rbis', vegaVariables);
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
         className: "centered",
@@ -96793,7 +96970,7 @@ try {
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        id: "team-hits",
+        id: "team-rbis",
         __self: this,
         __source: {
           fileName: _jsxFileName,
@@ -96825,13 +97002,228 @@ try {
       }, "Description for the team salarys of 2001"))
     );
   }
-  _s(TeamHitsVisual, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
+  _s(TeamRBIsVisual, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
     return [_hooksUseFetch.useFetch];
   });
-  _c = TeamHitsVisual;
-  exports.default = TeamHitsVisual;
+  _c = TeamRBIsVisual;
+  exports.default = TeamRBIsVisual;
   var _c;
-  $RefreshReg$(_c, "TeamHitsVisual");
+  $RefreshReg$(_c, "TeamRBIsVisual");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"65Czg":[function(require,module,exports) {
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('./style.css');
+  var _hooksUseFetch = require("../hooks/useFetch");
+  var _vegaEmbed = require('vega-embed');
+  var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TeamHomeRuns.js", _s = $RefreshSig$();
+  function TeamHomerunsVisual() {
+    _s();
+    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchise-homeruns-d-info474-QueryResult.csv';
+    const [data, loading] = _hooksUseFetch.useFetch(githubDataURL);
+    var vegaVariables = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "description": "A simple bar chart looking at all of the MLB franchises salary for 2001.",
+      "title": "2001 Total Homeruns Per Homeruns Franchise",
+      "width": screen.width / 1.5,
+      "height": "400",
+      "data": {
+        "values": data
+      },
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "Franchise",
+          "type": "nominal",
+          "axis": {
+            "labelAngle": -90
+          }
+        },
+        "y": {
+          "field": "Homeruns",
+          "type": "quantitative"
+        }
+      }
+    };
+    _vegaEmbedDefault.default('#team-homeruns', vegaVariables);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "centered",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        id: "team-homeruns",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29,
+          columnNumber: 17
+        }
+      }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30,
+          columnNumber: 17
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "vis-description",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32,
+          columnNumber: 13
+        }
+      }, "Description for the team salarys of 2001"))
+    );
+  }
+  _s(TeamHomerunsVisual, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
+    return [_hooksUseFetch.useFetch];
+  });
+  _c = TeamHomerunsVisual;
+  exports.default = TeamHomerunsVisual;
+  var _c;
+  $RefreshReg$(_c, "TeamHomerunsVisual");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"6DbgG":[function(require,module,exports) {
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('./style.css');
+  var _hooksUseFetch = require("../hooks/useFetch");
+  var _vegaEmbed = require('vega-embed');
+  var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TeamPricePerHomerun.js", _s = $RefreshSig$();
+  function TeamPricePerHomerunVisual() {
+    _s();
+    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchise-salary-per-info474-QueryResult.csv';
+    const [data, loading] = _hooksUseFetch.useFetch(githubDataURL);
+    var vegaVariables = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "description": "A simple bar chart looking at all of the MLB franchises salary for 2001.",
+      "title": "2001 Salary / Homeruns Per Franchise",
+      "width": screen.width / 1.5,
+      "height": "400",
+      "data": {
+        "values": data
+      },
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "Franchise",
+          "type": "nominal",
+          "axis": {
+            "labelAngle": -90
+          }
+        },
+        "y": {
+          "field": "TeamPricePerHomerun",
+          "type": "quantitative"
+        }
+      },
+      "signals": [{
+        "name": "tooltip",
+        "value": {},
+        "on": [{
+          "events": "rect:mouseover",
+          "update": "datum"
+        }, {
+          "events": "rect:mouseout",
+          "update": "{}"
+        }]
+      }]
+    };
+    _vegaEmbedDefault.default('#team-price-homerun', vegaVariables);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "centered",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        id: "team-price-homerun",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43,
+          columnNumber: 17
+        }
+      }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44,
+          columnNumber: 17
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "vis-description",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46,
+          columnNumber: 13
+        }
+      }, "Description for the team salarys of 2001"))
+    );
+  }
+  _s(TeamPricePerHomerunVisual, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
+    return [_hooksUseFetch.useFetch];
+  });
+  _c = TeamPricePerHomerunVisual;
+  exports.default = TeamPricePerHomerunVisual;
+  var _c;
+  $RefreshReg$(_c, "TeamPricePerHomerunVisual");
   helpers.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
@@ -96857,56 +97249,56 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 8,
+            lineNumber: 7,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 9,
+            lineNumber: 8,
             columnNumber: 17
           }
         }, "Clayton Novotney"), /*#__PURE__*/_reactDefault.default.createElement("h2", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 10,
+            lineNumber: 9,
             columnNumber: 17
           }
         }, "Info 474"), /*#__PURE__*/_reactDefault.default.createElement("h2", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 11,
+            lineNumber: 10,
             columnNumber: 17
           }
         }, "April 20th, 2021"), /*#__PURE__*/_reactDefault.default.createElement("h3", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 12,
+            lineNumber: 11,
             columnNumber: 17
           }
         }, "Exploratory Data Analysis, Assignment 2"), /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 13,
+            lineNumber: 12,
             columnNumber: 17
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("h2", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 14,
+            lineNumber: 13,
             columnNumber: 17
           }
         }, "Step 1: Data Selection"), /*#__PURE__*/_reactDefault.default.createElement("h4", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 15,
+            lineNumber: 14,
             columnNumber: 17
           }
         }, "Data Selected: MLB Statitistics from ", /*#__PURE__*/_reactDefault.default.createElement("a", {
@@ -96914,87 +97306,94 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 15,
+            lineNumber: 14,
             columnNumber: 58
           }
         }, "Data.World.com")), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 16,
+            lineNumber: 15,
             columnNumber: 17
           }
         }, "In this full raw data set, there are roughly ~28,000 rows of data including information about individuals players and statistics on each of their seasons from 1985-2016."), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 17,
+            lineNumber: 16,
             columnNumber: 17
           }
         }, "Since I am a big Seattle Mariners fan, and have been my entire life. I am curious about the statistics of the historic 2001 season where they were able to break the all time win record and set a new one at 116 wins in a single season."), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 18,
+            lineNumber: 17,
             columnNumber: 17
           }
         }, "I am also very interested to look at the statistics of the Arizona Diamondbacks who won the world series that season, as well as the New York Yankees who beat us 4-1 in the series to end our playoff run."), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 19,
+            lineNumber: 18,
             columnNumber: 17
           }
         }, "Unfortunately, the 2021 season underway right now is a promising season for the Los Angeles Dodgers and it is speculated that they might be able to take the throne away from the Mariners and beat the record of 116 wins."), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20,
+            lineNumber: 19,
             columnNumber: 17
           }
         }, "The columns I am most interested in are:"), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21,
+            lineNumber: 20,
             columnNumber: 17
           }
         }, "Franchise, Season, Hits (H), Homeruns (HR), RBI, Salary, Wins, Strike-Outs (SO)"), /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22,
+            lineNumber: 21,
             columnNumber: 17
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("h4", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23,
+            lineNumber: 22,
             columnNumber: 17
           }
         }, "Questions: "), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24,
+            lineNumber: 23,
             columnNumber: 17
           }
-        }, "1) How has the avg salary per player on each team progressed as the years have gone on?"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        }, "1) How much are teams paying for each of their hits and homeruns?"), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 25,
+            lineNumber: 24,
             columnNumber: 17
           }
         }, "2) What is the correlation between the number of wins each franchise has in comparison to the amount of money they spend on players?"), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
+            lineNumber: 25,
+            columnNumber: 17
+          }
+        }, "3) What is the cost effectiveness of certain teams per hit/homerun"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
             lineNumber: 26,
             columnNumber: 17
           }
-        }, "3) What is the cost effectiveness of certain teams per hit/homerun"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        }, "4) How well did the Mariners do in total compared to the Yankees and Cardinals who ended their post season and won the world series?"), /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
@@ -97023,7 +97422,7 @@ try {
             lineNumber: 30,
             columnNumber: 57
           }
-        }, "Data.World.com"), " and was able to execute certain SQL queries on the data set that was given. Since I was curious only about the 2001 season and particular statistics, I was able to reduce the data down to a much simpler set of csv files to begin visualizing and analyzing. "))
+        }, "Data.World.com"), " and was able to execute certain SQL queries on the data set that was given. Since I was curious only about the 2001 season and particular statistics, I was able to reduce the data down to a much simpler set of csv files to begin visualizing and analyzing."))
       );
     }
   }
@@ -97259,7 +97658,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"4hkd9":[function(require,module,exports) {
+},{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"46A44":[function(require,module,exports) {
 var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -97273,15 +97672,15 @@ try {
   var _hooksUseFetch = require("../hooks/useFetch");
   var _vegaEmbed = require('vega-embed');
   var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TeamRBIS.js", _s = $RefreshSig$();
-  function TeamRBIsVisual() {
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TeamStrikeouts.js", _s = $RefreshSig$();
+  function TeamStrikeoutVisual() {
     _s();
-    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchise-rbis-data--info474-QueryResult.csv';
+    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchisestrikeouts-info474-QueryResult.csv';
     const [data, loading] = _hooksUseFetch.useFetch(githubDataURL);
     var vegaVariables = {
       "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
       "description": "A simple bar chart looking at all of the MLB franchises salary for 2001.",
-      "title": "2001 Total RBI's Per MLB Franchise",
+      "title": "2001 Total Strikeouts Per MLB Franchise",
       "width": screen.width / 1.5,
       "height": "400",
       "data": {
@@ -97300,42 +97699,41 @@ try {
           }
         },
         "y": {
-          "field": "RBIs",
+          "field": "NumStrikeouts",
           "type": "quantitative"
         }
       }
     };
-    vegaVariables["data"]["values"];
-    _vegaEmbedDefault.default('#team-rbis', vegaVariables);
+    _vegaEmbedDefault.default('#team-strikeouts', vegaVariables);
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
         className: "centered",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29,
+          lineNumber: 28,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        id: "team-rbis",
+        id: "team-strikeouts",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30,
+          lineNumber: 29,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31,
+          lineNumber: 30,
           columnNumber: 17
         }
       }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32,
+          lineNumber: 31,
           columnNumber: 17
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("p", {
@@ -97343,225 +97741,19 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34,
+          lineNumber: 33,
           columnNumber: 13
         }
       }, "Description for the team salarys of 2001"))
     );
   }
-  _s(TeamRBIsVisual, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
+  _s(TeamStrikeoutVisual, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
     return [_hooksUseFetch.useFetch];
   });
-  _c = TeamRBIsVisual;
-  exports.default = TeamRBIsVisual;
+  _c = TeamStrikeoutVisual;
+  exports.default = TeamStrikeoutVisual;
   var _c;
-  $RefreshReg$(_c, "TeamRBIsVisual");
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"65Czg":[function(require,module,exports) {
-var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require('react');
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  require('./style.css');
-  var _hooksUseFetch = require("../hooks/useFetch");
-  var _vegaEmbed = require('vega-embed');
-  var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TeamHomeRuns.js", _s = $RefreshSig$();
-  function TeamHomerunsVisual() {
-    _s();
-    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchise-homeruns-d-info474-QueryResult.csv';
-    const [data, loading] = _hooksUseFetch.useFetch(githubDataURL);
-    var vegaVariables = {
-      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-      "description": "A simple bar chart looking at all of the MLB franchises salary for 2001.",
-      "title": "2001 Total Homeruns Per Homeruns Franchise",
-      "width": screen.width / 1.5,
-      "height": "400",
-      "data": {
-        "values": data
-      },
-      "mark": {
-        "type": "bar",
-        "cornerRadiusEnd": 1
-      },
-      "encoding": {
-        "x": {
-          "field": "Franchise",
-          "type": "nominal",
-          "axis": {
-            "labelAngle": -90
-          }
-        },
-        "y": {
-          "field": "Homeruns",
-          "type": "quantitative"
-        }
-      }
-    };
-    vegaVariables["data"]["values"];
-    _vegaEmbedDefault.default('#team-homeruns', vegaVariables);
-    return (
-      /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "centered",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        id: "team-homeruns",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 30,
-          columnNumber: 13
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("p", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 31,
-          columnNumber: 17
-        }
-      }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32,
-          columnNumber: 17
-        }
-      })), /*#__PURE__*/_reactDefault.default.createElement("p", {
-        className: "vis-description",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34,
-          columnNumber: 13
-        }
-      }, "Description for the team salarys of 2001"))
-    );
-  }
-  _s(TeamHomerunsVisual, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
-    return [_hooksUseFetch.useFetch];
-  });
-  _c = TeamHomerunsVisual;
-  exports.default = TeamHomerunsVisual;
-  var _c;
-  $RefreshReg$(_c, "TeamHomerunsVisual");
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"6DbgG":[function(require,module,exports) {
-var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require('react');
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  require('./style.css');
-  var _hooksUseFetch = require("../hooks/useFetch");
-  var _vegaEmbed = require('vega-embed');
-  var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TeamPricePerHomerun.js", _s = $RefreshSig$();
-  function TeamPricePerHomerunVisual() {
-    _s();
-    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchise-salary-per-info474-QueryResult (1).csv';
-    const [data, loading] = _hooksUseFetch.useFetch(githubDataURL);
-    var vegaVariables = {
-      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-      "description": "A simple bar chart looking at all of the MLB franchises salary for 2001.",
-      "title": "2001 Total Homeruns Per Homeruns Franchise",
-      "width": screen.width / 1.5,
-      "height": "400",
-      "data": {
-        "values": data
-      },
-      "mark": {
-        "type": "bar",
-        "cornerRadiusEnd": 1
-      },
-      "encoding": {
-        "x": {
-          "field": "Franchise",
-          "type": "nominal",
-          "axis": {
-            "labelAngle": -90
-          }
-        },
-        "y": {
-          "field": "TeamPricePerHomerun",
-          "type": "quantitative"
-        }
-      }
-    };
-    vegaVariables["data"]["values"];
-    _vegaEmbedDefault.default('#team-price-homerun', vegaVariables);
-    return (
-      /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "centered",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 29,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        id: "team-price-homerun",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 30,
-          columnNumber: 13
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("p", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 31,
-          columnNumber: 17
-        }
-      }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32,
-          columnNumber: 17
-        }
-      })), /*#__PURE__*/_reactDefault.default.createElement("p", {
-        className: "vis-description",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34,
-          columnNumber: 13
-        }
-      }, "Description for the team salarys of 2001"))
-    );
-  }
-  _s(TeamPricePerHomerunVisual, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
-    return [_hooksUseFetch.useFetch];
-  });
-  _c = TeamPricePerHomerunVisual;
-  exports.default = TeamPricePerHomerunVisual;
-  var _c;
-  $RefreshReg$(_c, "TeamPricePerHomerunVisual");
+  $RefreshReg$(_c, "TeamStrikeoutVisual");
   helpers.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;

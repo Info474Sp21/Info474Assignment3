@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './style.css'
 
-
 export default class Intro extends Component {
     render() {
         return (
@@ -21,15 +20,17 @@ export default class Intro extends Component {
                 <p>Franchise, Season, Hits (H), Homeruns (HR), RBI, Salary, Wins, Strike-Outs (SO)</p>
                 <br></br>
                 <h4>Questions: </h4>
-                <p>1) How has the avg salary per player on each team progressed as the years have gone on?</p>
+                <p>1) How much are teams paying for each of their hits and homeruns?</p>
                 <p>2) What is the correlation between the number of wins each franchise has in comparison to the amount of money they spend on players?</p>
                 <p>3) What is the cost effectiveness of certain teams per hit/homerun</p>
+                <p>4) How well did the Mariners do in total compared to the Yankees and Cardinals who ended their post season and won the world series?</p>
                 <br></br>
                 <h2>Step 2: Exploratory Visual Analysis</h2>
                 <p>
                     I got my data from a website called <a href="https://data.world/cnovotn/info474/workspace/intro">Data.World.com</a> and was able to execute certain SQL queries on the data set that was given. Since I was curious only about the 
                     2001 season and particular statistics, I was able to reduce the data down to a much simpler set of csv files to begin visualizing
-                    and analyzing. </p>
+                    and analyzing. 
+                </p>
             </div>
         );
     };
