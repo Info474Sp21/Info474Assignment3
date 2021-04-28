@@ -26496,75 +26496,18 @@ try {
         "type": "bar",
         "cornerRadiusEnd": 1
       },
-      "marks": [{
-        "type": "rect",
-        "from": {
-          "data": "table"
-        },
-        "encode": {
-          "enter": {
-            "x": {
-              "scale": "xscale",
-              "field": "Franchise"
-            },
-            "width": {
-              "scale": "xscale",
-              "band": 1
-            },
-            "y": {
-              "scale": "yscale",
-              "field": "Wins"
-            },
-            "y2": {
-              "scale": "yscale",
-              "value": 0
-            }
-          },
-          "update": {
-            "fill": {
-              "value": "steelblue"
-            }
-          },
-          "hover": {
-            "fill": {
-              "value": "red"
-            }
-          }
-        }
+      "layer": [{
+        "mark": 'bar'
       }, {
-        "type": "text",
-        "encode": {
-          "enter": {
-            "align": {
-              "value": "center"
-            },
-            "baseline": {
-              "value": "bottom"
-            },
-            "fill": {
-              "value": "#333"
-            }
-          },
-          "update": {
-            "x": {
-              "scale": "xscale",
-              "signal": "tooltip.Franchise",
-              "band": 0.5
-            },
-            "y": {
-              "scale": "yscale",
-              "signal": "tooltip.Wins",
-              "offset": -2
-            },
-            "text": {
-              "signal": "tooltip.Wins"
-            },
-            "fillOpacity": [{
-              "test": "datum === tooltip",
-              "value": 0
-            }, {
-              "value": 1
-            }]
+        "mark": {
+          "type": "text",
+          "align": "center",
+          "baseline": "line-bottom"
+        },
+        "encoding": {
+          "text": {
+            "field": "Wins",
+            "type": "quantitative"
           }
         }
       }],
@@ -26589,7 +26532,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76,
+          lineNumber: 49,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -26597,14 +26540,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77,
+          lineNumber: 50,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78,
+          lineNumber: 51,
           columnNumber: 17
         }
       }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
@@ -26613,7 +26556,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79,
+          lineNumber: 52,
           columnNumber: 17
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("p", {
@@ -26621,7 +26564,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81,
+          lineNumber: 54,
           columnNumber: 13
         }
       }, "The entire reason that I chose this season as the season to investigate out of all of them was because the Seattle Mariners were able to win the most regular season games in MLB history! It was also a great season for the Oakland Athletics which is traditionally another team that struggles to get wins."), /*#__PURE__*/_reactDefault.default.createElement("p", {
@@ -26629,7 +26572,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86,
+          lineNumber: 59,
           columnNumber: 13
         }
       }, "What I found most interesting was the fact that the Arizona Diamondbacks were the ones that won the world series even though they were barely above the middle of the pack for wins the entire season."))
@@ -96946,6 +96889,24 @@ try {
         "type": "bar",
         "cornerRadiusEnd": 1
       },
+      "layer": [{
+        "mark": 'bar'
+      }, {
+        "mark": {
+          "type": "text",
+          "align": "center",
+          "baseline": "line-bottom"
+        },
+        "encoding": {
+          "text": {
+            "field": "Hits",
+            "type": "quantitative",
+            "axis": {
+              "labelAngle": 90
+            }
+          }
+        }
+      }],
       "encoding": {
         "x": {
           "field": "franchise",
@@ -96967,7 +96928,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28,
+          lineNumber: 40,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -96975,21 +96936,21 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29,
+          lineNumber: 41,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30,
+          lineNumber: 42,
           columnNumber: 17
         }
       }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31,
+          lineNumber: 43,
           columnNumber: 17
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("p", {
@@ -96997,7 +96958,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33,
+          lineNumber: 45,
           columnNumber: 13
         }
       }, "This visualization was fun to look at knowing that it was a very historic season for a handful of mariner players in regards to hits. Seeing that they let the league in hits made a lot of sense in comparison to the other charts that we were looking at. Hits result in RBI's, Homeruns, Wins, and the general score!"), /*#__PURE__*/_reactDefault.default.createElement("p", {
@@ -97005,7 +96966,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37,
+          lineNumber: 49,
           columnNumber: 13
         }
       }, "I was surprised to see how yet again the Arizona Diamondbacks were lumped in the average group of total hits for the season even though they won the whole thing."))
@@ -97056,6 +97017,21 @@ try {
         "type": "bar",
         "cornerRadiusEnd": 1
       },
+      "layer": [{
+        "mark": 'bar'
+      }, {
+        "mark": {
+          "type": "text",
+          "align": "center",
+          "baseline": "line-bottom"
+        },
+        "encoding": {
+          "text": {
+            "field": "RBIs",
+            "type": "quantitative"
+          }
+        }
+      }],
       "encoding": {
         "x": {
           "field": "Franchise",
@@ -97078,7 +97054,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29,
+          lineNumber: 41,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -97086,21 +97062,21 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30,
+          lineNumber: 42,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31,
+          lineNumber: 43,
           columnNumber: 17
         }
       }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32,
+          lineNumber: 44,
           columnNumber: 17
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("p", {
@@ -97108,7 +97084,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34,
+          lineNumber: 46,
           columnNumber: 13
         }
       }, "This visualization was surprising in the fact that the New York Yankees were very high in the RBI's compared to hits and Homeruns. Meaing that they were scoring runs efficiently via walks or past balls."))
@@ -97159,6 +97135,24 @@ try {
         "type": "bar",
         "cornerRadiusEnd": 1
       },
+      "layer": [{
+        "mark": 'bar'
+      }, {
+        "mark": {
+          "type": "text",
+          "align": "center",
+          "baseline": "line-bottom"
+        },
+        "encoding": {
+          "text": {
+            "field": "Homeruns",
+            "type": "quantitative",
+            "axis": {
+              "labelAngle": -90
+            }
+          }
+        }
+      }],
       "encoding": {
         "x": {
           "field": "Franchise",
@@ -97180,7 +97174,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27,
+          lineNumber: 39,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -97188,21 +97182,21 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28,
+          lineNumber: 40,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29,
+          lineNumber: 41,
           columnNumber: 17
         }
       }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30,
+          lineNumber: 42,
           columnNumber: 17
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("p", {
@@ -97210,7 +97204,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32,
+          lineNumber: 44,
           columnNumber: 13
         }
       }, "This visualization was surprising to see that the San Fransisco Giants led the league by a landslide for homeruns throughout the entire season even though they had a very insiginicant season as a whole."))
@@ -97261,6 +97255,24 @@ try {
         "type": "bar",
         "cornerRadiusEnd": 1
       },
+      "layer": [{
+        "mark": 'bar'
+      }, {
+        "mark": {
+          "type": "text",
+          "align": "center",
+          "baseline": "line-bottom"
+        },
+        "encoding": {
+          "text": {
+            "field": "TeamPricePerHomerun",
+            "type": "quantitative",
+            "axis": {
+              "labelAngle": -90
+            }
+          }
+        }
+      }],
       "encoding": {
         "x": {
           "field": "Franchise",
@@ -97293,7 +97305,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41,
+          lineNumber: 53,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -97301,21 +97313,21 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42,
+          lineNumber: 54,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43,
+          lineNumber: 55,
           columnNumber: 17
         }
       }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44,
+          lineNumber: 56,
           columnNumber: 17
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("p", {
@@ -97323,7 +97335,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46,
+          lineNumber: 58,
           columnNumber: 13
         }
       }, "Again, this makes a lot of sense knowing that the teams that pay the most for their players are in result still paying proportitely more for each of their hits and Homeruns that they are getting during the season. This just goes to show that the success within the MLB league is significantly biased towards programs that are capable of shelling out more money than other programs who don't have as much money to spend on players."))
@@ -97577,6 +97589,21 @@ try {
         "type": "bar",
         "cornerRadiusEnd": 1
       },
+      "layer": [{
+        "mark": 'bar'
+      }, {
+        "mark": {
+          "type": "text",
+          "align": "center",
+          "baseline": "line-bottom"
+        },
+        "encoding": {
+          "text": {
+            "field": "NumStrikeouts",
+            "type": "quantitative"
+          }
+        }
+      }],
       "encoding": {
         "x": {
           "field": "Franchise",
@@ -97598,7 +97625,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28,
+          lineNumber: 40,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -97606,21 +97633,21 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29,
+          lineNumber: 41,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30,
+          lineNumber: 42,
           columnNumber: 17
         }
       }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31,
+          lineNumber: 43,
           columnNumber: 17
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("p", {
@@ -97628,7 +97655,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33,
+          lineNumber: 45,
           columnNumber: 13
         }
       }, "Teams that get more hits, and more at bats, will also have more strikeouts due to the fact that they have more opportunites to do something at the plate."))
@@ -97820,32 +97847,32 @@ try {
             lineNumber: 17,
             columnNumber: 17
           }
-        }, "Using Tableau for the initial data loading and transformation was very obnoxious because working with the graphical user interface on their application was SOOOOO much easier than physically coding in the visualisations that I was interested in displaying using VEGA. While I chose to use VEGA for this assignment, I started out working with D3 as well and could see the appeal to that library program as well."), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        }, "Using Tableau for the initial data loading and transformation was very obnoxious because working with the graphical user interface on their application was SOOOOO much easier than physically coding in the visualisations that I was interested in displaying using VEGA. While I chose to use VEGA for this assignment, I started out working with D3 as well and could see the appeal to that library program as well. I also think that I went about the assignment completely wrong, but by the time I figured this out I was way too deep into it. I simply altered the CSV files themselves for the queries rather than performing the queries with in the JS application itself. While this may have been wrong, it could have helped the runtime of the application significantly. This is also a huge learning experience for me since I am aware of the tools and features that will help me complete the transformations and queries within the VegaLite or D3 library itself."), /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22,
+            lineNumber: 25,
             columnNumber: 17
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23,
+            lineNumber: 26,
             columnNumber: 17
           }
         }, "I also figured out at the end of the assignment, that the data sets that I was using was also very redundant. I could have easily created one main data set with all of the columns that I loaded into multiple different csv files."), /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27,
+            lineNumber: 30,
             columnNumber: 17
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28,
+            lineNumber: 31,
             columnNumber: 17
           }
         }, "All in all, this was a very interesting assignment to work on and helped me get acquanted with the coding programs that are used for visualizing data in the web interfaces we are using every day."))

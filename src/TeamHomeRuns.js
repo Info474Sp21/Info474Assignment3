@@ -17,6 +17,18 @@ function TeamHomerunsVisual() {
         "height": "400",
         "data": {"values": data},
         "mark": {"type": "bar", "cornerRadiusEnd": 1},
+        "layer": [{
+            "mark": 'bar'
+          },
+          { "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "line-bottom",
+          },
+            "encoding": {
+              "text": {"field": "Homeruns", "type": "quantitative", "axis": {"labelAngle": -90}}
+            }
+        }],
         "encoding": {
             "x": {"field": "Franchise", "type": "nominal", "axis": {"labelAngle": -90}},
             "y": {"field": "Homeruns", "type": "quantitative"}

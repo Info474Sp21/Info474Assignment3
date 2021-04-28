@@ -17,6 +17,18 @@ function TeamHitsVisual() {
         "height": "400",
         "data": {"values": data},
         "mark": {"type": "bar", "cornerRadiusEnd": 1},
+        "layer": [{
+            "mark": 'bar'
+          },
+          { "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "line-bottom",
+          },
+            "encoding": {
+              "text": {"field": "Hits", "type": "quantitative", "axis": {"labelAngle": 90}}
+            }
+        }],
         "encoding": {
             "x": {"field": "franchise", "type": "nominal", "axis": {"labelAngle": -90}},
             "y": {"field": "Hits", "type": "quantitative"}

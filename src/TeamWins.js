@@ -27,45 +27,18 @@ function TeamWinsVisual() {
             }
           ],
         "mark": {"type": "bar", "cornerRadiusEnd": 1},
-        "marks": [
-            {
-              "type": "rect",
-              "from": {"data":"table"},
-              "encode": {
-                "enter": {
-                  "x": {"scale": "xscale", "field": "Franchise"},
-                  "width": {"scale": "xscale", "band": 1},
-                  "y": {"scale": "yscale", "field": "Wins"},
-                  "y2": {"scale": "yscale", "value": 0}
-                },
-                "update": {
-                  "fill": {"value": "steelblue"}
-                },
-                "hover": {
-                  "fill": {"value": "red"}
-                }
-              }
-            },
-            {
+        "layer": [{
+            "mark": 'bar'
+          },
+          { "mark": {
               "type": "text",
-              "encode": {
-                "enter": {
-                  "align": {"value": "center"},
-                  "baseline": {"value": "bottom"},
-                  "fill": {"value": "#333"}
-                },
-                "update": {
-                  "x": {"scale": "xscale", "signal": "tooltip.Franchise", "band": 0.5},
-                  "y": {"scale": "yscale", "signal": "tooltip.Wins", "offset": -2},
-                  "text": {"signal": "tooltip.Wins"},
-                  "fillOpacity": [
-                    {"test": "datum === tooltip", "value": 0},
-                    {"value": 1}
-                  ]
-                }
-              }
+              "align": "center",
+              "baseline": "line-bottom",
+          },
+            "encoding": {
+              "text": {"field": "Wins", "type": "quantitative"}
             }
-        ],
+        }],
         "encoding": {
             "x": {"field": "Franchise", "type": "nominal", "axis": {"labelAngle": -90}},
             "y": {"field": "Wins", "type": "quantitative"}

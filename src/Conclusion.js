@@ -17,7 +17,10 @@ export default class Conclusion extends Component {
                 <p>
                     Using Tableau for the initial data loading and transformation was very obnoxious because working with the graphical user interface on their application
                     was SOOOOO much easier than physically coding in the visualisations that I was interested in displaying using VEGA. While I chose to use VEGA for this assignment,
-                    I started out working with D3 as well and could see the appeal to that library program as well.
+                    I started out working with D3 as well and could see the appeal to that library program as well. I also think that I went about the assignment completely wrong, but by the time I
+                    figured this out I was way too deep into it. I simply altered the CSV files themselves for the queries rather than performing the queries with in the JS application itself.
+                    While this may have been wrong, it could have helped the runtime of the application significantly. This is also a huge learning experience for me since I am aware of the tools and 
+                    features that will help me complete the transformations and queries within the VegaLite or D3 library itself.
                 </p>
                 <br></br>
                 <p>
