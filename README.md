@@ -1,5 +1,5 @@
 # Info474Assignment3
-### Clayton Novotney, Kelson Flint,  Olivia
+### Clayton Novotney, Kelson Flint,  Olivia Victorino, Zhan Wu
 Interactive Data Analysis
 For this assignment, you will explore the issues involved in implementing interactive visualizations. You will build a visualization that enables interactive exploration of a dataset of your own choosing and deploy it on the web.
 

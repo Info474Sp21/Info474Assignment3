@@ -10,24 +10,24 @@
     "vega-lite-api": "^5.0.0",
     "vega-tooltip": "^0.25.1"
   },
-  "name": "Info474Assignment2",
+  "name": "Info474Assignment3",
   "description": "",
   "version": "1.0.0",
   "main": "dist/index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --public-url https://cnovotn.github.io/Info474Assignment2/; rm -rf docs; mv dist docs;",
+    "build": "parcel build index.html --public-url https://info474sp21.github.io/Info474Assignment3/; rm -rf docs; mv dist docs;",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cnovotn/Info474Assignment2.git"
+    "url": "git+https://github.com/Info474Sp21/Info474Assignment3.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Cnovotn/Info474Assignment2/issues"
+    "url": "https://github.com/Info474Sp21/Info474Assignment3.git/issues"
   },
-  "homepage": "https://github.com/Cnovotn/Info474Assignment2#readme"
+  "homepage": "https://github.com/Info474Sp21/Info474Assignment3.git#readme"
 }

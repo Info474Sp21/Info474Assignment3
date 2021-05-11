@@ -1054,7 +1054,7 @@ try {
   var _reactDomDefault = _parcelHelpers.interopDefault(_reactDom);
   var _App = require("./App");
   var _AppDefault = _parcelHelpers.interopDefault(_App);
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/index.js";
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/index.js";
   _reactDomDefault.default.render(/*#__PURE__*/_reactDefault.default.createElement(_AppDefault.default, {
     __self: undefined,
     __source: {
@@ -26294,7 +26294,7 @@ try {
   var _ConclusionDefault = _parcelHelpers.interopDefault(_Conclusion);
   var _TestingGraphic = require("./TestingGraphic");
   var _TestingGraphicDefault = _parcelHelpers.interopDefault(_TestingGraphic);
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/App.js", _s = $RefreshSig$();
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/App.js", _s = $RefreshSig$();
   const App = () => {
     _s();
     const comps = [/*#__PURE__*/_reactDefault.default.createElement(_TeamWinsDefault.default, {
@@ -26473,7 +26473,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./TeamWins":"5RpWr","./TeamSalary":"20ZRJ","./TeamHits":"5yr6L","./TeamRBIS":"4hkd9","./TeamHomeRuns":"65Czg","./TeamPricePerHomerun":"6DbgG","./Intro":"6WOVi","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./TeamStrikeouts":"46A44","./TeamPricePerHit":"5vH7E","./Conclusion":"6ORwS","./TestingGraphic":"4tWYM"}],"5RpWr":[function(require,module,exports) {
+},{"react":"3b2NM","./TeamWins":"5RpWr","./TeamSalary":"20ZRJ","./TeamHits":"5yr6L","./TeamPricePerHit":"5vH7E","./TeamRBIS":"4hkd9","./TeamHomeRuns":"65Czg","./TeamPricePerHomerun":"6DbgG","./TeamStrikeouts":"46A44","./Intro":"6WOVi","./Conclusion":"6ORwS","./TestingGraphic":"4tWYM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5RpWr":[function(require,module,exports) {
 var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -26487,7 +26487,7 @@ try {
   var _hooksUseFetch = require("../hooks/useFetch");
   var _vegaEmbed = require('vega-embed');
   var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TeamWins.js", _s = $RefreshSig$();
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/TeamWins.js", _s = $RefreshSig$();
   function TeamWinsVisual() {
     _s();
     const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchiseBasedData.csv';
@@ -96787,7 +96787,7 @@ try {
   var _hooksUseFetch = require("../hooks/useFetch");
   var _vegaEmbed = require('vega-embed');
   var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TeamSalary.js", _s = $RefreshSig$();
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/TeamSalary.js", _s = $RefreshSig$();
   function TeamSalaryVisual() {
     _s();
     const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/FranchiseSalary.csv';
@@ -96891,7 +96891,7 @@ try {
   var _hooksUseFetch = require("../hooks/useFetch");
   var _vegaEmbed = require('vega-embed');
   var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TeamHits.js", _s = $RefreshSig$();
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/TeamHits.js", _s = $RefreshSig$();
   function TeamHitsVisual() {
     _s();
     const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchise-hits-data--info474-QueryResult.csv';
@@ -97005,6 +97005,119 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
+},{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"5vH7E":[function(require,module,exports) {
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('./style.css');
+  var _hooksUseFetch = require("../hooks/useFetch");
+  var _vegaEmbed = require('vega-embed');
+  var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/TeamPricePerHit.js", _s = $RefreshSig$();
+  function TeamPricePerHitVisual() {
+    _s();
+    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchise-salaryhits-info474-QueryResult.csv';
+    const [data, loading] = _hooksUseFetch.useFetch(githubDataURL);
+    var vegaVariables = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "description": "A simple bar chart looking at all of the MLB franchises salary for 2001.",
+      "title": "2001 Salary / Hits Per Franchise",
+      "width": screen.width / 1.5,
+      "height": "400",
+      "data": {
+        "values": data
+      },
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 1
+      },
+      "encoding": {
+        "x": {
+          "field": "Franchise",
+          "type": "nominal",
+          "axis": {
+            "labelAngle": -90
+          }
+        },
+        "y": {
+          "field": "TeamPricePerHit",
+          "type": "quantitative"
+        }
+      },
+      "signals": [{
+        "name": "tooltip",
+        "value": {},
+        "on": [{
+          "events": "rect:mouseover",
+          "update": "datum"
+        }, {
+          "events": "rect:mouseout",
+          "update": "{}"
+        }]
+      }]
+    };
+    _vegaEmbedDefault.default('#team-price-hit', vegaVariables);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "centered",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        id: "team-price-hit",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43,
+          columnNumber: 17
+        }
+      }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44,
+          columnNumber: 17
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "vis-description",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46,
+          columnNumber: 13
+        }
+      }, "Knowing that the LA Dodgers and New York Yankees are the highest Salaried teams, this makes a lot of sense that they are paying the most per hit."))
+    );
+  }
+  _s(TeamPricePerHitVisual, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
+    return [_hooksUseFetch.useFetch];
+  });
+  _c = TeamPricePerHitVisual;
+  exports.default = TeamPricePerHitVisual;
+  var _c;
+  $RefreshReg$(_c, "TeamPricePerHitVisual");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
 },{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"4hkd9":[function(require,module,exports) {
 var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
@@ -97019,7 +97132,7 @@ try {
   var _hooksUseFetch = require("../hooks/useFetch");
   var _vegaEmbed = require('vega-embed');
   var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TeamRBIS.js", _s = $RefreshSig$();
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/TeamRBIS.js", _s = $RefreshSig$();
   function TeamRBIsVisual() {
     _s();
     const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchise-rbis-data--info474-QueryResult.csv';
@@ -97137,7 +97250,7 @@ try {
   var _hooksUseFetch = require("../hooks/useFetch");
   var _vegaEmbed = require('vega-embed');
   var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TeamHomeRuns.js", _s = $RefreshSig$();
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/TeamHomeRuns.js", _s = $RefreshSig$();
   function TeamHomerunsVisual() {
     _s();
     const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchise-homeruns-d-info474-QueryResult.csv';
@@ -97257,7 +97370,7 @@ try {
   var _hooksUseFetch = require("../hooks/useFetch");
   var _vegaEmbed = require('vega-embed');
   var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TeamPricePerHomerun.js", _s = $RefreshSig$();
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/TeamPricePerHomerun.js", _s = $RefreshSig$();
   function TeamPricePerHomerunVisual() {
     _s();
     const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchise-salary-per-info474-QueryResult.csv';
@@ -97374,6 +97487,123 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
+},{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"46A44":[function(require,module,exports) {
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('./style.css');
+  var _hooksUseFetch = require("../hooks/useFetch");
+  var _vegaEmbed = require('vega-embed');
+  var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/TeamStrikeouts.js", _s = $RefreshSig$();
+  function TeamStrikeoutVisual() {
+    _s();
+    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchisestrikeouts-info474-QueryResult.csv';
+    const [data, loading] = _hooksUseFetch.useFetch(githubDataURL);
+    var vegaVariables = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "description": "A simple bar chart looking at all of the MLB franchises salary for 2001.",
+      "title": "2001 Total Strikeouts Per MLB Franchise",
+      "width": screen.width / 1.5,
+      "height": "400",
+      "data": {
+        "values": data
+      },
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 1
+      },
+      "layer": [{
+        "mark": 'bar'
+      }, {
+        "mark": {
+          "type": "text",
+          "align": "center",
+          "baseline": "line-bottom"
+        },
+        "encoding": {
+          "text": {
+            "field": "NumStrikeouts",
+            "type": "quantitative"
+          }
+        }
+      }],
+      "encoding": {
+        "x": {
+          "field": "Franchise",
+          "type": "nominal",
+          "axis": {
+            "labelAngle": -90
+          }
+        },
+        "y": {
+          "field": "NumStrikeouts",
+          "type": "quantitative"
+        }
+      }
+    };
+    _vegaEmbedDefault.default('#team-strikeouts', vegaVariables);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "centered",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        id: "team-strikeouts",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42,
+          columnNumber: 17
+        }
+      }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43,
+          columnNumber: 17
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        className: "vis-description",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45,
+          columnNumber: 13
+        }
+      }, "Teams that get more hits, and more at bats, will also have more strikeouts due to the fact that they have more opportunites to do something at the plate."))
+    );
+  }
+  _s(TeamStrikeoutVisual, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
+    return [_hooksUseFetch.useFetch];
+  });
+  _c = TeamStrikeoutVisual;
+  exports.default = TeamStrikeoutVisual;
+  var _c;
+  $RefreshReg$(_c, "TeamStrikeoutVisual");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
 },{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"6WOVi":[function(require,module,exports) {
 var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
@@ -97387,7 +97617,7 @@ try {
   require('./style.css');
   var _BigGraphic = require("./BigGraphic");
   var _BigGraphicDefault = _parcelHelpers.interopDefault(_BigGraphic);
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/Intro.js";
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/Intro.js";
   class Intro extends _react.Component {
     render() {
       return (
@@ -97586,7 +97816,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./style.css":"6eQIz","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./BigGraphic":"6af82"}],"6eQIz":[function() {},{}],"6af82":[function(require,module,exports) {
+},{"react":"3b2NM","./style.css":"6eQIz","./BigGraphic":"6af82","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"6af82":[function(require,module,exports) {
 var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -97600,7 +97830,7 @@ try {
   var _hooksUseFetch = require("../hooks/useFetch");
   var _vegaEmbed = require('vega-embed');
   var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/BigGraphic.js", _s = $RefreshSig$();
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/BigGraphic.js", _s = $RefreshSig$();
   function BigGraphic() {
     _s();
     const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchiseBasedData.csv';
@@ -97733,236 +97963,6 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"46A44":[function(require,module,exports) {
-var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require('react');
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  require('./style.css');
-  var _hooksUseFetch = require("../hooks/useFetch");
-  var _vegaEmbed = require('vega-embed');
-  var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TeamStrikeouts.js", _s = $RefreshSig$();
-  function TeamStrikeoutVisual() {
-    _s();
-    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchisestrikeouts-info474-QueryResult.csv';
-    const [data, loading] = _hooksUseFetch.useFetch(githubDataURL);
-    var vegaVariables = {
-      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-      "description": "A simple bar chart looking at all of the MLB franchises salary for 2001.",
-      "title": "2001 Total Strikeouts Per MLB Franchise",
-      "width": screen.width / 1.5,
-      "height": "400",
-      "data": {
-        "values": data
-      },
-      "mark": {
-        "type": "bar",
-        "cornerRadiusEnd": 1
-      },
-      "layer": [{
-        "mark": 'bar'
-      }, {
-        "mark": {
-          "type": "text",
-          "align": "center",
-          "baseline": "line-bottom"
-        },
-        "encoding": {
-          "text": {
-            "field": "NumStrikeouts",
-            "type": "quantitative"
-          }
-        }
-      }],
-      "encoding": {
-        "x": {
-          "field": "Franchise",
-          "type": "nominal",
-          "axis": {
-            "labelAngle": -90
-          }
-        },
-        "y": {
-          "field": "NumStrikeouts",
-          "type": "quantitative"
-        }
-      }
-    };
-    _vegaEmbedDefault.default('#team-strikeouts', vegaVariables);
-    return (
-      /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "centered",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        id: "team-strikeouts",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 41,
-          columnNumber: 13
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("p", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 42,
-          columnNumber: 17
-        }
-      }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 43,
-          columnNumber: 17
-        }
-      })), /*#__PURE__*/_reactDefault.default.createElement("p", {
-        className: "vis-description",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 45,
-          columnNumber: 13
-        }
-      }, "Teams that get more hits, and more at bats, will also have more strikeouts due to the fact that they have more opportunites to do something at the plate."))
-    );
-  }
-  _s(TeamStrikeoutVisual, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
-    return [_hooksUseFetch.useFetch];
-  });
-  _c = TeamStrikeoutVisual;
-  exports.default = TeamStrikeoutVisual;
-  var _c;
-  $RefreshReg$(_c, "TeamStrikeoutVisual");
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"5vH7E":[function(require,module,exports) {
-var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require('react');
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  require('./style.css');
-  var _hooksUseFetch = require("../hooks/useFetch");
-  var _vegaEmbed = require('vega-embed');
-  var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TeamPricePerHit.js", _s = $RefreshSig$();
-  function TeamPricePerHitVisual() {
-    _s();
-    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchise-salaryhits-info474-QueryResult.csv';
-    const [data, loading] = _hooksUseFetch.useFetch(githubDataURL);
-    var vegaVariables = {
-      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-      "description": "A simple bar chart looking at all of the MLB franchises salary for 2001.",
-      "title": "2001 Salary / Hits Per Franchise",
-      "width": screen.width / 1.5,
-      "height": "400",
-      "data": {
-        "values": data
-      },
-      "mark": {
-        "type": "bar",
-        "cornerRadiusEnd": 1
-      },
-      "encoding": {
-        "x": {
-          "field": "Franchise",
-          "type": "nominal",
-          "axis": {
-            "labelAngle": -90
-          }
-        },
-        "y": {
-          "field": "TeamPricePerHit",
-          "type": "quantitative"
-        }
-      },
-      "signals": [{
-        "name": "tooltip",
-        "value": {},
-        "on": [{
-          "events": "rect:mouseover",
-          "update": "datum"
-        }, {
-          "events": "rect:mouseout",
-          "update": "{}"
-        }]
-      }]
-    };
-    _vegaEmbedDefault.default('#team-price-hit', vegaVariables);
-    return (
-      /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "centered",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 41,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        id: "team-price-hit",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 42,
-          columnNumber: 13
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("p", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 43,
-          columnNumber: 17
-        }
-      }, loading && "Loading the data!!!"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 44,
-          columnNumber: 17
-        }
-      })), /*#__PURE__*/_reactDefault.default.createElement("p", {
-        className: "vis-description",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 46,
-          columnNumber: 13
-        }
-      }, "Knowing that the LA Dodgers and New York Yankees are the highest Salaried teams, this makes a lot of sense that they are paying the most per hit."))
-    );
-  }
-  _s(TeamPricePerHitVisual, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
-    return [_hooksUseFetch.useFetch];
-  });
-  _c = TeamPricePerHitVisual;
-  exports.default = TeamPricePerHitVisual;
-  var _c;
-  $RefreshReg$(_c, "TeamPricePerHitVisual");
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
 },{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"6ORwS":[function(require,module,exports) {
 var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
@@ -97974,7 +97974,7 @@ try {
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   require('./style.css');
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/Conclusion.js";
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/Conclusion.js";
   class Conclusion extends _react.Component {
     render() {
       return (
@@ -98076,7 +98076,7 @@ try {
   var _hooksUseFetch = require("../hooks/useFetch");
   var _vegaEmbed = require('vega-embed');
   var _vegaEmbedDefault = _parcelHelpers.interopDefault(_vegaEmbed);
-  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Assignment2/Info474Assignment2/src/TestingGraphic.js", _s = $RefreshSig$();
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/TestingGraphic.js", _s = $RefreshSig$();
   function TestingGraphic() {
     _s();
     const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchiseBasedData.csv';
@@ -98273,6 +98273,6 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}]},["1j6wU","3Imd1","5rkFb"], "5rkFb", "parcelRequire8ca7")
+},{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}]},["1j6wU","3Imd1","5rkFb"], "5rkFb", "parcelRequire96b1")
 
 //# sourceMappingURL=index.3fafb3e2.js.map
