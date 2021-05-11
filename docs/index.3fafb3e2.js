@@ -26276,6 +26276,7 @@ try {
   var _TeamWinsDefault = _parcelHelpers.interopDefault(_TeamWins);
   var _Intro = require("./Intro");
   var _IntroDefault = _parcelHelpers.interopDefault(_Intro);
+  require("./D3Testing");
   var _Conclusion = require('./Conclusion');
   var _ConclusionDefault = _parcelHelpers.interopDefault(_Conclusion);
   var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/App.js";
@@ -26287,44 +26288,36 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9,
+          lineNumber: 10,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_IntroDefault.default, {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10,
-          columnNumber: 13
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "flexed",
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 11,
           columnNumber: 13
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "data-center",
+      }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "flexed data-center",
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 12,
-          columnNumber: 17
+          columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_TeamWinsDefault.default, {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 13,
-          columnNumber: 21
+          columnNumber: 17
         }
-      }))), /*#__PURE__*/_reactDefault.default.createElement(_ConclusionDefault.default, {
+      })), /*#__PURE__*/_reactDefault.default.createElement(_ConclusionDefault.default, {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16,
+          lineNumber: 15,
           columnNumber: 13
         }
       }))
@@ -26340,7 +26333,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./TeamWins":"5RpWr","./Intro":"6WOVi","./Conclusion":"6ORwS","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5RpWr":[function(require,module,exports) {
+},{"react":"3b2NM","./TeamWins":"5RpWr","./Intro":"6WOVi","./D3Testing":"5xSXI","./Conclusion":"6ORwS","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5RpWr":[function(require,module,exports) {
 var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -96653,6 +96646,8 @@ try {
   require('./style.css');
   var _BigGraphic = require("./BigGraphic");
   var _BigGraphicDefault = _parcelHelpers.interopDefault(_BigGraphic);
+  var _D3Testing = require("./D3Testing");
+  var _D3TestingDefault = _parcelHelpers.interopDefault(_D3Testing);
   var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/Intro.js";
   class Intro extends _react.Component {
     render() {
@@ -96661,28 +96656,28 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 8,
+            lineNumber: 9,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 9,
+            lineNumber: 10,
             columnNumber: 17
           }
         }, "Info 474"), /*#__PURE__*/_reactDefault.default.createElement("h3", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 10,
+            lineNumber: 11,
             columnNumber: 17
           }
         }, "May 1th, 2021"), /*#__PURE__*/_reactDefault.default.createElement("h3", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 11,
+            lineNumber: 12,
             columnNumber: 17
           }
         }, "Clayton Novotney, Kelson Flint, Olivia Victorino, Zhan Wu"), /*#__PURE__*/_reactDefault.default.createElement("h1", {
@@ -96690,28 +96685,28 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 12,
+            lineNumber: 13,
             columnNumber: 17
           }
         }, "Interactive Data Visualization, Assignment 3"), /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 13,
+            lineNumber: 14,
             columnNumber: 17
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("h2", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 14,
+            lineNumber: 15,
             columnNumber: 17
           }
         }, "Step 1: Data Selection"), /*#__PURE__*/_reactDefault.default.createElement("h4", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 15,
+            lineNumber: 16,
             columnNumber: 17
           }
         }, "Data Selected: Spotify Music Data from ", /*#__PURE__*/_reactDefault.default.createElement("a", {
@@ -96719,175 +96714,182 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 15,
+            lineNumber: 16,
             columnNumber: 60
           }
         }, "Kaggle.com")), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 16,
+            lineNumber: 17,
             columnNumber: 17
           }
         }, "From this particular website, there were 7 different CSV files that we were able to choice from with different information being stored in each one."), /*#__PURE__*/_reactDefault.default.createElement("ul", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 17,
+            lineNumber: 18,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("li", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 18,
+            lineNumber: 19,
             columnNumber: 21
           }
         }, "artists.csv"), /*#__PURE__*/_reactDefault.default.createElement("li", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 19,
+            lineNumber: 20,
             columnNumber: 21
           }
         }, "data_by_artist_o.csv"), /*#__PURE__*/_reactDefault.default.createElement("li", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20,
+            lineNumber: 21,
             columnNumber: 21
           }
         }, "data_by_genres_0.csv"), /*#__PURE__*/_reactDefault.default.createElement("li", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21,
+            lineNumber: 22,
             columnNumber: 21
           }
         }, "data_by_year_o.csv"), /*#__PURE__*/_reactDefault.default.createElement("li", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22,
+            lineNumber: 23,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("b", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22,
+            lineNumber: 23,
             columnNumber: 25
           }
         }, "data_o.csv")), /*#__PURE__*/_reactDefault.default.createElement("li", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23,
+            lineNumber: 24,
             columnNumber: 21
           }
         }, "dict_artists.json"), /*#__PURE__*/_reactDefault.default.createElement("li", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24,
+            lineNumber: 25,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("b", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24,
+            lineNumber: 25,
             columnNumber: 25
           }
         }, "tracks.csv"))), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26,
+            lineNumber: 27,
             columnNumber: 17
           }
         }, "Looking at all of the different csv files, we found that we were most interested in the data_o.csv and tracks.csv files since they had the most unique information that we believe we could work with"), /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27,
-            columnNumber: 17
-          }
-        }), /*#__PURE__*/_reactDefault.default.createElement("p", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
             lineNumber: 28,
             columnNumber: 17
           }
-        }, "The columns we are most interested in for the data_o.csv (28.44 MB) file are:"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        }), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 29,
             columnNumber: 17
           }
-        }, "valence (positivity), year (Year), acousticness (How Acoustic the song is), artists (array of artists contributed), danceability (how suitable the song is for dancing), duration (time duration of song in ms), energy (how energetic the song is), instrumentalness (ratio of instrumental sounds)"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        }, "The columns we are most interested in for the data_o.csv (28.44 MB) file are:"), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 33,
+            lineNumber: 30,
             columnNumber: 17
           }
-        }), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        }, "valence (positivity), year (Year), acousticness (How Acoustic the song is), artists (array of artists contributed), danceability (how suitable the song is for dancing), duration (time duration of song in ms), energy (how energetic the song is), instrumentalness (ratio of instrumental sounds)"), /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 34,
             columnNumber: 17
           }
-        }, "The columns we are most interested in for the tracks.csv (106.21 MB) file are:"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        }), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 35,
             columnNumber: 17
           }
-        }, "id (id of track), name (name of track), popularity (popularity of track), duration_ms (time duration of track in ms), explicit (whether it contains explicit (1) content or not (0)), artists (artists contributed to the track), id_artists (id of artists contributed to the track), release_date (the release date of the album containing this track), dancibility (how suitable the track is for dancing, 0(not danceable)->1(very danceable)), energy (how energetic the track is, 0(less energetic)->1(very energetic))"), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        }, "The columns we are most interested in for the tracks.csv (106.21 MB) file are:"), /*#__PURE__*/_reactDefault.default.createElement("p", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 40,
+            lineNumber: 36,
             columnNumber: 17
           }
-        }), /*#__PURE__*/_reactDefault.default.createElement("h4", {
+        }, "id (id of track), name (name of track), popularity (popularity of track), duration_ms (time duration of track in ms), explicit (whether it contains explicit (1) content or not (0)), artists (artists contributed to the track), id_artists (id of artists contributed to the track), release_date (the release date of the album containing this track), dancibility (how suitable the track is for dancing, 0(not danceable)->1(very danceable)), energy (how energetic the track is, 0(less energetic)->1(very energetic))"), /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 41,
             columnNumber: 17
           }
-        }, "Questions: "), /*#__PURE__*/_reactDefault.default.createElement("br", {
+        }), /*#__PURE__*/_reactDefault.default.createElement("h4", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 42,
             columnNumber: 17
           }
-        }), /*#__PURE__*/_reactDefault.default.createElement(_BigGraphicDefault.default, {
+        }, "Questions: "), /*#__PURE__*/_reactDefault.default.createElement(_D3TestingDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 43,
             columnNumber: 17
           }
-        }), /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        }), /*#__PURE__*/_reactDefault.default.createElement("br", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 44,
             columnNumber: 17
           }
-        }, "Step 2: Interactive Data Visualization"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        }), /*#__PURE__*/_reactDefault.default.createElement(_BigGraphicDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 45,
+            columnNumber: 17
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("h2", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 46,
+            columnNumber: 17
+          }
+        }, "Step 2: Interactive Data Visualization"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 47,
             columnNumber: 17
           }
         }, "We got my data from a website called ", /*#__PURE__*/_reactDefault.default.createElement("a", {
@@ -96895,7 +96897,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 46,
+            lineNumber: 48,
             columnNumber: 58
           }
         }, "Kaggle.com"), " and were able to execute certain SQL queries on the data set that was given."))
@@ -96909,7 +96911,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./style.css":"6eQIz","./BigGraphic":"6af82","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"6af82":[function(require,module,exports) {
+},{"react":"3b2NM","./style.css":"6eQIz","./BigGraphic":"6af82","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./D3Testing":"5xSXI"}],"6eQIz":[function() {},{}],"6af82":[function(require,module,exports) {
 var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -97056,7 +97058,56 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"6ORwS":[function(require,module,exports) {
+},{"react":"3b2NM","./style.css":"6eQIz","../hooks/useFetch":"2cpmb","vega-embed":"4V7Ot","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"5xSXI":[function(require,module,exports) {
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('./style.css');
+  var _hooksUseFetch = require("../hooks/useFetch");
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/D3Testing.js", _s = $RefreshSig$();
+  function D3Testing() {
+    _s();
+    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchiseBasedData.csv';
+    const [data, loading] = _hooksUseFetch.useFetch(githubDataURL);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        className: "centered",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12,
+          columnNumber: 13
+        }
+      }, "Testing D3 Implementation"))
+    );
+  }
+  _s(D3Testing, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
+    return [_hooksUseFetch.useFetch];
+  });
+  _c = D3Testing;
+  exports.default = D3Testing;
+  var _c;
+  $RefreshReg$(_c, "D3Testing");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","./style.css":"6eQIz","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../hooks/useFetch":"2cpmb"}],"6eQIz":[function() {},{}],"6ORwS":[function(require,module,exports) {
 var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

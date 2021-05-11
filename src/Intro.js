@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './style.css'
 import BigGraphic from "./BigGraphic"
+import D3Testing from "./D3Testing"
 
 export default class Intro extends Component {
     render() {
@@ -39,6 +40,7 @@ export default class Intro extends Component {
                 </p>
                 <br></br>
                 <h4>Questions: </h4>
+                <D3Testing/>
                 <br></br>
                 <BigGraphic/>
                 <h2>Step 2: Interactive Data Visualization</h2>
