@@ -13,6 +13,7 @@ const App = () => {
                 <TeamWinsVisual/>
             </div>
             <Conclusion/>
+            <D3Testing/>
         </div>
     );
 };
