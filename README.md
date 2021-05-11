@@ -1,43 +1,46 @@
-# Info474Assignment2
-Assignment 2: Exploratory Data Analysis
+# Info474Assignment3
+### Clayton Novotney, Kelson Flint,  Olivia
+Interactive Data Analysis
+For this assignment, you will explore the issues involved in implementing interactive visualizations. You will build a visualization that enables interactive exploration of a dataset of your own choosing and deploy it on the web.
 
-In this assignment, you will work with one of the three datasets of interest you have chosen, and perform an exploratory analysis to better understand the shape & structure of the data, investigate initial questions, and develop preliminary insights & hypotheses.
+You are encouraged to build on the work you've done in Assignment 2, but create a new section for this work (don't overwrite Assignment 2, leave it as a portfolio and grading artifact for the class. There are a few methods here: fork your repo and do this on a new GitHub pages URL, use the same GitHub pages URL and create a new section, or get fancy and use react router to create pages. 
 
-Your final submission will take the form of a report consisting of captioned visualizations that convey key insights gained during your analysis.
+One goal of this assignment is to gain familiarity implementing interaction techniques for visualizations. For example, the zipdecode (Links to an external site.) and NameVoyager (Links to an external site.) applications shown in class apply the interactive technique of dynamic queries to the problem of uncovering patterns in zip codes and baby names. We have seen many other examples of interactive visualization techniques in class and in the readings. The goal with this assignment is not only for you to gain hands-on implementation experience, but also for you to think about the effectiveness of the specific techniques for your chosen data domain.
 
-## Step 1: Data Selection
+One challenge is to scope the assignment so that you can finish it within two weeks. Focus on designing a limited yet compelling visualization that enables interactive exploration along a few critical dimensions. The NameVoyager (Links to an external site.) application is a nice example that uses a simple but elegant interaction design to enable engaging explorations. A tightly-focused, well-implemented interactive graphic is much preferred to a sprawling design that attempts too much!
 
-You've already picked three datasets that reflect a topic area of interest to you. To streamline this assignment and as a fallback, there are a number of pre-selected datasets included below for you to choose from if you prefer to use those instead, or if you run into serious trouble with data formats (too big, too small, too broken, etc).
+### Team Registration
+For this assignment you should work in teams of 3-5 students. You should attempt to find project partners that you will continue to work with for the final project, as the final project will build on your interactive visualization work.
 
-If you are concerned that your self-selected dataset may not work, you are free to check with Kevin or I to ensure it is appropriate for the course. Data collection and preparation (also known as data wrangling) can be a very tedious and time-consuming process. Be sure you have sufficient time to conduct exploratory analysis, after preparing the data.
+### Deliverables
+Design an interactive graphic aimed at enabling understanding of a compelling question for a dataset of your own choosing. In order to determine what subset of the data and which interactive options are most promising, you may want to perform additional exploratory analysis. What aspects of the data reveal the most interesting discoveries or stories? Do not feel obligated to try to convey everything about the data: focus on a compelling subset.
 
-After selecting a topic and dataset – but prior to analysis – you should write down an initial set of at least three questions you'd like to investigate.
+Your graphic must include interactions that enable exploration. Possible techniques include panning, zooming, brushing, details-on-demand (e.g., tooltips), dynamic query filters, and selecting different measures to display. You are free to also consider highlights, annotations, or other narrative features intended to draw attention to particular items of interest and provide additional context.
 
-## Step 2: Exploratory Visual Analysis
-You will perform an exploratory analysis of your dataset using browser based tools including D3, vega-lite, React, and SVG. You should consider two different phases of exploration.
+Implement your interactive graphic and deploy it to the web. We expect most students will use a combination of React & D3.js for this assignment. Your graphic should not require customized server-side support; you should simply load data from a static data file or public web API.
 
-In the first phase, you should seek to gain an overview of the shape & structure of your dataset. What variables does the dataset contain? How are they distributed? Are there any notable data quality issues? Are there any surprising relationships among the variables? Be sure to also perform "sanity checks" for patterns you expect to see!
+You should use GitHub pages to host your visualization (Links to an external site.) from your project repository. We recommend keeping everything (development files and website) in your main branch: either serve your website from the root folder or from the "/docs" folder. Your repo must also contain the (unobfuscated) source code for your visualization.
 
-In the second phase, you should investigate your initial questions, as well as any new questions that arise during your exploration. For each question, start by creating a visualization that might provide a useful answer. Then refine the visualization (by adding additional variables, changing sorting or axis scales, filtering or subsetting data, etc.) to develop better perspectives, explore unexpected observations, or sanity check your assumptions. You should repeat this process for each of your questions, but feel free to revise your questions or branch off to explore new questions if the data warrants.
+Your deployed webpage should also include a write-up with the following components:
 
-## Final Deliverable
-Your final submission should take the form of a sequence of data visualization graphics on a web page – similar to a slide show or comic book – that consists of 8 or more visualizations detailing your most important insights. Your "insights" can include important surprises or issues (such as data quality problems affecting your analysis) as well as responses to your analysis questions. You do not necessarily need to create 8 unique visualizations: you may repeat the same visualization with various captions highlighting different parts of the data, but your submission must include a minimum of 4 unique views of the data.
+- A rationale for your design decisions. How did you choose your particular visual encodings and interaction techniques? What alternatives did you consider and how did you arrive at your ultimate choices?
+- An overview of your development process. Describe how the work was split among the team members. Include a commentary on the development process, including answers to the following questions: Roughly how much time did you spend developing your application (in people-hours)? What aspects took the most time?
 
-Each visualization should be accompanied by a title and descriptive caption highlighting the insight(s) shown in that view, which correspond to an aspect of the visualization which is made prominent in some way. Provide sufficient detail such that anyone could read through your report and understand what you've learned without necessarily being familiar with that dataset. You should caption your visualizations to draw attention to specific features of the data. You must use the expressiveness of the SVG medium to call attention to the aspect of the visualization you are captioning. Examples of this will be provided in lecture.
+### Grading Criteria
+Projects that squarely meet the requirements for the assignment will receive a score of 9 (A). Going beyond the call of duty can net additional points, for example:
+- advanced interaction techniques
+- novel visualization elements
+- effective multi-view coordination
+- thoughtful and elegant graphic design
+- insightful & engaging exploration experience
+ 
 
-When complete, submit a url to the page with your visualizations. You should also include a brief write-up (4 paragraphs max.) stating the questions you came up with, explaining your analysis process and outlining the data transformations that you performed in the course of creating the visualizations. The end of the write up should include a brief summary of main lessons learned.
+##### Point deductions will be made when projects suffer from:
+- errors or broken features
+- clearly ineffective visual encodings
+- confusing interface design or unhelpful interactions
+- lack of exploratory interaction techniques
+- incomplete or insufficient write-up
 
-## Grading Criteria
-Each submission will be graded based on both the analysis process and included visualizations. Here are our grading criteria:
-
-- Poses clear questions applicable to the chosen dataset.
-- Appropriate data quality assessment and transformation.
-- Sufficient breadth of analysis, exploring multiple questions.
-- Sufficient depth of analysis, with appropriate follow-up questions.
-- Expressive & effective visualizations crafted to investigate analysis questions.
-- Clearly written, understandable annotations that communicate primary insights.
-
-## Submission Details
-This is an individual assignment. You may not work in groups.
-
-When complete, submit a url to your page hosted on GitHub pages. The images filenames should be numbered in the order that they are meant to be viewed, e.g. 1.png, 2.png, 3.png, .... You should also include a brief write-up (4 paragraphs max.) stating the questions you came up with, explaining your analysis process and outlining the data transformations that you performed in the course of creating the visualizations. The end of the write up should include a brief summary of main lessons learned.
+#### Submission Details
+Submission is the same as in Assignment 2: a URL to GitHub pages. 
