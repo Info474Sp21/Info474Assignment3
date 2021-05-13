@@ -1,7 +1,6 @@
-import React, {useState} from "react";
-import TeamWinsVisual from "./TeamWins";
+import React from "react";
 import Intro from "./Intro";
-import D3Testing from "./D3Testing";
+import D3Visual from "./D3Visual";
 import Conclusion from './Conclusion';
 
 
@@ -9,11 +8,11 @@ const App = () => {
     return (
         <div id="main" className="container">
             <Intro/>
-            <div className="flexed data-center">
-                <TeamWinsVisual/>
+            <div>
+                <br></br>
+                <D3Visual/>
             </div>
             <Conclusion/>
-            <D3Testing/>
         </div>
     );
 };
