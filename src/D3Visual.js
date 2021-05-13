@@ -130,29 +130,40 @@ function D3Visual() {
         dataByYearURL
     );
     const [filter, setFilter] = useState("danceability")
-    const [startYear, setStartYear] = useState(1930)
+    const [startYear, setStartYear] = useState(1921)
     const [endYear, setEndYear] = useState(2020)
     const [anchorEl, setAnchorEl] = useState(null);
+    const [minOfCat, setMinOfCat] = useState(0.41445);
+    const [maxOfCat, setMaxOfCat] = useState(0.69291);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
     const handleFilterChange = (f) => { 
-        console.log("change filter: " + f)
-        setFilter(f)
+        console.log("change filter: " + f);
+        setFilter(f);
         setAnchorEl(null);
+        var tempArr = [];
+        for (var t = 0; t < data.length; t++) {
+            tempArr.push(data[t][f]);
+        }
+        setMinOfCat(Math.min.apply(Math, tempArr));
+        setMaxOfCat(Math.max.apply(Math, tempArr));
     };
     const handleSliderChange = (e, v) => {
-        console.log("set years to: " + v)
-        setStartYear(v[0])
-        setEndYear(v[1])
+        console.log("set years to: " + v);
+        setStartYear(v[0]);
+        setEndYear(v[1]);
     };
     const size = 500;
     const margin = 20;
     const axisTextAlignmentFactor = 10;
     const xScale = scaleLinear()
-        .domain(extent(data, (d) => d.year))
-        .range([size - 350, size]);
+        .domain([startYear, endYear])
+        .range([105 + (startYear - 1921) * 5.3, 633 - (2020 - endYear) * 5.3]);
+    const yScale = scaleLinear()
+        .domain([maxOfCat, minOfCat])
+        .range([50,500]);
     const _bins = bin().thresholds(10); //call bin i guess?
     const tmaxBins = _bins(
     // bin takes an array: aka map of the csv.
@@ -203,16 +214,23 @@ function D3Visual() {
                     />
                 </div>
             </div>
-            <svg width={500} height={500} style={{ border: "1px solid #1DB954" }}>
-                {data.filter(r => { return r.year > startYear && r.year < endYear}).map((year, i) => {
+            <svg width={630} height={500} style={{ border: "1px solid #1DB954" }}>
+                {data.filter(r => { return r.year >= startYear && r.year <= endYear}).map((year, i) => {
+                    var wholeList = []; 
+                    for (var k = 0; k < data.length; k++) {
+                        wholeList.push(data[k][filter]);
+                    };
+                    var minOfArr = Math.min.apply(Math, wholeList);
+                    var maxofArr = Math.max.apply(Math, wholeList);
+                    var range = maxofArr - minOfArr;
                     return (
                         <svg>
 
                             <rect
-                                y={size - margin - (year[filter] * 200)}
-                                width="2.8"
-                                height={year[filter] * 200}
-                                x={100 + i * 3.4}
+                                y={size - margin - ((year[filter] - minOfArr) * 450 / range)}
+                                width="2.9"
+                                height={(year[filter] - minOfArr) * 450 / range}
+                                x={46 + (year['year'] - 1921) * 5.3}
                                 fill="#1DB954"
                             />
                         </svg>
@@ -223,10 +241,19 @@ function D3Visual() {
                     <Axis
                         orient={Orient.bottom}
                         scale={xScale}
+                        
+                    />
+                    </g>
+                <g transform={`translate(${40 + 5.3 * (startYear - 1921)}, ${(size - margin) - size})`} className="axisBottom">
+                    {/* define our axis here*/} 
+                    <Axis
+                        orient={Orient.left}
+                        scale={yScale}
+                        
                     />
                     </g>
                 <text
-                    x={margin + 65}
+                    x={size + 100 + margin - 5.3 * (2020 - endYear)}
                     textAnchor="end"
                     y={size - margin + axisTextAlignmentFactor}
                     style={{ fontSize: 12, fontFamily: "Gill Sans, sans serif" }}

@@ -1,0 +1,482 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('./style.css');
+  var _materialUiCoreStyles = require('@material-ui/core/styles');
+  var _materialUiCore = require('@material-ui/core');
+  var _materialUiCoreMenuItem = require('@material-ui/core/MenuItem');
+  var _materialUiCoreMenuItemDefault = _parcelHelpers.interopDefault(_materialUiCoreMenuItem);
+  var _materialUiCoreFade = require('@material-ui/core/Fade');
+  var _materialUiCoreFadeDefault = _parcelHelpers.interopDefault(_materialUiCoreFade);
+  require('@material-ui/core/Typography');
+  var _materialUiCoreSlider = require('@material-ui/core/Slider');
+  var _materialUiCoreSliderDefault = _parcelHelpers.interopDefault(_materialUiCoreSlider);
+  var _hooksUseFetch = require("../hooks/useFetch");
+  var _d3Array = require("d3-array");
+  var _d3AxisForReact = require("d3-axis-for-react");
+  var _d3Scale = require("d3-scale");
+  var _jsxFileName = "/Users/zhanwu/Desktop/UW/INFO-474/Info474Assignment3/src/D3Visual.js", _s = $RefreshSig$();
+  const AirbnbSlider = _materialUiCoreStyles.withStyles({
+    root: {
+      color: '#3a8589',
+      height: 3,
+      padding: '13px 0'
+    },
+    thumb: {
+      height: 27,
+      width: 27,
+      backgroundColor: '#fff',
+      border: '1px solid currentColor',
+      marginTop: -12,
+      marginLeft: -13,
+      boxShadow: '#ebebeb 0 2px 2px',
+      '&:focus, &:hover, &$active': {
+        boxShadow: '#ccc 0 2px 3px 1px'
+      },
+      '& .bar': {
+        // display: inline-block !important;
+        height: 9,
+        width: 1,
+        backgroundColor: 'currentColor',
+        marginLeft: 1,
+        marginRight: 1
+      }
+    },
+    active: {},
+    track: {
+      height: 3
+    },
+    rail: {
+      color: '#d8d8d8',
+      opacity: 1,
+      height: 3
+    }
+  })(_materialUiCoreSliderDefault.default);
+  _c = AirbnbSlider;
+  // Scale for these values is still unknown
+  const yValues = {
+    "acousticness": {
+      "name": "acousticness",
+      "scale": 100,
+      "minVal": 0.22,
+      "maxVal": 0.96,
+      "description": "how acoustic the songs in year are"
+    },
+    "danceability": {
+      "name": "danceability",
+      "scale": 100,
+      "minVal": 0.41,
+      "maxVal": 0.69,
+      "description": "how suitable the songs in year are for dancing"
+    },
+    "duration_ms": {
+      "name": "duration_ms",
+      "scale": 100,
+      "minVal": 157000,
+      "maxVal": 268000,
+      "description": "average time duration of songs in year in ms"
+    },
+    "energy": {
+      "name": "energy",
+      "scale": 100,
+      "minVal": 0.21,
+      "maxVal": 0.68,
+      "description": "how energetic the songs in year are"
+    },
+    "instrumentalness": {
+      "name": "instrumentalness",
+      "scale": 100,
+      "minVal": 0.02,
+      "maxVal": 0.58,
+      "description": "ratio of instrumental sounds"
+    },
+    "liveness": {
+      "name": "liveness",
+      "scale": 100,
+      "minVal": 0.17,
+      "maxVal": 0.26,
+      "description": "audience presence"
+    },
+    "speechiness": {
+      "name": "speechiness",
+      "scale": 100,
+      "minVal": 0.05,
+      "maxVal": 0.49,
+      "description": "spoken words ratio"
+    },
+    "tempo": {
+      "name": "tempo",
+      "scale": 100,
+      "minVal": 101,
+      "maxVal": 124,
+      "description": "tempo of songs in year in BPM"
+    },
+    "valence": {
+      "name": "valence",
+      "scale": 100,
+      "minVal": 0.38,
+      "maxVal": 0.66,
+      "description": "positivity of songs in year"
+    },
+    "popularity": {
+      "name": "popularity",
+      "scale": 100,
+      "minVal": 0.14,
+      "maxVal": 65.3,
+      "description": "popularity of songs in year"
+    }
+  };
+  function D3Visual() {
+    _s();
+    const dataByYearURL = "https://raw.githubusercontent.com/Info474Sp21/Info474Assignment3/main/data/data_by_year_o.csv";
+    // state stuff
+    const [data, loading] = _hooksUseFetch.useFetch(dataByYearURL);
+    const [filter, setFilter] = _react.useState("danceability");
+    const [startYear, setStartYear] = _react.useState(1921);
+    const [endYear, setEndYear] = _react.useState(2020);
+    const [anchorEl, setAnchorEl] = _react.useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = event => {
+      setAnchorEl(event.currentTarget);
+    };
+    const handleFilterChange = f => {
+      console.log("change filter: " + f);
+      setFilter(f);
+      setAnchorEl(null);
+    };
+    const handleSliderChange = (e, v) => {
+      console.log("set years to: " + v);
+      setStartYear(v[0]);
+      setEndYear(v[1]);
+    };
+    const size = 500;
+    const margin = 20;
+    const axisTextAlignmentFactor = 10;
+    const xScale = _d3Scale.scaleLinear().domain(_d3Array.extent(data, d => d.year)).range([size - 395, size + 130]);
+    console.log(xScale(10000));
+    const _bins = _d3Array.bin().thresholds(10);
+    // call bin i guess?
+    const tmaxBins = _bins(// bin takes an array: aka map of the csv.
+    data.map(d => {
+      return +d.year;
+    }));
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "histogram",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 164,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        className: "centered",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 165,
+          columnNumber: 13
+        }
+      }, "React and D3 Interactive Visualization"), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "filters",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 166,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "centered",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 167,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 168,
+          columnNumber: 21
+        }
+      }, "Change Filters"), /*#__PURE__*/_reactDefault.default.createElement(_materialUiCore.Button, {
+        style: {
+          width: "300px"
+        },
+        variant: "contained",
+        "aria-controls": "fade-menu",
+        "aria-haspopup": "true",
+        onClick: handleClick,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 169,
+          columnNumber: 21
+        }
+      }, filter), /*#__PURE__*/_reactDefault.default.createElement(_materialUiCore.Menu, {
+        id: "fade-menu",
+        anchorEl: anchorEl,
+        keepMounted: true,
+        open: open,
+        onClose: e => setAnchorEl(null),
+        TransitionComponent: _materialUiCoreFadeDefault.default,
+        variant: "contained",
+        style: {
+          width: "300px"
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 172,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_materialUiCoreMenuItemDefault.default, {
+        value: "danceability",
+        onClick: () => handleFilterChange("danceability"),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 182,
+          columnNumber: 25
+        }
+      }, "Danceability"), /*#__PURE__*/_reactDefault.default.createElement(_materialUiCoreMenuItemDefault.default, {
+        value: "acousticness",
+        onClick: () => handleFilterChange("acousticness"),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 183,
+          columnNumber: 25
+        }
+      }, "Acousticness"), /*#__PURE__*/_reactDefault.default.createElement(_materialUiCoreMenuItemDefault.default, {
+        value: "liveness",
+        onClick: () => handleFilterChange("liveness"),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 184,
+          columnNumber: 25
+        }
+      }, "Liveness"), /*#__PURE__*/_reactDefault.default.createElement(_materialUiCoreMenuItemDefault.default, {
+        value: "popularity",
+        onClick: () => handleFilterChange("popularity"),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 185,
+          columnNumber: 25
+        }
+      }, "Popularity"), /*#__PURE__*/_reactDefault.default.createElement(_materialUiCoreMenuItemDefault.default, {
+        value: "tempo",
+        onClick: () => handleFilterChange("tempo"),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 186,
+          columnNumber: 25
+        }
+      }, "Tempo"), /*#__PURE__*/_reactDefault.default.createElement(_materialUiCoreMenuItemDefault.default, {
+        value: "valence",
+        onClick: () => handleFilterChange("valence"),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 187,
+          columnNumber: 25
+        }
+      }, "Valence"), /*#__PURE__*/_reactDefault.default.createElement(_materialUiCoreMenuItemDefault.default, {
+        value: "speechiness",
+        onClick: () => handleFilterChange("speechiness"),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 188,
+          columnNumber: 25
+        }
+      }, "Speechiness"), /*#__PURE__*/_reactDefault.default.createElement(_materialUiCoreMenuItemDefault.default, {
+        value: "instrumentalness",
+        onClick: () => handleFilterChange("instrumentalness"),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 189,
+          columnNumber: 25
+        }
+      }, "Instrumentalness"), /*#__PURE__*/_reactDefault.default.createElement(_materialUiCoreMenuItemDefault.default, {
+        value: "energy",
+        onClick: () => handleFilterChange("energy"),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 190,
+          columnNumber: 25
+        }
+      }, "Energy"), /*#__PURE__*/_reactDefault.default.createElement(_materialUiCoreMenuItemDefault.default, {
+        value: "duration_ms",
+        onClick: () => handleFilterChange("duration_ms"),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 191,
+          columnNumber: 25
+        }
+      }, "Duration(ms)"))), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "slider",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 194,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        className: "centered",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 195,
+          columnNumber: 21
+        }
+      }, "Select Years"), /*#__PURE__*/_reactDefault.default.createElement(AirbnbSlider, {
+        valueLabelDisplay: "auto",
+        marks: true,
+        min: 1921,
+        max: 2020,
+        style: {
+          color: '#1DB954',
+          height: "50px",
+          width: 500,
+          marginTop: "20px"
+        },
+        defaultValue: [1921, 2020],
+        onChange: handleSliderChange,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 196,
+          columnNumber: 21
+        }
+      }))), /*#__PURE__*/_reactDefault.default.createElement("svg", {
+        width: 600,
+        height: 500,
+        style: {
+          border: "1px solid #1DB954"
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 207,
+          columnNumber: 13
+        }
+      }, data.filter(r => {
+        return r.year > startYear && r.year < endYear;
+      }).map((year, i) => {
+        console.log();
+        return (
+          /*#__PURE__*/_reactDefault.default.createElement("svg", {
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 210,
+              columnNumber: 25
+            }
+          }, /*#__PURE__*/_reactDefault.default.createElement("rect", {
+            y: size - margin - year[filter] * 200,
+            width: "2.9",
+            height: (year[filter] - Math.min(year[filter])) * 200 / Math.max(year[filter] - Math.min(year[filter])),
+            x: 50 + i * 5.3,
+            fill: "#1DB954",
+            __self: this,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 212,
+              columnNumber: 29
+            }
+          }))
+        );
+      }), /*#__PURE__*/_reactDefault.default.createElement("g", {
+        transform: `translate(-60, ${size - margin})`,
+        className: "axisBottom",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 222,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_d3AxisForReact.Axis, {
+        orient: _d3AxisForReact.Orient.bottom,
+        scale: xScale,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 224,
+          columnNumber: 21
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("g", {
+        transform: `translate(60, ${size - 600})`,
+        className: "axisBottom",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 230,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_d3AxisForReact.Axis, {
+        orient: _d3AxisForReact.Orient.left,
+        scale: xScale,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 232,
+          columnNumber: 21
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("text", {
+        x: margin + 20,
+        textAnchor: "end",
+        y: size - margin + axisTextAlignmentFactor,
+        style: {
+          fontSize: 12,
+          fontFamily: "Gill Sans, sans serif"
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 238,
+          columnNumber: 17
+        }
+      }, "Year"), /*#__PURE__*/_reactDefault.default.createElement("text", {
+        x: 100,
+        textAnchor: "begin",
+        y: 30,
+        style: {
+          fontSize: 15,
+          fontFamily: "Gill Sans, sans serif"
+        },
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 246,
+          columnNumber: 17
+        }
+      })))
+    );
+  }
+  _s(D3Visual, "REc0UmDgEWfCDDoU9A4QYH4W4TI=", false, function () {
+    return [_hooksUseFetch.useFetch];
+  });
+  _c2 = D3Visual;
+  exports.default = D3Visual;
+  var _c, _c2;
+  $RefreshReg$(_c, "AirbnbSlider");
+  $RefreshReg$(_c2, "D3Visual");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
