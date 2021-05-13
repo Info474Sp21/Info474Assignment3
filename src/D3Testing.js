@@ -1,5 +1,7 @@
 import React, { Component, useState } from 'react'
 import './style.css'
+import { withStyles, makeStyles } from '@material-ui/core/styles';
+
 import {Button, Menu} from '@material-ui/core';
 import MenuItem from '@material-ui/core/MenuItem';
 import Fade from '@material-ui/core/Fade';
@@ -10,6 +12,43 @@ import { extent, max, min, bin } from "d3-array";
 import { Axis, Orient } from "d3-axis-for-react"
 import { scaleLinear } from "d3-scale";
 
+const AirbnbSlider = withStyles({
+    root: {
+      color: '#3a8589',
+      height: 3,
+      padding: '13px 0',
+    },
+    thumb: {
+      height: 27,
+      width: 27,
+      backgroundColor: '#fff',
+      border: '1px solid currentColor',
+      marginTop: -12,
+      marginLeft: -13,
+      boxShadow: '#ebebeb 0 2px 2px',
+      '&:focus, &:hover, &$active': {
+        boxShadow: '#ccc 0 2px 3px 1px',
+      },
+      '& .bar': {
+        // display: inline-block !important;
+        height: 9,
+        width: 1,
+        backgroundColor: 'currentColor',
+        marginLeft: 1,
+        marginRight: 1,
+      },
+    },
+    active: {},
+    track: {
+      height: 3,
+    },
+    rail: {
+      color: '#d8d8d8',
+      opacity: 1,
+      height: 3,
+    },
+  })(Slider);
+
 function D3Testing() {
     const dataByYearURL = "https://raw.githubusercontent.com/Info474Sp21/Info474Assignment3/main/data/data_by_year_o.csv"
     const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchiseBasedData.csv';
@@ -19,7 +58,8 @@ function D3Testing() {
         dataByYearURL
     );
     const [filter, setFilter] = useState("danceability")
-    const [binYear, setYear] = useState(1930)
+    const [startYear, setStartYear] = useState(1930)
+    const [endYear, setEndYear] = useState(2000)
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
 
@@ -34,10 +74,12 @@ function D3Testing() {
     }
 
     const handleSliderChange = (e, v) => {
-        console.log("change binYear: " + v)
-        setYear(v)
+        console.log("set years to: " + v)
+        setStartYear(v[0])
+        setEndYear(v[1])
     }
 
+    
 
 
     const size = 500;
@@ -51,14 +93,14 @@ function D3Testing() {
     .range([size - 350, size]);
 
     const _bins = bin().thresholds(10); //call bin i guess?
-  const tmaxBins = _bins(
+    const tmaxBins = _bins(
     // bin takes an array: aka map of the csv.
     data.map((d) => {
 
       return +d.year;
 
     }));
-    console.log(tmaxBins);
+    //console.log(tmaxBins);
 
 
     return (
@@ -93,16 +135,14 @@ function D3Testing() {
                     </Menu>
                 </div>
                 <div className="slider">
-                    <h2>Select Year Bins</h2>
-                    <Slider
-                        defaultValue={1930}
-                        aria-labelledby="discrete-slider-small-steps"
-                        step={10}
-                        marks
-                        min={1920}
-                        max={2020}
+                    <h2>Select Years</h2>
+                    <AirbnbSlider
                         valueLabelDisplay="auto"
+                        marks
+                        min={1921}
+                        max={2020}
                         style={{color: '#1DB954', height: "50px", width: 500, marginTop: "20px"}}
+                        defaultValue={[1921, 2020]}
                         onChange={handleSliderChange}
                     />
                 </div>
@@ -111,7 +151,7 @@ function D3Testing() {
 
 
             <svg width={500} height={500} style={{ border: "1px solid #1DB954" }}>
-                {data.map((year, i) => {
+                {data.filter(r => { return r.year > startYear && r.year < endYear}).map((year, i) => {
                     return (
                         <svg>
 
