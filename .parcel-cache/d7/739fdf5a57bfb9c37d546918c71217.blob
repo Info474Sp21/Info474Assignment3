@@ -1,0 +1,39 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('./style.css');
+  var _hooksUseFetch = require("../hooks/useFetch");
+  require('d3');
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/D3TestingClay.js";
+  class D3TestingClay extends _react.Component {
+    getData() {
+      const dataByYearURL = "https://raw.githubusercontent.com/Info474Sp21/Info474Assignment3/main/data/data_by_year_o.csv";
+      const [fetchData, loading] = _hooksUseFetch.useFetch(dataByYearURL);
+      console.log(fetchData);
+    }
+    render() {
+      getData();
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("h1", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 26,
+            columnNumber: 13
+          }
+        }, "Testing SVG D3")
+      );
+    }
+  }
+  exports.default = D3TestingClay;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

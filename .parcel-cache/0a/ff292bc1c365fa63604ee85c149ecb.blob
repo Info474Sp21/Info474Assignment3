@@ -1,0 +1,36 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  require('react');
+  require('./style.css');
+  require("../hooks/useFetch");
+  require("d3-array");
+  require("d3");
+  require("d3-axis-for-react");
+  require("d3-scale");
+  require('./D3Testing');
+  var _s = $RefreshSig$();
+  // export default class D3TestingClay extends Component{
+  // const dataByYearURL = "https://raw.githubusercontent.com/Info474Sp21/Info474Assignment3/main/data/data_by_year_o.csv"
+  // const [data, loading] = useFetch(
+  // dataByYearURL
+  // );
+  // }
+  const D3TestingClay = () => {
+    _s();
+    const d3Chart = useRef();
+  };
+  _s(D3TestingClay, "2RO6S3WqrObecB9KreeEzfDDTbc=");
+  _c = D3TestingClay;
+  exports.default = D3TestingClay;
+  var _c;
+  $RefreshReg$(_c, "D3TestingClay");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

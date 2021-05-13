@@ -1,0 +1,70 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _d = require('d3');
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/D3Graphic.js";
+  class BarChart extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.renderSvg = this.renderSvg.bind(this);
+    }
+    componentDidMount() {
+      this.renderSvg();
+    }
+    renderSvg() {
+      const margin = 20;
+      const width = 400;
+      const height = 800;
+      const data = ["why", "aren't", "you", "working"].map(title => ({
+        title
+      }));
+      // create scalar for x axis
+      const x = _d.scaleOrdinal().domain(data.map(({title}) => title)).range([0, width]);
+      const xAxis = _d.axisBottom(x);
+      // create svg and append graph
+      const svg = _d.select("svg").attr("width", width).attr("height", height + margin).append("g");
+      svg.append("g").attr("class", "x axis").attr("transform", "translate(0," + height + ")").call(xAxis);
+      const xScale = _d.scaleLinear().domain(extent(data, d => d.year)).range([size - 350, size]);
+      const yScale = _d.scaleLinear().domain(extent(data, d => d[variables[yAxisName]])).range([size - 350, size]);
+      const _bins = bin().thresholds(10);
+      // call bin i guess?
+      const tmaxBins = _bins(// bin takes an array: aka map of the csv.
+      data.map(d => {
+        return +d.year;
+      }));
+    }
+    render() {
+      const {width, height, className} = this.props;
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "body",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 55,
+            columnNumber: 12
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("svg", {
+          className: "svg",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 56,
+            columnNumber: 7
+          }
+        }))
+      );
+    }
+  }
+  exports.default = BarChart;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

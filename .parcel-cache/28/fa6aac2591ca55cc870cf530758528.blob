@@ -1,0 +1,79 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('./style.css');
+  require("../hooks/useFetch");
+  var _d = require("d3");
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/D3TestingClay.js";
+  // function D3TestingClay() {
+  // const dataByYearURL = "https://raw.githubusercontent.com/Info474Sp21/Info474Assignment3/main/data/data_by_year_o.csv"
+  // const [fetchData, loading] = useFetch(
+  // dataByYearURL
+  // );
+  // console.log(fetchData);
+  // return (
+  // <div>
+  // <h1 className="centered">Testing D3 Implementation</h1>
+  // <svg width="600" height="600"></svg>
+  // </div>
+  // );
+  // }
+  // export default D3TestingClay;
+  class D3TestingClay extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {};
+    }
+    componentDidMount() {
+      const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+      const w = 600;
+      const h = 300;
+      const svg = _d.select(this.refs.chart).append("svg").attr("width", w).attr("height", h).attr("class", "bar");
+      svg.selectAll("rect").data(dataset).enter().append("rect").attr("fill", "navy").attr("class", "sBar").attr("x", (d, i) => i * 60).attr("y", (d, i) => {
+        return h - 7 * d;
+      }).attr("width", 50).attr("height", (d, i) => 7 * d).append("title").text(d => d);
+      svg.selectAll("text").data(dataset).enter().append("text").style("font-size", 18).attr("fill", "red").attr("x", (d, i) => i * 60).attr("y", (d, i) => h - 7 * d - 3).text(d => d);
+    }
+    render() {
+      const styles = {
+        container: {
+          display: "grid",
+          justifyItems: "center"
+        }
+      };
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          ref: "chart",
+          style: styles.container,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 72,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+          style: {
+            textAlign: "center"
+          },
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 73,
+            columnNumber: 11
+          }
+        }, "Hi, I'm the bar chart"))
+      );
+    }
+  }
+  exports.default = D3TestingClay;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

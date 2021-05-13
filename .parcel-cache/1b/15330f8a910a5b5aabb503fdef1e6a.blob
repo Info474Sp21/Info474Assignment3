@@ -1,0 +1,73 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require("./Style.css");
+  var _dataData_ = require("../data/data_");
+  var _dataData_Default = _parcelHelpers.interopDefault(_dataData_);
+  var _componentsBarChart = require("./components/BarChart");
+  var _componentsBarChartDefault = _parcelHelpers.interopDefault(_componentsBarChart);
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/D3TestingClay.js";
+  class D3TestingClay extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        selectedValue: "US"
+      };
+    }
+    /*handleChange = (e) => {*/
+    /*this.setState({ selectedValue: e.target.value });*/
+    /*};*/
+    render() {
+      const {selectedValue} = this.state;
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement(_reactDefault.default.Fragment, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 21,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_componentsBarChartDefault.default, {
+          width: 800,
+          height: 450,
+          data: this.state.selectedValue === "US" ? _dataData_Default.default.USData : _dataData_Default.default.JapanData,
+          yAxisTitle: `${this.state.selectedValue} GDP growth`,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 22,
+            columnNumber: 9
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          style: {
+            marginLeft: "calc(100% - 950px"
+          },
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 31,
+            columnNumber: 13
+          }
+        }, "Hello")))
+      );
+    }
+  }
+  exports.default = D3TestingClay;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

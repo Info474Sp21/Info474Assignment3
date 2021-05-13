@@ -1,0 +1,88 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require("./Style.css");
+  var _d = require('d3');
+  require("../hooks/useFetch");
+  var _D3TestingJs = require("./D3Testing.js");
+  var _D3TestingJsDefault = _parcelHelpers.interopDefault(_D3TestingJs);
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/D3TestingClay.js";
+  class D3TestingClay extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {};
+    }
+    componentDidMount() {
+      console.log("component mounted");
+      const data = _D3TestingJsDefault.default();
+      console.log(data);
+      const titleText = 'Top 10 Most Populous Countries';
+      const xAxisLabelText = 'Population';
+      const svg = _d.select('svg');
+      const width = +svg.attr('width');
+      const height = +svg.attr('height');
+      const render = data => {
+        const xValue = d => d['population'];
+        const yValue = d => d.country;
+        const margin = {
+          top: 50,
+          right: 40,
+          bottom: 77,
+          left: 180
+        };
+        const innerWidth = width - margin.left - margin.right;
+        const innerHeight = height - margin.top - margin.bottom;
+        const xScale = _d.scaleLinear().domain([0, _d.max(data, xValue)]).range([0, innerWidth]);
+        const yScale = _d.scaleBand().domain(data.map(yValue)).range([0, innerHeight]).padding(0.1);
+        const g = svg.append('g').attr('transform', `translate(${margin.left},${margin.top})`);
+        const xAxisTickFormat = number => _d.format('.3s')(number).replace('G', 'B');
+        const xAxis = _d.axisBottom(xScale).tickFormat(xAxisTickFormat).tickSize(-innerHeight);
+        g.append('g').call(_d.axisLeft(yScale)).selectAll('.domain, .tick line').remove();
+        const xAxisG = g.append('g').call(xAxis).attr('transform', `translate(0,${innerHeight})`);
+        xAxisG.select('.domain').remove();
+        xAxisG.append('text').attr('class', 'axis-label').attr('y', 65).attr('x', innerWidth / 2).attr('fill', 'black').text(xAxisLabelText);
+        g.selectAll('rect').data(data).enter().append('rect').attr('y', d => yScale(yValue(d))).attr('width', d => xScale(xValue(d))).attr('height', yScale.bandwidth());
+        g.append('text').attr('class', 'title').attr('y', -10).text(titleText);
+      };
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 90,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 91,
+            columnNumber: 17
+          }
+        }, "D3 Interactivity Testing"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
+          width: "600",
+          height: "500",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 92,
+            columnNumber: 17
+          }
+        }))
+      );
+    }
+  }
+  exports.default = D3TestingClay;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

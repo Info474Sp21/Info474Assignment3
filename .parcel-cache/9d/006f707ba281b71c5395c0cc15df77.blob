@@ -1,0 +1,75 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('react-dom');
+  var _d = require('d3');
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/App.js", _s = $RefreshSig$();
+  const csvUrl = "https://raw.githubusercontent.com/Info474Sp21/Info474Assignment3/main/data/data_by_year_o.csv";
+  const width = 960;
+  const height = 500;
+  const App = () => {
+    _s();
+    _react.useEffect(() => {
+      const row = d => {
+        d.Population = +d['2020'];
+        return d;
+      };
+      _d.csv(csvUrl, row).then(data => {
+        setData(data.slice(0, 10));
+      });
+    }, []);
+    if (!data) {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("pre", {
+          __self: undefined,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 25,
+            columnNumber: 16
+          }
+        }, "Loading...")
+      );
+    }
+    console.log(data[0]);
+    const yScale = _d.scaleBand().domain(data.map(d => d.Country)).range([0, height]);
+    const xScale = _d.scaleLinear().domain([0, _d.max(data, d => d.Population)]).range([0, width]);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("svg", {
+        width: width,
+        height: height,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39,
+          columnNumber: 9
+        }
+      }, data.map(d => /*#__PURE__*/_reactDefault.default.createElement("rect", {
+        key: d.Country,
+        y: yScale(d.Country),
+        width: xScale(d.Population),
+        height: yScale.bandwidth(),
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41,
+          columnNumber: 17
+        }
+      })))
+    );
+  };
+  _s(App, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+  _c = App;
+  exports.default = App;
+  var _c;
+  $RefreshReg$(_c, "App");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

@@ -1,0 +1,39 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _d = require("d3");
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/BarChart.js";
+  class BarChart extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.myRef = _react.React.createRef();
+    }
+    componentDidMount() {
+      let accessToRef = _d.select(this.myRef.current);
+      accessToRef.style("background-color", "red");
+    }
+    render() {
+      return (
+        /*#__PURE__*/_react.React.createElement("div", {
+          ref: this.myRef,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16,
+            columnNumber: 16
+          }
+        }, " Testing Refs ")
+      );
+    }
+  }
+  exports.default = BarChart;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

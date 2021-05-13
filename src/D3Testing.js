@@ -11,9 +11,7 @@ import { Axis, Orient } from "d3-axis-for-react"
 import { scaleLinear } from "d3-scale";
 
 function D3Testing() {
-    const dataByYearURL = "https://raw.githubusercontent.com/Info474Sp21/Info474Assignment3/main/data/data_by_year_o.csv"
-    const githubDataURL = 'https://raw.githubusercontent.com/Cnovotn/Info474Assignment2/main/data/franchiseBasedData.csv';
-    
+    const dataByYearURL = "https://raw.githubusercontent.com/Info474Sp21/Info474Assignment3/main/data/data_by_year_o.csv"; 
     //state stuff
     const [data, loading] = useFetch(
         dataByYearURL
@@ -22,48 +20,33 @@ function D3Testing() {
     const [binYear, setYear] = useState(1930)
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
-
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
-
     const handleFilterChange = (f) => { 
         console.log("change filter: " + f)
         setFilter(f)
         setAnchorEl(null);
     }
-
     const handleSliderChange = (e, v) => {
         console.log("change binYear: " + v)
         setYear(v)
     }
-
-
-
     const size = 500;
     const margin = 20;
     const axisTextAlignmentFactor = 10;
-    //console.log(data);
-    
-
     const xScale = scaleLinear()
-    .domain(extent(data, (d) => d.year))
-    .range([size - 350, size]);
-
+        .domain(extent(data, (d) => d.year))
+        .range([size - 350, size]);
     const _bins = bin().thresholds(10); //call bin i guess?
-  const tmaxBins = _bins(
-    // bin takes an array: aka map of the csv.
-    data.map((d) => {
-
-      return +d.year;
-
-    }));
-    console.log(tmaxBins);
-
-
+    const tmaxBins = _bins(
+        // bin takes an array: aka map of the csv.
+        data.map((d) => {
+        return +d.year;
+        }));
     return (
         <div className="histogram">
-            <h1 className="centered">Testing D3 Implementation</h1>
+            <h1 className="centered">Spotify D3 Interactive Visualization</h1>
             <div className="filters">
                 <div>
                     <h2>Change Filters</h2>
@@ -107,9 +90,6 @@ function D3Testing() {
                     />
                 </div>
             </div>
-            
-
-
             <svg width={500} height={500} style={{ border: "1px solid #1DB954" }}>
                 {data.map((year, i) => {
                     return (
@@ -150,20 +130,8 @@ function D3Testing() {
                 >
                     I need to look at how to bin this.
               </text>
-
             </svg>
-
-
         </div>
-
-                        
-
-
     );
-    //slider
-    //binning by decade
-    //changing y axis based on the visualization
-
-
 }
 export default D3Testing;

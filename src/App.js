@@ -10,10 +10,9 @@ const App = () => {
         <div id="main" className="container">
             <Intro/>
             <div className="flexed data-center">
-                <TeamWinsVisual/>
+                <D3Testing/>
             </div>
             <Conclusion/>
-            <D3Testing/>
         </div>
     );
 };

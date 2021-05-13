@@ -1,0 +1,77 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('react-dom');
+  var _d = require('d3');
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/App.js", _s = $RefreshSig$();
+  const csvUrl = "https://raw.githubusercontent.com/Info474Sp21/Info474Assignment3/main/data/data_by_year_o.csv";
+  const width = 960;
+  const height = 500;
+  // const csvUrl = 'https://gist.githubusercontent.com/curran/0ac4077c7fc6390f5dd33bf5c06cb5ff/raw/605c54080c7a93a417a3cea93fd52e7550e76500/UN_Population_2019.csv';
+  const App = () => {
+    _s();
+    const [data, setData] = _react.useState(null);
+    _react.useEffect(() => {
+      const row = d => {
+        d.year = +d['2020'];
+        return d;
+      };
+      _d.csv(csvUrl, row).then(data => {
+        setData(data.slice(0, 10));
+      });
+    }, []);
+    if (!data) {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("pre", {
+          __self: undefined,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27,
+            columnNumber: 16
+          }
+        }, "Loading...")
+      );
+    }
+    console.log(data[0]);
+    const yScale = _d.scaleBand().domain(data.map(d => d.duration_ms)).range([0, height]);
+    const xScale = _d.scaleLinear().domain([0, _d.max(data, d => d.year)]).range([0, width]);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("svg", {
+        width: width,
+        height: height,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41,
+          columnNumber: 9
+        }
+      }, data.map(d => /*#__PURE__*/_reactDefault.default.createElement("rect", {
+        key: d.duration_ms,
+        y: yScale(d.duration_ms),
+        width: xScale(d.year),
+        height: yScale.bandwidth(),
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43,
+          columnNumber: 17
+        }
+      })))
+    );
+  };
+  _s(App, "fQZRxy/+nAZ7NLS1X4dVhrlp8Go=");
+  _c = App;
+  exports.default = App;
+  var _c;
+  $RefreshReg$(_c, "App");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

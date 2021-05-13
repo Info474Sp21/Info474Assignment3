@@ -1,0 +1,83 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require("./D3TestingClay");
+  require("./D3Graphic");
+  var _hooksUseFetch = require("../hooks/useFetch");
+  var _d = require("d3");
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/App.js", _s = $RefreshSig$();
+  const App = () => {
+    _s();
+    const dataByYearURL = "https://raw.githubusercontent.com/Info474Sp21/Info474Assignment3/main/data/data_by_year_o.csv";
+    const [dataset, loading] = _hooksUseFetch.useFetch(dataByYearURL);
+    const w = 600;
+    const h = 500;
+    const size = 500;
+    const xScale = _d.scaleLinear().domain(_d.extent(dataset, d => d.year)).range([size - 350, size]);
+    const yScale = _d.scaleLinear().domain(_d.extent(dataset, d => d["accoustic"])).range([size - 350, size]);
+    const _bins = _d.bin().thresholds(10);
+    // call bin i guess?
+    const tmaxBins = _bins(// bin takes an array: aka map of the csv.
+    data.map(d => {
+      return +d.year;
+    }));
+    const svg = _d.select("svg").append("svg").attr("width", w).attr("height", h).attr("class", "bar");
+    svg.selectAll("rect").data(dataset).enter().append("rect").attr("fill", "navy").attr("class", "sBar").attr("x", (d, i) => i * 60).attr("y", (d, i) => {
+      return h - 7 * d;
+    }).attr("width", 50).attr("height", (d, i) => 7 * d).append("title").text(d => d);
+    svg.selectAll("text").data(dataset).enter().append("text").style("font-size", 18).attr("fill", "red").attr("x", (d, i) => i * 60).attr("y", (d, i) => h - 7 * d - 3).text(d => d);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        id: "main",
+        className: "container",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        id: "main-vis",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63,
+          columnNumber: 17
+        }
+      }, "D3 Visual"), /*#__PURE__*/_reactDefault.default.createElement("svg", {
+        width: "600",
+        height: "500",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64,
+          columnNumber: 17
+        }
+      })))
+    );
+  };
+  _s(App, "PIRSWu0hefX9d13/tCv2o5b0Xls=", false, function () {
+    return [_hooksUseFetch.useFetch];
+  });
+  _c = App;
+  exports.default = App;
+  var _c;
+  $RefreshReg$(_c, "App");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

@@ -1,0 +1,73 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('./style.css');
+  require("../hooks/useFetch");
+  var _d3Array = require("d3-array");
+  require("d3-axis-for-react");
+  var _d3Scale = require("d3-scale");
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/D3TestingClay.js";
+  inmpoer;
+  function helper() {
+    return "Helper";
+  }
+  function D3TestingClay(data) {
+    var yAxisName = "acousticness";
+    var variables = {
+      "acousticness": "acousticness",
+      "danceability": "danceability"
+    };
+    const size = 500;
+    const margin = 20;
+    const axisTextAlignmentFactor = 10;
+    const xScale = _d3Scale.scaleLinear().domain(_d3Array.extent(data, d => d.year)).range([size - 350, size]);
+    const yScale = _d3Scale.scaleLinear().domain(_d3Array.extent(data, d => d[variables[yAxisName]])).range([size - 350, size]);
+    const _bins = _d3Array.bin().thresholds(10);
+    // call bin i guess?
+    const tmaxBins = _bins(// bin takes an array: aka map of the csv.
+    data.map(d => {
+      return +d.year;
+    }));
+    const svg = d3.select(this.refs.chart).append("svg").attr("width", w).attr("height", h).attr("class", "bar");
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        className: "centered",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43,
+          columnNumber: 13
+        }
+      }, "Testing D3 Implementation"), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        ref: "chart",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44,
+          columnNumber: 13
+        }
+      }))
+    );
+  }
+  _c = D3TestingClay;
+  exports.default = D3TestingClay;
+  var _c;
+  $RefreshReg$(_c, "D3TestingClay");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

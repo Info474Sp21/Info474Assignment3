@@ -1,0 +1,67 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require("./TeamWins");
+  require("./Intro");
+  require("./D3Testing");
+  require('./Conclusion');
+  require("./D3TestingClay");
+  var _D3Graphic = require("./D3Graphic");
+  var _D3GraphicDefault = _parcelHelpers.interopDefault(_D3Graphic);
+  require("../hooks/useFetch");
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/App.js";
+  const App = () => {
+    // const dataByYearURL = "https://raw.githubusercontent.com/Info474Sp21/Info474Assignment3/main/data/data_by_year_o.csv";
+    // const [data, loading] = useFetch(
+    // dataByYearURL
+    // );
+    // var visualization = D3TestingClay(data, "acousticness");
+    // function interactive(newYValue) {
+    // console.log("Loading a new Visualization");
+    // console.log(newYValue);
+    // newYValue = "dancibility";
+    // visualization = D3TestingClay(data ,newYValue);
+    // }
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        id: "main",
+        className: "container",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        id: "main-vis",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_D3GraphicDefault.default, {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28,
+          columnNumber: 17
+        }
+      })))
+    );
+  };
+  _c = App;
+  exports.default = App;
+  var _c;
+  $RefreshReg$(_c, "App");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

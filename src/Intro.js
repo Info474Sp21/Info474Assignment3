@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import './style.css'
-import BigGraphic from "./BigGraphic"
-import D3Testing from "./D3Testing"
 
 export default class Intro extends Component {
     render() {
@@ -40,9 +38,7 @@ export default class Intro extends Component {
                 </p>
                 <br></br>
                 <h4>Questions: </h4>
-                <D3Testing/>
                 <br></br>
-                <BigGraphic/>
                 <h2>Step 2: Interactive Data Visualization</h2>
                 <p>
                     We got my data from a website called <a href="https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks">Kaggle.com</a> and were able to execute certain SQL queries on the data set that was given.
