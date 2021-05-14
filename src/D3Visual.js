@@ -9,8 +9,10 @@ import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import { useFetch } from "../hooks/useFetch"
 import { extent, max, min, bin } from "d3-array";
-import { Axis, Orient } from "d3-axis-for-react"
+import { Axis, Orient } from "d3-axis-for-react";
 import { scaleLinear } from "d3-scale";
+import * as d3 from "d3";
+import d3Tip from "d3-tip";
 
 const AirbnbSlider = withStyles({
     root: {
@@ -56,70 +58,70 @@ const yValues = {
         "scale":100,
         "minVal":0.22,
         "maxVal":0.96,
-        "description": "how acoustic the songs in year are"
+        "description": "How acoustic the songs in year are on a scale of 0.0 to 1.0."
     },
     "danceability" : {
         "name":"danceability",
         "scale":100,
         "minVal":0.41,
         "maxVal":0.69,
-        "description": "how suitable the songs in year are for dancing"
+        "description": "How suitable the songs in year are for dancing on a scale of 0.0 to 1.0."
     },
     "duration_ms" : {
         "name":"duration_ms",
         "scale":100,
         "minVal":157000,
         "maxVal":268000,
-        "description": "average time duration of songs in year in ms"
+        "description": "Average time duration of songs in year in ms."
     },
     "energy" : {
         "name":"energy",
         "scale":100,
         "minVal":0.21,
         "maxVal":0.68,
-        "description": "how energetic the songs in year are"
+        "description": "How energetic the songs in year are on a scale of 0.0 to 1.0."
     },
     "instrumentalness" : {
         "name":"instrumentalness",
         "scale":100,
         "minVal":0.02,
         "maxVal":0.58,
-        "description": "ratio of instrumental sounds"
+        "description": "Ratio of instrumental sounds on a scale of 0.0 to 1.0."
     },
     "liveness" : {
         "name":"liveness",
         "scale":100,
         "minVal":0.17,
         "maxVal":0.26,
-        "description": "audience presence"
+        "description": "Audience presence on a scale of 0.0 to 1.0."
     },
     "speechiness" : {
         "name":"speechiness",
         "scale":100,
         "minVal":0.05,
         "maxVal":0.49,
-        "description": "spoken words ratio"
+        "description": "Spoken words ratio on a scale of 0.0 to 1.0."
     },
     "tempo" : {
         "name":"tempo",
         "scale":100,
         "minVal":101,
         "maxVal":124,
-        "description": "tempo of songs in year in BPM"
+        "description": "Tempo of songs in year in BPM on a scale of 0.0 to 160."
     },
     "valence" : {
         "name":"valence",
         "scale":100,
         "minVal":0.38,
         "maxVal":0.66,
-        "description": "positivity of songs in year"
+        "description": "Positivity of songs in year on a scale of 0.0 to 1.0."
     },
     "popularity" : {
         "name":"popularity",
         "scale":100,
         "minVal":0.14,
         "maxVal":65.3,
-        "description": "popularity of songs in year"
+        "description": "Popularity of songs in year on a scale of 0.0 to 100.0."
     },
 }
 
@@ -139,8 +141,23 @@ function D3Visual() {
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
+    const updateText = (f) => {
+        var textArea = document.getElementById("y-axis-description");
+        textArea.innerText = yValues[f]["description"];
+        var textTitle = document.getElementById("y-axis-title");
+        textTitle.innerText = f + ":";
+    }
+    var rectWidth = 2.9;
+    var rectSpace = 5.3;
+    var xScale = scaleLinear()
+        .domain([startYear, endYear])
+        .range([105 + (startYear - 1921) * rectSpace, 633 - (2020 - endYear) * rectSpace]);
+    var yScale = scaleLinear()
+        .domain([maxOfCat, minOfCat])
+        .range([50,500]);
     const handleFilterChange = (f) => { 
         console.log("change filter: " + f);
+        updateText(f);
         setFilter(f);
         setAnchorEl(null);
         var tempArr = [];
@@ -156,25 +173,39 @@ function D3Visual() {
         setEndYear(v[1]);
     };
     const size = 500;
+    var width = 630;
+    var height = 500;
     const margin = 20;
     const axisTextAlignmentFactor = 10;
-    const xScale = scaleLinear()
-        .domain([startYear, endYear])
-        .range([105 + (startYear - 1921) * 5.3, 633 - (2020 - endYear) * 5.3]);
-    const yScale = scaleLinear()
-        .domain([maxOfCat, minOfCat])
-        .range([50,500]);
     const _bins = bin().thresholds(10); //call bin i guess?
     const tmaxBins = _bins(
     // bin takes an array: aka map of the csv.
     data.map((d) => {
       return +d.year;
     }));
+    // var tip = d3.tip()
+    //     .attr('class', 'd3-tip')
+    //     .offset([-10, 0])
+    //     .html(function(d) {
+    //         return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
+    //     })
+    var tip = d3Tip().attr('class', 'd3-tip').offset([-12,0])
+        .html(function(d) {
+            console.log(d);
+            return "<strong>Frequency:</strong> <span style='color:red'>" + d + "</span>";
+        });
+    var svg = d3.select("#svg-vis");
+    svg.call(tip);
+
     return (
         <div className="histogram">
             <h1 className="centered">React and D3 Interactive Visualization</h1>
             <div className="filters">
                 <div className="centered">
+                    <div>
+                        <h1 id="y-axis-title">danceability:</h1>
+                        <h4 id="y-axis-description">How suitable the songs in year are for dancing</h4>
+                    </div>
                     <h2>Change Filters</h2>
                     <Button style={{width:"300px"}} variant="contained" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
                         {filter}
@@ -214,7 +245,7 @@ function D3Visual() {
                     />
                 </div>
             </div>
-            <svg width={630} height={500} style={{ border: "1px solid #1DB954" }}>
+            <svg id="svg-vis" width={width} height={height} style={{ border: "1px solid #1DB954", padding: "20" }}>
                 {data.filter(r => { return r.year >= startYear && r.year <= endYear}).map((year, i) => {
                     var wholeList = []; 
                     for (var k = 0; k < data.length; k++) {
@@ -225,12 +256,11 @@ function D3Visual() {
                     var range = maxofArr - minOfArr;
                     return (
                         <svg>
-
                             <rect
                                 y={size - margin - ((year[filter] - minOfArr) * 450 / range)}
-                                width="2.9"
+                                width={rectWidth}
                                 height={(year[filter] - minOfArr) * 450 / range}
-                                x={46 + (year['year'] - 1921) * 5.3}
+                                x={46 + (year['year'] - 1921) * rectSpace}
                                 fill="#1DB954"
                             />
                         </svg>
@@ -241,32 +271,17 @@ function D3Visual() {
                     <Axis
                         orient={Orient.bottom}
                         scale={xScale}
-                        
+                        title="Year"
                     />
-                    </g>
-                <g transform={`translate(${40 + 5.3 * (startYear - 1921)}, ${(size - margin) - size})`} className="axisBottom">
+                </g>
+                <g transform={`translate(${40 + rectSpace * (startYear - 1921)}, ${(size - margin) - size})`} className="axisBottom">
                     {/* define our axis here*/} 
                     <Axis
                         orient={Orient.left}
                         scale={yScale}
-                        
+                        title="Year"
                     />
-                    </g>
-                <text
-                    x={size + 100 + margin - 5.3 * (2020 - endYear)}
-                    textAnchor="end"
-                    y={size - margin + axisTextAlignmentFactor}
-                    style={{ fontSize: 12, fontFamily: "Gill Sans, sans serif" }}
-                >
-                    Year
-              </text>
-                <text
-                    x={100}
-                    textAnchor="begin"
-                    y={30}
-                    style={{ fontSize: 15, fontFamily: "Gill Sans, sans serif" }}
-                >
-              </text>
+                </g>
             </svg>
         </div>
     );
