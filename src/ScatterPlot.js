@@ -117,6 +117,8 @@ function ScatterPlot() {
         .append("g")
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
+    // svg = d3.select('.svg-canvas')
+        // svg.selectAll("*").remove()
     // Add X axis
     var x = d3.scaleLinear()
         .domain([yValues[xValue]["minVal"], yValues[xValue]["maxVal"]])
@@ -196,9 +198,10 @@ function ScatterPlot() {
     return (
         <div className="scatterplot_container centered">
             <h1 className="centered">React and D3 Interactive Scatter Plot Visualization #2</h1>
-            <div id="scatterplot-vis">
+            <svg id="scatterplot-vis" className="svg-canvas" width={width} height={height + margin.top * 6} />
+            {/* <div id="scatterplot-vis">
 
-            </div>
+            </div> */}
         </div>
     );
 }
