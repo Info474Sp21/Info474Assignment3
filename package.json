@@ -23,7 +23,7 @@
   "main": "dist/index.html",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --public-url https://info474sp21.github.io/Info474Assignment3/; rm -rf docs; mv dist docs;",
+    "build": "parcel build index.html --public-url https://info474sp21.github.io/Info474Assignment3/;",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
