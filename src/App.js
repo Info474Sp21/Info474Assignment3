@@ -3,6 +3,8 @@ import Intro from "./Intro";
 import D3Visual from "./D3Visual";
 import ScatterPlot from "./ScatterPlot"
 import Conclusion from './Conclusion';
+import VisualSection from "./VisualSection"
+
 
 
 const App = () => {
@@ -13,6 +15,7 @@ const App = () => {
                 <br></br>
                 <D3Visual/>
                 <ScatterPlot/>
+                {/* <VisualSection/> */}
             </div>
             <Conclusion/>
         </div>
