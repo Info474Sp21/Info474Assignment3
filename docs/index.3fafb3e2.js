@@ -27311,7 +27311,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./style.css":"6eQIz","@material-ui/core/styles":"1Rdvd","@material-ui/core":"6DoV9","@material-ui/core/MenuItem":"3pvH5","@material-ui/core/Fade":"4rGBt","@material-ui/core/Typography":"3wcF9","@material-ui/core/Slider":"5T3CG","../hooks/useFetch":"2cpmb","d3-array":"7CLUA","d3-axis-for-react":"3RPRP","d3-scale":"2UZ4X","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","d3":"3auhl","d3-tip":"3Oof4"}],"6eQIz":[function() {},{}],"1Rdvd":[function(require,module,exports) {
+},{"react":"3b2NM","./style.css":"6eQIz","@material-ui/core/styles":"1Rdvd","@material-ui/core":"6DoV9","@material-ui/core/MenuItem":"3pvH5","@material-ui/core/Fade":"4rGBt","@material-ui/core/Typography":"3wcF9","@material-ui/core/Slider":"5T3CG","../hooks/useFetch":"2cpmb","d3-array":"7CLUA","d3-axis-for-react":"3RPRP","d3-scale":"2UZ4X","d3":"3auhl","d3-tip":"3Oof4","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}],"1Rdvd":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "createMuiTheme", function () {
@@ -27859,7 +27859,7 @@ if ("development" !== 'production') {
   module.exports = require('./factoryWithThrowingShims')();
 }
 
-},{"react-is":"3AQNa","./factoryWithTypeCheckers":"1PVBO"}],"3AQNa":[function(require,module,exports) {
+},{"react-is":"68QIU","./factoryWithTypeCheckers":"1PVBO"}],"68QIU":[function(require,module,exports) {
 "use strict";
 if ("development" === 'production') {
   module.exports = require('./cjs/react-is.production.min.js');
@@ -27867,7 +27867,7 @@ if ("development" === 'production') {
   module.exports = require('./cjs/react-is.development.js');
 }
 
-},{"./cjs/react-is.development.js":"1pM5H"}],"1pM5H":[function(require,module,exports) {
+},{"./cjs/react-is.development.js":"2onCQ"}],"2onCQ":[function(require,module,exports) {
 /** @license React v16.13.1
 * react-is.development.js
 *
@@ -28553,7 +28553,7 @@ module.exports = function (isValidElement, throwOnDirectAccess) {
   return ReactPropTypes;
 };
 
-},{"react-is":"3AQNa","object-assign":"3eM6x","./lib/ReactPropTypesSecret":"3OVnw","./checkPropTypes":"R8SC7"}],"3OVnw":[function(require,module,exports) {
+},{"react-is":"68QIU","object-assign":"3eM6x","./lib/ReactPropTypesSecret":"3OVnw","./checkPropTypes":"R8SC7"}],"3OVnw":[function(require,module,exports) {
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  *
@@ -28920,7 +28920,7 @@ function getDisplayName(Component) {
 
   return undefined;
 }
-},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/typeof":"3F8fn","react-is":"68QIU"}],"68QIU":[function(require,module,exports) {
+},{"@babel/runtime/helpers/interopRequireDefault":"4ttVj","@babel/runtime/helpers/typeof":"3F8fn","react-is":"63c6g"}],"63c6g":[function(require,module,exports) {
 "use strict";
 if ("development" === 'production') {
   module.exports = require('./cjs/react-is.production.min.js');
@@ -28928,7 +28928,7 @@ if ("development" === 'production') {
   module.exports = require('./cjs/react-is.development.js');
 }
 
-},{"./cjs/react-is.development.js":"2onCQ"}],"2onCQ":[function(require,module,exports) {
+},{"./cjs/react-is.development.js":"6IXPm"}],"6IXPm":[function(require,module,exports) {
 /** @license React v17.0.2
 * react-is.development.js
 *
@@ -35805,181 +35805,7 @@ function hoistNonReactStatics(targetComponent, sourceComponent, blacklist) {
 
 module.exports = hoistNonReactStatics;
 
-},{"react-is":"RNMLE"}],"RNMLE":[function(require,module,exports) {
-"use strict";
-if ("development" === 'production') {
-  module.exports = require('./cjs/react-is.production.min.js');
-} else {
-  module.exports = require('./cjs/react-is.development.js');
-}
-
-},{"./cjs/react-is.development.js":"67nvd"}],"67nvd":[function(require,module,exports) {
-/** @license React v16.13.1
-* react-is.development.js
-*
-* Copyright (c) Facebook, Inc. and its affiliates.
-*
-* This source code is licensed under the MIT license found in the
-* LICENSE file in the root directory of this source tree.
-*/
-"use strict";
-if ("development" !== "production") {
-  (function () {
-    "use strict";
-    // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
-    // nor polyfill, then a plain number is used for performance.
-    var hasSymbol = typeof Symbol === 'function' && Symbol.for;
-    var REACT_ELEMENT_TYPE = hasSymbol ? Symbol.for('react.element') : 0xeac7;
-    var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
-    var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
-    var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
-    var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
-    var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
-    var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace;
-    // TODO: We don't use AsyncMode or ConcurrentMode anymore. They were temporary
-    // (unstable) APIs that have been removed. Can we remove the symbols?
-    var REACT_ASYNC_MODE_TYPE = hasSymbol ? Symbol.for('react.async_mode') : 0xeacf;
-    var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
-    var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
-    var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
-    var REACT_SUSPENSE_LIST_TYPE = hasSymbol ? Symbol.for('react.suspense_list') : 0xead8;
-    var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
-    var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
-    var REACT_BLOCK_TYPE = hasSymbol ? Symbol.for('react.block') : 0xead9;
-    var REACT_FUNDAMENTAL_TYPE = hasSymbol ? Symbol.for('react.fundamental') : 0xead5;
-    var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
-    var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 0xead7;
-    function isValidElementType(type) {
-      return typeof type === 'string' || typeof type === 'function' || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
-      type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
-    }
-    function typeOf(object) {
-      if (typeof object === 'object' && object !== null) {
-        var $$typeof = object.$$typeof;
-        switch ($$typeof) {
-          case REACT_ELEMENT_TYPE:
-            var type = object.type;
-            switch (type) {
-              case REACT_ASYNC_MODE_TYPE:
-              case REACT_CONCURRENT_MODE_TYPE:
-              case REACT_FRAGMENT_TYPE:
-              case REACT_PROFILER_TYPE:
-              case REACT_STRICT_MODE_TYPE:
-              case REACT_SUSPENSE_TYPE:
-                return type;
-              default:
-                var $$typeofType = type && type.$$typeof;
-                switch ($$typeofType) {
-                  case REACT_CONTEXT_TYPE:
-                  case REACT_FORWARD_REF_TYPE:
-                  case REACT_LAZY_TYPE:
-                  case REACT_MEMO_TYPE:
-                  case REACT_PROVIDER_TYPE:
-                    return $$typeofType;
-                  default:
-                    return $$typeof;
-                }
-            }
-          case REACT_PORTAL_TYPE:
-            return $$typeof;
-        }
-      }
-      return undefined;
-    }
-    // AsyncMode is deprecated along with isAsyncMode
-    var AsyncMode = REACT_ASYNC_MODE_TYPE;
-    var ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
-    var ContextConsumer = REACT_CONTEXT_TYPE;
-    var ContextProvider = REACT_PROVIDER_TYPE;
-    var Element = REACT_ELEMENT_TYPE;
-    var ForwardRef = REACT_FORWARD_REF_TYPE;
-    var Fragment = REACT_FRAGMENT_TYPE;
-    var Lazy = REACT_LAZY_TYPE;
-    var Memo = REACT_MEMO_TYPE;
-    var Portal = REACT_PORTAL_TYPE;
-    var Profiler = REACT_PROFILER_TYPE;
-    var StrictMode = REACT_STRICT_MODE_TYPE;
-    var Suspense = REACT_SUSPENSE_TYPE;
-    var hasWarnedAboutDeprecatedIsAsyncMode = false;
-    // AsyncMode should be deprecated
-    function isAsyncMode(object) {
-      {
-        if (!hasWarnedAboutDeprecatedIsAsyncMode) {
-          hasWarnedAboutDeprecatedIsAsyncMode = true;
-          // Using console['warn'] to evade Babel and ESLint
-          console['warn']('The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactIs.isConcurrentMode() instead. It has the exact same API.');
-        }
-      }
-      return isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE;
-    }
-    function isConcurrentMode(object) {
-      return typeOf(object) === REACT_CONCURRENT_MODE_TYPE;
-    }
-    function isContextConsumer(object) {
-      return typeOf(object) === REACT_CONTEXT_TYPE;
-    }
-    function isContextProvider(object) {
-      return typeOf(object) === REACT_PROVIDER_TYPE;
-    }
-    function isElement(object) {
-      return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
-    }
-    function isForwardRef(object) {
-      return typeOf(object) === REACT_FORWARD_REF_TYPE;
-    }
-    function isFragment(object) {
-      return typeOf(object) === REACT_FRAGMENT_TYPE;
-    }
-    function isLazy(object) {
-      return typeOf(object) === REACT_LAZY_TYPE;
-    }
-    function isMemo(object) {
-      return typeOf(object) === REACT_MEMO_TYPE;
-    }
-    function isPortal(object) {
-      return typeOf(object) === REACT_PORTAL_TYPE;
-    }
-    function isProfiler(object) {
-      return typeOf(object) === REACT_PROFILER_TYPE;
-    }
-    function isStrictMode(object) {
-      return typeOf(object) === REACT_STRICT_MODE_TYPE;
-    }
-    function isSuspense(object) {
-      return typeOf(object) === REACT_SUSPENSE_TYPE;
-    }
-    exports.AsyncMode = AsyncMode;
-    exports.ConcurrentMode = ConcurrentMode;
-    exports.ContextConsumer = ContextConsumer;
-    exports.ContextProvider = ContextProvider;
-    exports.Element = Element;
-    exports.ForwardRef = ForwardRef;
-    exports.Fragment = Fragment;
-    exports.Lazy = Lazy;
-    exports.Memo = Memo;
-    exports.Portal = Portal;
-    exports.Profiler = Profiler;
-    exports.StrictMode = StrictMode;
-    exports.Suspense = Suspense;
-    exports.isAsyncMode = isAsyncMode;
-    exports.isConcurrentMode = isConcurrentMode;
-    exports.isContextConsumer = isContextConsumer;
-    exports.isContextProvider = isContextProvider;
-    exports.isElement = isElement;
-    exports.isForwardRef = isForwardRef;
-    exports.isFragment = isFragment;
-    exports.isLazy = isLazy;
-    exports.isMemo = isMemo;
-    exports.isPortal = isPortal;
-    exports.isProfiler = isProfiler;
-    exports.isStrictMode = isStrictMode;
-    exports.isSuspense = isSuspense;
-    exports.isValidElementType = isValidElementType;
-    exports.typeOf = typeOf;
-  })();
-}
-
-},{}],"1pSzq":[function(require,module,exports) {
+},{"react-is":"68QIU"}],"1pSzq":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "default", function () {
@@ -40189,7 +40015,7 @@ exports.default = _stylesWithStylesDefault.default(styles, {
   name: 'MuiAccordion'
 })(Accordion);
 
-},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/toArray":"4RQgW","@babel/runtime/helpers/esm/slicedToArray":"4Qm8F","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"68QIU","prop-types":"4dfy5","clsx":"29lTl","@material-ui/utils":"11kc7","../Collapse":"59lvF","../Paper":"5Fj22","../styles/withStyles":"4q1Sj","./AccordionContext":"6EXFi","../utils/useControlled":"39wLv","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"4RQgW":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/toArray":"4RQgW","@babel/runtime/helpers/esm/slicedToArray":"4Qm8F","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"3UvLp","prop-types":"4dfy5","clsx":"29lTl","@material-ui/utils":"11kc7","../Collapse":"59lvF","../Paper":"5Fj22","../styles/withStyles":"4q1Sj","./AccordionContext":"6EXFi","../utils/useControlled":"39wLv","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"4RQgW":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 var _arrayWithHolesJs = require("./arrayWithHoles.js");
@@ -40301,7 +40127,222 @@ function _iterableToArrayLimit(arr, i) {
 }
 exports.default = _iterableToArrayLimit;
 
-},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"59lvF":[function(require,module,exports) {
+},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"3UvLp":[function(require,module,exports) {
+"use strict";
+if ("development" === 'production') {
+  module.exports = require('./cjs/react-is.production.min.js');
+} else {
+  module.exports = require('./cjs/react-is.development.js');
+}
+
+},{"./cjs/react-is.development.js":"1tO6l"}],"1tO6l":[function(require,module,exports) {
+/** @license React v17.0.2
+* react-is.development.js
+*
+* Copyright (c) Facebook, Inc. and its affiliates.
+*
+* This source code is licensed under the MIT license found in the
+* LICENSE file in the root directory of this source tree.
+*/
+"use strict";
+if ("development" !== "production") {
+  (function () {
+    "use strict";
+    // ATTENTION
+    // When adding new symbols to this file,
+    // Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
+    // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+    // nor polyfill, then a plain number is used for performance.
+    var REACT_ELEMENT_TYPE = 0xeac7;
+    var REACT_PORTAL_TYPE = 0xeaca;
+    var REACT_FRAGMENT_TYPE = 0xeacb;
+    var REACT_STRICT_MODE_TYPE = 0xeacc;
+    var REACT_PROFILER_TYPE = 0xead2;
+    var REACT_PROVIDER_TYPE = 0xeacd;
+    var REACT_CONTEXT_TYPE = 0xeace;
+    var REACT_FORWARD_REF_TYPE = 0xead0;
+    var REACT_SUSPENSE_TYPE = 0xead1;
+    var REACT_SUSPENSE_LIST_TYPE = 0xead8;
+    var REACT_MEMO_TYPE = 0xead3;
+    var REACT_LAZY_TYPE = 0xead4;
+    var REACT_BLOCK_TYPE = 0xead9;
+    var REACT_SERVER_BLOCK_TYPE = 0xeada;
+    var REACT_FUNDAMENTAL_TYPE = 0xead5;
+    var REACT_SCOPE_TYPE = 0xead7;
+    var REACT_OPAQUE_ID_TYPE = 0xeae0;
+    var REACT_DEBUG_TRACING_MODE_TYPE = 0xeae1;
+    var REACT_OFFSCREEN_TYPE = 0xeae2;
+    var REACT_LEGACY_HIDDEN_TYPE = 0xeae3;
+    if (typeof Symbol === 'function' && Symbol.for) {
+      var symbolFor = Symbol.for;
+      REACT_ELEMENT_TYPE = symbolFor('react.element');
+      REACT_PORTAL_TYPE = symbolFor('react.portal');
+      REACT_FRAGMENT_TYPE = symbolFor('react.fragment');
+      REACT_STRICT_MODE_TYPE = symbolFor('react.strict_mode');
+      REACT_PROFILER_TYPE = symbolFor('react.profiler');
+      REACT_PROVIDER_TYPE = symbolFor('react.provider');
+      REACT_CONTEXT_TYPE = symbolFor('react.context');
+      REACT_FORWARD_REF_TYPE = symbolFor('react.forward_ref');
+      REACT_SUSPENSE_TYPE = symbolFor('react.suspense');
+      REACT_SUSPENSE_LIST_TYPE = symbolFor('react.suspense_list');
+      REACT_MEMO_TYPE = symbolFor('react.memo');
+      REACT_LAZY_TYPE = symbolFor('react.lazy');
+      REACT_BLOCK_TYPE = symbolFor('react.block');
+      REACT_SERVER_BLOCK_TYPE = symbolFor('react.server.block');
+      REACT_FUNDAMENTAL_TYPE = symbolFor('react.fundamental');
+      REACT_SCOPE_TYPE = symbolFor('react.scope');
+      REACT_OPAQUE_ID_TYPE = symbolFor('react.opaque.id');
+      REACT_DEBUG_TRACING_MODE_TYPE = symbolFor('react.debug_trace_mode');
+      REACT_OFFSCREEN_TYPE = symbolFor('react.offscreen');
+      REACT_LEGACY_HIDDEN_TYPE = symbolFor('react.legacy_hidden');
+    }
+    // Filter certain DOM attributes (e.g. src, href) if their values are empty strings.
+    var enableScopeAPI = false;
+    // Experimental Create Event Handle API.
+    function isValidElementType(type) {
+      if (typeof type === 'string' || typeof type === 'function') {
+        return true;
+      }
+      // Note: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
+      if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || type === REACT_DEBUG_TRACING_MODE_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || type === REACT_LEGACY_HIDDEN_TYPE || enableScopeAPI) {
+        return true;
+      }
+      if (typeof type === 'object' && type !== null) {
+        if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_BLOCK_TYPE || type[0] === REACT_SERVER_BLOCK_TYPE) {
+          return true;
+        }
+      }
+      return false;
+    }
+    function typeOf(object) {
+      if (typeof object === 'object' && object !== null) {
+        var $$typeof = object.$$typeof;
+        switch ($$typeof) {
+          case REACT_ELEMENT_TYPE:
+            var type = object.type;
+            switch (type) {
+              case REACT_FRAGMENT_TYPE:
+              case REACT_PROFILER_TYPE:
+              case REACT_STRICT_MODE_TYPE:
+              case REACT_SUSPENSE_TYPE:
+              case REACT_SUSPENSE_LIST_TYPE:
+                return type;
+              default:
+                var $$typeofType = type && type.$$typeof;
+                switch ($$typeofType) {
+                  case REACT_CONTEXT_TYPE:
+                  case REACT_FORWARD_REF_TYPE:
+                  case REACT_LAZY_TYPE:
+                  case REACT_MEMO_TYPE:
+                  case REACT_PROVIDER_TYPE:
+                    return $$typeofType;
+                  default:
+                    return $$typeof;
+                }
+            }
+          case REACT_PORTAL_TYPE:
+            return $$typeof;
+        }
+      }
+      return undefined;
+    }
+    var ContextConsumer = REACT_CONTEXT_TYPE;
+    var ContextProvider = REACT_PROVIDER_TYPE;
+    var Element = REACT_ELEMENT_TYPE;
+    var ForwardRef = REACT_FORWARD_REF_TYPE;
+    var Fragment = REACT_FRAGMENT_TYPE;
+    var Lazy = REACT_LAZY_TYPE;
+    var Memo = REACT_MEMO_TYPE;
+    var Portal = REACT_PORTAL_TYPE;
+    var Profiler = REACT_PROFILER_TYPE;
+    var StrictMode = REACT_STRICT_MODE_TYPE;
+    var Suspense = REACT_SUSPENSE_TYPE;
+    var hasWarnedAboutDeprecatedIsAsyncMode = false;
+    var hasWarnedAboutDeprecatedIsConcurrentMode = false;
+    // AsyncMode should be deprecated
+    function isAsyncMode(object) {
+      {
+        if (!hasWarnedAboutDeprecatedIsAsyncMode) {
+          hasWarnedAboutDeprecatedIsAsyncMode = true;
+          // Using console['warn'] to evade Babel and ESLint
+          console['warn']('The ReactIs.isAsyncMode() alias has been deprecated, ' + 'and will be removed in React 18+.');
+        }
+      }
+      return false;
+    }
+    function isConcurrentMode(object) {
+      {
+        if (!hasWarnedAboutDeprecatedIsConcurrentMode) {
+          hasWarnedAboutDeprecatedIsConcurrentMode = true;
+          // Using console['warn'] to evade Babel and ESLint
+          console['warn']('The ReactIs.isConcurrentMode() alias has been deprecated, ' + 'and will be removed in React 18+.');
+        }
+      }
+      return false;
+    }
+    function isContextConsumer(object) {
+      return typeOf(object) === REACT_CONTEXT_TYPE;
+    }
+    function isContextProvider(object) {
+      return typeOf(object) === REACT_PROVIDER_TYPE;
+    }
+    function isElement(object) {
+      return typeof object === 'object' && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+    }
+    function isForwardRef(object) {
+      return typeOf(object) === REACT_FORWARD_REF_TYPE;
+    }
+    function isFragment(object) {
+      return typeOf(object) === REACT_FRAGMENT_TYPE;
+    }
+    function isLazy(object) {
+      return typeOf(object) === REACT_LAZY_TYPE;
+    }
+    function isMemo(object) {
+      return typeOf(object) === REACT_MEMO_TYPE;
+    }
+    function isPortal(object) {
+      return typeOf(object) === REACT_PORTAL_TYPE;
+    }
+    function isProfiler(object) {
+      return typeOf(object) === REACT_PROFILER_TYPE;
+    }
+    function isStrictMode(object) {
+      return typeOf(object) === REACT_STRICT_MODE_TYPE;
+    }
+    function isSuspense(object) {
+      return typeOf(object) === REACT_SUSPENSE_TYPE;
+    }
+    exports.ContextConsumer = ContextConsumer;
+    exports.ContextProvider = ContextProvider;
+    exports.Element = Element;
+    exports.ForwardRef = ForwardRef;
+    exports.Fragment = Fragment;
+    exports.Lazy = Lazy;
+    exports.Memo = Memo;
+    exports.Portal = Portal;
+    exports.Profiler = Profiler;
+    exports.StrictMode = StrictMode;
+    exports.Suspense = Suspense;
+    exports.isAsyncMode = isAsyncMode;
+    exports.isConcurrentMode = isConcurrentMode;
+    exports.isContextConsumer = isContextConsumer;
+    exports.isContextProvider = isContextProvider;
+    exports.isElement = isElement;
+    exports.isForwardRef = isForwardRef;
+    exports.isFragment = isFragment;
+    exports.isLazy = isLazy;
+    exports.isMemo = isMemo;
+    exports.isPortal = isPortal;
+    exports.isProfiler = isProfiler;
+    exports.isStrictMode = isStrictMode;
+    exports.isSuspense = isSuspense;
+    exports.isValidElementType = isValidElementType;
+    exports.typeOf = typeOf;
+  })();
+}
+
+},{}],"59lvF":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "default", function () {
@@ -40822,7 +40863,7 @@ var CSSTransition = /*#__PURE__*/(function (_React$Component) {
     if (type === 'appear' && phase === 'done' && doneClassName) {
       className += " " + doneClassName;
     }
-    // This is for to force a repaint,
+    // This is to force a repaint,
     // which is necessary in order to transition styles when adding a class name.
     if (phase === 'active') {
       /*eslint-disable no-unused-expressions*/
@@ -41421,7 +41462,10 @@ Transition.propTypes = "development" !== "production" ? {
   *     [test/CSSTransition-test.js](https://github.com/reactjs/react-transition-group/blob/13435f897b3ab71f6e19d724f145596f5910581c/test/CSSTransition-test.js#L362-L437)).
   */
   nodeRef: _propTypes.default.shape({
-    current: typeof Element === 'undefined' ? _propTypes.default.any : _propTypes.default.instanceOf(Element)
+    current: typeof Element === 'undefined' ? _propTypes.default.any : function (propValue, key, componentName, location, propFullName, secret) {
+      var value = propValue[key];
+      return _propTypes.default.instanceOf(value && ('ownerDocument' in value) ? value.ownerDocument.defaultView.Element : Element)(propValue, key, componentName, location, propFullName, secret);
+    }
   }),
   /**
   * A `function` child can be used instead of a React element. This function is
@@ -44877,7 +44921,7 @@ exports.default = _stylesWithStylesDefault.default(styles, {
   name: 'MuiBottomNavigation'
 })(BottomNavigation);
 
-},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"68QIU","prop-types":"4dfy5","clsx":"29lTl","../styles/withStyles":"4q1Sj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"37jI9":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"3UvLp","prop-types":"4dfy5","clsx":"29lTl","../styles/withStyles":"4q1Sj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"37jI9":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "default", function () {
@@ -45240,7 +45284,7 @@ exports.default = _stylesWithStylesDefault.default(styles, {
   name: 'MuiBreadcrumbs'
 })(Breadcrumbs);
 
-},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/toConsumableArray":"3nUlx","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"68QIU","prop-types":"4dfy5","clsx":"29lTl","../styles/withStyles":"4q1Sj","../Typography":"3wcF9","./BreadcrumbCollapsed":"1fCuT","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"3wcF9":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/toConsumableArray":"3nUlx","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"3UvLp","prop-types":"4dfy5","clsx":"29lTl","../styles/withStyles":"4q1Sj","../Typography":"3wcF9","./BreadcrumbCollapsed":"1fCuT","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"3wcF9":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "default", function () {
@@ -46203,7 +46247,7 @@ exports.default = _stylesWithStylesDefault.default(styles, {
   name: 'MuiButtonGroup'
 })(ButtonGroup);
 
-},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"68QIU","prop-types":"4dfy5","clsx":"29lTl","../utils/capitalize":"59pJw","../styles/colorManipulator":"3kz3i","../styles/withStyles":"4q1Sj","../Button":"1Xm5M","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"37gLn":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"3UvLp","prop-types":"4dfy5","clsx":"29lTl","../utils/capitalize":"59pJw","../styles/colorManipulator":"3kz3i","../styles/withStyles":"4q1Sj","../Button":"1Xm5M","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"37gLn":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "default", function () {
@@ -50858,7 +50902,7 @@ exports.default = _stylesWithStylesDefault.default(styles, {
   name: 'MuiExpansionPanel'
 })(ExpansionPanel);
 
-},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/toArray":"4RQgW","@babel/runtime/helpers/esm/slicedToArray":"4Qm8F","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"68QIU","prop-types":"4dfy5","clsx":"29lTl","@material-ui/utils":"11kc7","../Collapse":"59lvF","../Paper":"5Fj22","../styles/withStyles":"4q1Sj","./ExpansionPanelContext":"6xLDP","../utils/useControlled":"39wLv","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"6xLDP":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/toArray":"4RQgW","@babel/runtime/helpers/esm/slicedToArray":"4Qm8F","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"3UvLp","prop-types":"4dfy5","clsx":"29lTl","@material-ui/utils":"11kc7","../Collapse":"59lvF","../Paper":"5Fj22","../styles/withStyles":"4q1Sj","./ExpansionPanelContext":"6xLDP","../utils/useControlled":"39wLv","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"6xLDP":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 var _react = require('react');
@@ -53776,7 +53820,7 @@ exports.default = _stylesWithStylesDefault.default(styles, {
   name: 'MuiGridList'
 })(GridList);
 
-},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"68QIU","prop-types":"4dfy5","clsx":"29lTl","../styles/withStyles":"4q1Sj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5bVdU":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"3UvLp","prop-types":"4dfy5","clsx":"29lTl","../styles/withStyles":"4q1Sj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5bVdU":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "default", function () {
@@ -57200,7 +57244,7 @@ exports.default = _stylesWithStylesDefault.default(styles, {
   name: 'MuiMenu'
 })(Menu);
 
-},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"68QIU","prop-types":"4dfy5","clsx":"29lTl","@material-ui/utils":"11kc7","../styles/withStyles":"4q1Sj","../Popover":"14VvC","../MenuList":"4RwcA","react-dom":"2sg1U","../utils/setRef":"fLJTB","../styles/useTheme":"WDbNZ","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"14VvC":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"3UvLp","prop-types":"4dfy5","clsx":"29lTl","@material-ui/utils":"11kc7","../styles/withStyles":"4q1Sj","../Popover":"14VvC","../MenuList":"4RwcA","react-dom":"2sg1U","../utils/setRef":"fLJTB","../styles/useTheme":"WDbNZ","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"14VvC":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "default", function () {
@@ -57952,7 +57996,7 @@ var MenuList = /*#__PURE__*/_react.forwardRef(function MenuList(props, ref) {
 } : void 0;
 exports.default = MenuList;
 
-},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"68QIU","prop-types":"4dfy5","react-dom":"2sg1U","../utils/ownerDocument":"4U0qh","../List":"5yMsX","../utils/getScrollbarSize":"3ywf8","../utils/useForkRef":"5XQwt","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"3pvH5":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"3UvLp","prop-types":"4dfy5","react-dom":"2sg1U","../utils/ownerDocument":"4U0qh","../List":"5yMsX","../utils/getScrollbarSize":"3ywf8","../utils/useForkRef":"5XQwt","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"3pvH5":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "default", function () {
@@ -62944,7 +62988,7 @@ var SelectInput = /*#__PURE__*/_react.forwardRef(function SelectInput(props, ref
 } : void 0;
 exports.default = SelectInput;
 
-},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/slicedToArray":"4Qm8F","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","@babel/runtime/helpers/esm/typeof":"2CDJr","@material-ui/utils":"11kc7","react":"3b2NM","react-is":"68QIU","prop-types":"4dfy5","clsx":"29lTl","../utils/ownerDocument":"4U0qh","../utils/capitalize":"59pJw","../Menu/Menu":"WU43u","../InputBase/utils":"6I5u1","../utils/useForkRef":"5XQwt","../utils/useControlled":"39wLv","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5T3CG":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/slicedToArray":"4Qm8F","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","@babel/runtime/helpers/esm/typeof":"2CDJr","@material-ui/utils":"11kc7","react":"3b2NM","react-is":"3UvLp","prop-types":"4dfy5","clsx":"29lTl","../utils/ownerDocument":"4U0qh","../utils/capitalize":"59pJw","../Menu/Menu":"WU43u","../InputBase/utils":"6I5u1","../utils/useForkRef":"5XQwt","../utils/useControlled":"39wLv","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5T3CG":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "default", function () {
@@ -64505,7 +64549,7 @@ exports.default = _stylesWithStylesDefault.default(styles, {
   name: 'MuiStep'
 })(Step);
 
-},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"68QIU","prop-types":"4dfy5","clsx":"29lTl","../styles/withStyles":"4q1Sj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"3QuZS":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","react":"3b2NM","react-is":"3UvLp","prop-types":"4dfy5","clsx":"29lTl","../styles/withStyles":"4q1Sj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"3QuZS":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "default", function () {
@@ -68331,7 +68375,7 @@ exports.default = _stylesWithStylesDefault.default(styles, {
   name: 'MuiTabs'
 })(Tabs);
 
-},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","@babel/runtime/helpers/esm/defineProperty":"1MbJ7","react":"3b2NM","react-is":"68QIU","prop-types":"4dfy5","clsx":"29lTl","@material-ui/utils":"11kc7","../utils/debounce":"5UzsG","../utils/ownerWindow":"3oinN","../utils/scrollLeft":"6nVUk","../internal/animate":"1c6Nh","./ScrollbarSize":"5nUTi","../styles/withStyles":"4q1Sj","./TabIndicator":"1a50p","../TabScrollButton":"1eIsV","../utils/useEventCallback":"33awX","../styles/useTheme":"WDbNZ","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"6nVUk":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"5qnVv","@babel/runtime/helpers/esm/objectWithoutProperties":"5UtKX","@babel/runtime/helpers/esm/defineProperty":"1MbJ7","react":"3b2NM","react-is":"3UvLp","prop-types":"4dfy5","clsx":"29lTl","@material-ui/utils":"11kc7","../utils/debounce":"5UzsG","../utils/ownerWindow":"3oinN","../utils/scrollLeft":"6nVUk","../internal/animate":"1c6Nh","./ScrollbarSize":"5nUTi","../styles/withStyles":"4q1Sj","./TabIndicator":"1a50p","../TabScrollButton":"1eIsV","../utils/useEventCallback":"33awX","../styles/useTheme":"WDbNZ","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"6nVUk":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "detectScrollType", function () {
