@@ -18,8 +18,8 @@ RETRO YELLOW: #FFCC00;
 }
 
 html {
-    background: #C4CED4;
-    color: #0C2C56;
+    background: #191414 ;
+    color: #FFFFFF;
     line-height: 200%;
 }
 .container{
@@ -39,7 +39,7 @@ html {
     padding: 10px;
     text-align: center;
 }
-button{
+/*button{
     width: 100%;
     outline: none;
     text-emphasis: none;
@@ -54,8 +54,27 @@ button{
 button:hover{
     opacity: 1.0;
 }
+*/
 .vis-description{
     text-decoration: #0C2C56;
+}
+
+.histogram {
+    align-items: center;
+    display: inline;
+    margin: 0 auto;
+}
+
+.filters {
+    margin: 5%;
+    display: inline-block;
+}
+
+.slider {
+    margin-top: 5%;
+}
+.tabbed{
+    margin-left:15px;
 }
 
 /*# sourceMappingURL=index.de60a1d7.css.map */

@@ -1,2 +1,0 @@
-*{margin:0;padding:0}html{background:#c4ced4;color:#0c2c56;line-height:200%}.container{margin:5%}.flexed{display:flex}.left-side,.right-side{width:10%}.data-center{width:80%}.centered{margin:auto;padding:10px;text-align:center}button{width:100%;outline:none;text-emphasis:none;text-decoration:none;height:100%;border:none;background:#005c5c;color:#d50032;opacity:.7;animation-duration:1.1s}button:hover{opacity:1}.vis-description{text-decoration:#0c2c56}
-/*# sourceMappingURL=index.HASH_REF_f0918a547ace1733ebc251b0de60a1d7.css.map */
