@@ -1,0 +1,149 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('./style.css');
+  require('@material-ui/core/styles');
+  require('@material-ui/core');
+  require('@material-ui/core/MenuItem');
+  require('@material-ui/core/Fade');
+  require('@material-ui/core/Typography');
+  require('@material-ui/core/Slider');
+  var _hooksUseFetch = require("../hooks/useFetch");
+  require("d3-array");
+  require("d3-axis-for-react");
+  require("d3-scale");
+  require("d3");
+  require("d3-tip");
+  var _jsxFileName = "/Users/claytonnovotney/Desktop/UW/Spring2021/Info474/Info474Assignment3/src/ScatterPlot.js", _s = $RefreshSig$();
+  // Scale for these values is still unknown
+  const yValues = {
+    "acousticness": {
+      "name": "acousticness",
+      "scale": 100,
+      "minVal": 0.22,
+      "maxVal": 0.96,
+      "description": "How acoustic the songs in year are on a scale of 0.0 to 1.0."
+    },
+    "danceability": {
+      "name": "danceability",
+      "scale": 100,
+      "minVal": 0.41,
+      "maxVal": 0.69,
+      "description": "How suitable the songs in year are for dancing on a scale of 0.0 to 1.0."
+    },
+    "duration_ms": {
+      "name": "duration_ms",
+      "scale": 100,
+      "minVal": 157000,
+      "maxVal": 268000,
+      "description": "Average time duration of songs in year in ms."
+    },
+    "energy": {
+      "name": "energy",
+      "scale": 100,
+      "minVal": 0.21,
+      "maxVal": 0.68,
+      "description": "How energetic the songs in year are on a scale of 0.0 to 1.0."
+    },
+    "instrumentalness": {
+      "name": "instrumentalness",
+      "scale": 100,
+      "minVal": 0.02,
+      "maxVal": 0.58,
+      "description": "Ratio of instrumental sounds on a scale of 0.0 to 1.0."
+    },
+    "liveness": {
+      "name": "liveness",
+      "scale": 100,
+      "minVal": 0.17,
+      "maxVal": 0.26,
+      "description": "Audience presence on a scale of 0.0 to 1.0."
+    },
+    "speechiness": {
+      "name": "speechiness",
+      "scale": 100,
+      "minVal": 0.05,
+      "maxVal": 0.49,
+      "description": "Spoken words ratio on a scale of 0.0 to 1.0."
+    },
+    "tempo": {
+      "name": "tempo",
+      "scale": 100,
+      "minVal": 101,
+      "maxVal": 124,
+      "description": "Tempo of songs in year in BPM on a scale of 0.0 to 160."
+    },
+    "valence": {
+      "name": "valence",
+      "scale": 100,
+      "minVal": 0.38,
+      "maxVal": 0.66,
+      "description": "Positivity of songs in year on a scale of 0.0 to 1.0."
+    },
+    "popularity": {
+      "name": "popularity",
+      "scale": 100,
+      "minVal": 0.14,
+      "maxVal": 65.3,
+      "description": "Popularity of songs in year on a scale of 0.0 to 100.0."
+    }
+  };
+  function ScatterPlot() {
+    _s();
+    const dataByYearURL = "https://raw.githubusercontent.com/Info474Sp21/Info474Assignment3/main/data/data_by_year_o.csv";
+    // state stuff
+    const [data, loading] = _hooksUseFetch.useFetch(dataByYearURL);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "scatterplot",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        className: "centered",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 100,
+          columnNumber: 13
+        }
+      }, "React and D3 Interactive Scatter Plot Visualization #2"), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "filters",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 101,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "centered",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 102,
+          columnNumber: 17
+        }
+      })))
+    );
+  }
+  _s(ScatterPlot, "Jm65JCcgUFoenM4DufkEA80vRVI=", false, function () {
+    return [_hooksUseFetch.useFetch];
+  });
+  _c = ScatterPlot;
+  exports.default = ScatterPlot;
+  var _c;
+  $RefreshReg$(_c, "ScatterPlot");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
