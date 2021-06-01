@@ -5,9 +5,9 @@ export default class Intro extends Component {
         return (
             <div>
                 <h2>Info 474</h2>
-                <h3>May 1th, 2021</h3>
+                <h3>May 1st, 2021</h3>
                 <h3>Clayton Novotney, Kelson Flint, Olivia Victorino, Zhan Wu</h3>
-                <h1 className="centered">Interactive Data Visualization, Assignment 3</h1>
+                <h1 className="centered">Interactive Data Visualization, Assignment 3/4</h1>
                 <br></br>
                 <h2>Step 1: Data Selection</h2>
                 <h4>Data Selected: Spotify Music Data from <a href="https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks">Kaggle.com</a></h4>
