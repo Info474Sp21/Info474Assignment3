@@ -150,37 +150,7 @@ function ScatterPlot() {
         .text(yValue);
     svg.append("g")
         .call(d3.axisLeft(y));
-
-    // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
-    // Its opacity is set to 0: we don't see it by default.
-    // var tooltip = d3.select("#scatterplot-vis")
-    //     .append("div")
-    //     .style("opacity", 0)
-    //     .attr("class", "tooltip")
-    //     .style("background-color", "#E0E0E0")
-    //     .style("border", "solid")
-    //     .style("border-width", "1px")
-    //     .style("border-radius", "5px")
-    //     .style("padding", "10px")
-    // A function that change this tooltip when the user hover a point.
-    // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
-    // var mouseover = function(d) {
-    // tooltip
-    //     .style("opacity", 1)
-    // }
-    // var mousemove = function(d) {
-    // tooltip
-    //     .html("Year: " + d['year'] + " <br>" + xValue + ": d[xValue] <br> " + yValue + ": d[yValue]")
-    //     .style("left", (d3.mouse(this)[0]+90) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
-    //     .style("top", (d3.mouse(this)[1]) + "px")
-    // }
-    // // A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
-    // var mouseleave = function(d) {
-    // tooltip
-    //     .transition()
-    //     .duration(200)
-    //     .style("opacity", 0)
-    // }
+  
     // // Add dots
     svg.append('g')
         .selectAll("dot")
@@ -191,17 +161,14 @@ function ScatterPlot() {
         .attr("cy", function (d) { return y(d[yValue]); } )
         .attr("r", 2.5)
         .style("fill", "#1DB954")
-        // .on("mouseover", mouseover )
-        // .on("mousemove", mousemove )
-        // .on("mouseleave", mouseleave )
         
     return (
         <div className="scatterplot_container centered">
             <h1 className="centered">React and D3 Interactive Scatter Plot Visualization #2</h1>
-            {/* <svg id="scatterplot-vis" className="svg-canvas" width={width} height={height + margin.top * 6} /> */}
-            <div id="scatterplot-vis">
-            {/* This causes duplicate things to show up. But works well with the tooltip */}
-            </div>
+            <svg id="scatterplot-vis" className="svg-canvas" width={width} height={height + margin.top * 6} />
+            {/* <div id="scatterplot-vis">
+            This causes duplicate things to show up. But works well with the tooltip
+            </div> */}
         </div>
     );
 }
