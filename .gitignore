@@ -76,6 +76,12 @@ typings/
 .cache
 .parcel-cache
 
+*.cache
+*.parcel-cache
+
+.cache/
+.parcel-cache/
+
 # Next.js build output
 .next
 
