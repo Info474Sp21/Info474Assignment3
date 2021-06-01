@@ -1,6 +1,6 @@
 import React from "react";
 import Intro from "./Intro";
-import D3Visual from "./D3Visual";
+// import D3Visual from "./D3Visual";
 import ScatterPlot from "./ScatterPlot"
 import Conclusion from './Conclusion';
 
@@ -11,7 +11,7 @@ const App = () => {
             <Intro/>
             <div>
                 <br></br>
-                <D3Visual/>
+                {/* <D3Visual/> */}
                 <ScatterPlot/>
             </div>
             <Conclusion/>

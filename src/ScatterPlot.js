@@ -87,7 +87,14 @@ const yValues = {
         "description": "Popularity of songs in year on a scale of 0.0 to 100.0."
     }
 }
-const size = 500;
+
+function ScatterPlot() {
+    const dataByYearURL = "https://raw.githubusercontent.com/Info474Sp21/Info474Assignment3/main/data/data_by_year_o.csv"
+    //state stuff
+    const [data, loading] = useFetch(
+        dataByYearURL
+    );
+    const size = 500;
     const margin = 20;
     const axisTextAlignmentFactor = 10;
     console.log(data);
@@ -98,22 +105,14 @@ const size = 500;
     .range([size - 350, size]);
 
     const _bins = bin().thresholds(10); //call bin i guess?
-  const tmaxBins = _bins(
+    const tmaxBins = _bins(
     // bin takes an array: aka map of the csv.
-    data.map((d) => {
+        data.map((d) => {
 
-      return +d.year;
+        return +d.year;
 
-    }));
+        }));
     console.log(tmaxBins);
-
-function ScatterPlot() {
-    const dataByYearURL = "https://raw.githubusercontent.com/Info474Sp21/Info474Assignment3/main/data/data_by_year_o.csv"
-    //state stuff
-    const [data, loading] = useFetch(
-        dataByYearURL
-    );
-
     return (
         <div className="scatterplot">
             <h1 className="centered">React and D3 Interactive Scatter Plot Visualization #2</h1>
