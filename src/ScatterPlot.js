@@ -15,7 +15,6 @@ import * as d3 from "d3";
 import d3Tip from "d3-tip";
 
 
-//   Scale for these values is still unknown
 const yValues = {
     "acousticness" : {
         "name":"acousticness",
