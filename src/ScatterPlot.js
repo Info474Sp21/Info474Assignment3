@@ -101,11 +101,15 @@ function ScatterPlot() {
     const [data, loading] = useFetch(
         dataByYearURL
     );
-    var xValue = "liveness";
+    console.log("Scatter plot being called");
+    var xValue = "valence";
     var yValue = "popularity";
+    var screenWidth = window.innerWidth;
     var margin = {top: 10, right: 30, bottom: 30, left: 60},
-        width = 460 - margin.left - margin.right,
+        width = screenWidth * .8 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
+    const innerWidth = width - margin.left - margin.right;
+    const innerHeight = height - margin.top - margin.bottom;
     const svg = d3.select("#scatterplot-vis")
         .append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -117,44 +121,57 @@ function ScatterPlot() {
     var x = d3.scaleLinear()
         .domain([yValues[xValue]["minVal"], yValues[xValue]["maxVal"]])
         .range([ 0, width ]);
+    // Add X Axis Label
+    svg.append('text')
+        .attr('class', 'axis-label')
+        .attr('stroke', 'white')
+        .attr('fill', 'white')
+        .attr('x', innerWidth / 2 + margin.left/2)
+        .attr('y', 390)
+        .text(xValue);
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(x));
-
     // Add Y axis
     var y = d3.scaleLinear()
         .domain([yValues[yValue]["minVal"], yValues[yValue]["maxVal"]])
         .range([ height, 0]);
+    // Add y Xxis Label
+    svg.append('text')
+        .attr('class', 'axis-label')
+        .attr('stroke', 'white')
+        .attr('fill', 'white')
+        .attr('x', -innerHeight / 2 - margin.top)
+        .attr('y', -40)
+        .attr('transform', `rotate(-90)`)
+        .style('text-anchor', 'middle')
+        .text(yValue);
     svg.append("g")
         .call(d3.axisLeft(y));
 
     // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
     // Its opacity is set to 0: we don't see it by default.
     var tooltip = d3.select("#scatterplot-vis")
-    .append("div")
-    .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "#E0E0E0")
-    .style("border", "solid")
-    .style("border-width", "1px")
-    .style("border-radius", "5px")
-    .style("padding", "10px")
+        .append("div")
+        .style("opacity", 0)
+        .attr("class", "tooltip")
+        .style("background-color", "#E0E0E0")
+        .style("border", "solid")
+        .style("border-width", "1px")
+        .style("border-radius", "5px")
+        .style("padding", "10px")
     // A function that change this tooltip when the user hover a point.
     // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
     var mouseover = function(d) {
-        console.log(d);
     tooltip
         .style("opacity", 1)
     }
-
     var mousemove = function(d) {
-        console.log(d);
     tooltip
-        .html("The exact value of<br>the Ground Living area is: " + d)
+        .html("Year: " + d['year'] + " <br>" + xValue + ": d[xValue] <br> " + yValue + ": d[yValue]")
         .style("left", (d3.mouse(this)[0]+90) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
         .style("top", (d3.mouse(this)[1]) + "px")
     }
-
     // A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
     var mouseleave = function(d) {
     tooltip
@@ -162,7 +179,6 @@ function ScatterPlot() {
         .duration(200)
         .style("opacity", 0)
     }
-
     // Add dots
     svg.append('g')
         .selectAll("dot")
