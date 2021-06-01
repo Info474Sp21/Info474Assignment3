@@ -132,9 +132,7 @@ function ScatterPlot() {
                     cx={100 - year.acousticness}
                     cy={size - margin - year.danceability}
                     r="3"
-                    fill="none"
-                    stroke={highlight ? "red" : "steelblue"}
-                    strokeOpacity="0.2"
+                    fill="white"
                   />
                 );
               })}
