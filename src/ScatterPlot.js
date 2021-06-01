@@ -97,22 +97,16 @@ function ScatterPlot() {
     const size = 500;
     const margin = 20;
     const axisTextAlignmentFactor = 10;
-    console.log(data);
-    
 
+    var rectWidth = 2.9;
+    var rectSpace = 5.3;
     const xScale = scaleLinear()
-    .domain(extent(data, (d) => d.year))
+    .domain(extent(data, (d) => d.danceability))
     .range([size - 350, size]);
 
-    const _bins = bin().thresholds(10); //call bin i guess?
-    const tmaxBins = _bins(
-    // bin takes an array: aka map of the csv.
-        data.map((d) => {
-
-        return +d.year;
-
-        }));
-    console.log(tmaxBins);
+    var yScale = scaleLinear()
+    .domain(extent(data,(d) => d.acousticness))
+    .range([50,500]);
     return (
         <div className="scatterplot">
             <h1 className="centered">React and D3 Interactive Scatter Plot Visualization #2</h1>
@@ -127,15 +121,14 @@ function ScatterPlot() {
                 return (
                   <circle
                     key={index}
-                    //tmin by tmax per datum creates a nice scatterplot
-                    cx={100 - year.acousticness}
-                    cy={size - margin - year.danceability}
+                    cx={920 - year.danceability * 1200}
+                    cy={1100 -size - margin - year.acousticness * 580}
                     r="3"
                     fill="white"
                   />
                 );
               })}
-            </svg>
+            
 
             <g transform={`translate(-60, ${size - margin})`} className="axisBottom">
                     {/* define our axis here*/} 
@@ -145,15 +138,17 @@ function ScatterPlot() {
                         title="Year"
                     />
                 </g>
-                <g transform={`translate(${40 + rectSpace * (startYear - 1921)}, ${(size - margin) - size})`} className="axisBottom">
+                <g transform={`translate(${40 + rectSpace}, ${(size - margin) - size})`} className="axisBottom">
                     {/* define our axis here*/} 
                     <Axis
                         orient={Orient.left}
                         scale={yScale}
                         title="Year"
                     />
-                </g>
+                </g> 
+                </svg>
                 </div>
+                
             </div>
 
         </div>
