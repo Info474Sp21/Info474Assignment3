@@ -1,8 +1,8 @@
-import React, { Component, useState } from 'react'
+import React, { Component, useState, useEffect } from 'react'
 import './style.css'
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 
-import {Button, Menu} from '@material-ui/core';
+import {Button, InputLabel, Menu, Select} from '@material-ui/core';
 import MenuItem from '@material-ui/core/MenuItem';
 import Fade from '@material-ui/core/Fade';
 import Typography from '@material-ui/core/Typography';
@@ -15,7 +15,7 @@ import * as d3 from "d3";
 import d3Tip from "d3-tip";
 
 
-const yValues = {
+const filters = {
     "acousticness" : {
         "name":"acousticness",
         "scale":100,
@@ -95,15 +95,84 @@ const yValues = {
     }
 }
 
+
+
 function ScatterPlot() {
     const dataByYearURL = "https://raw.githubusercontent.com/Info474Sp21/Info474Assignment3/main/data/data_by_year_o.csv"
     //state stuff
     const [data, loading] = useFetch(
         dataByYearURL
     );
+    const [xFilter, setXFilter] = useState("danceability")
+    const [yFilter, setYFilter] = useState("popularity")
+    const [startYear, setStartYear] = useState(1921)
+    const [endYear, setEndYear] = useState(2020)
+    const [anchorEl, setAnchorEl] = useState(null);
+    const [minOfXCat, setMinOfXCat] = useState(0.41445);
+    const [maxOfXCat, setMaxOfXCat] = useState(0.69291);
+    const [minOfYCat, setMinOfYCat] = useState(0.14);
+    const [maxOfYCat, setMaxOfYCat] = useState(65.3);
+
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleXFilter = (e) => { 
+        console.log("change x filter: " + e.target.value);
+
+        setXFilter(e.target.value);
+        console.log(xFilter)
+        console.log(yFilter)
+        var tempArr = [];
+        for (var t = 0; t < data.length; t++) {
+            tempArr.push(data[t][e.target.value]);
+        }
+        setMinOfXCat(Math.min.apply(Math, tempArr));
+        setMaxOfXCat(Math.max.apply(Math, tempArr));
+    };
+
+    const handleYFilterChange = (e) => { 
+        console.log("change y filter: " + e.target.value);
+        
+        setYFilter(e.target.value);
+        console.log(xFilter)
+        console.log(yFilter)
+        var tempArr = [];
+        for (var t = 0; t < data.length; t++) {
+            tempArr.push(data[t][e.target.value]);
+        }
+        setMinOfYCat(Math.min.apply(Math, tempArr));
+        setMaxOfYCat(Math.max.apply(Math, tempArr));
+    };
+
+    const handleSliderChange = (e, v) => {
+        console.log("set years to: " + v);
+        setStartYear(v[0]);
+        setEndYear(v[1]);
+    };
+
+    const useStyles = makeStyles({
+        select: {
+            background: "#FFFFFF",
+            width: "300px",
+            '&:before': {
+                background: "#FFFFFF",
+            },
+            '&:after': {
+                background: "#FFFFFF",
+            }
+        },
+        label: {
+            color: "#FFFFFF"
+        }
+    })
+    const classes = useStyles();
+   
+
     console.log("Scatter plot being called");
-    var xValue = "valence";
-    var yValue = "popularity";
+    // var xFilter = xFilter;
+    // var yFilter = yFilter;
     var screenWidth = window.innerWidth;
     var margin = {top: 10, right: 30, bottom: 30, left: 60},
         width = screenWidth * .8 - margin.left - margin.right,
@@ -111,17 +180,20 @@ function ScatterPlot() {
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
     const svg = d3.select("#scatterplot-vis")
-        .append("svg")
+        .append("g")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
-        .append("g")
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
-    // svg = d3.select('.svg-canvas')
-        // svg.selectAll("*").remove()
+    
+            //need to delete previous plot before it rerenders
+            // const svg = d3.select('.svg-canvas')
+            // svg.selectAll("*").remove()
+    
     // Add X axis
     var x = d3.scaleLinear()
-        .domain([yValues[xValue]["minVal"]*.98, yValues[xValue]["maxVal"]*1.02])
+        //.domain([yFilters[xFilter]["minVal"]*.98, yFilters[xFilter]["maxVal"]*1.02])
+        .domain([minOfXCat, maxOfXCat])
         .range([ 0, width ]);
     // Add X Axis Label
     svg.append('text')
@@ -130,13 +202,14 @@ function ScatterPlot() {
         .attr('fill', 'white')
         .attr('x', innerWidth / 2 + margin.left/2)
         .attr('y', 390)
-        .text(xValue);
+        .text(xFilter);
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(x));
     // Add Y axis
     var y = d3.scaleLinear()
-        .domain([yValues[yValue]["minVal"]*.98, yValues[yValue]["maxVal"]*1.02])
+       // .domain([yFilters[yFilter]["minVal"]*.98, yFilters[yFilter]["maxVal"]*1.02])
+        .domain([maxOfYCat, minOfYCat])
         .range([ height, 0]);
     // Add y Xxis Label
     svg.append('text')
@@ -147,7 +220,7 @@ function ScatterPlot() {
         .attr('y', -40)
         .attr('transform', `rotate(-90)`)
         .style('text-anchor', 'middle')
-        .text(yValue);
+        .text(yFilter);
     svg.append("g")
         .call(d3.axisLeft(y));
 
@@ -162,15 +235,15 @@ function ScatterPlot() {
     //     .style("border-width", "1px")
     //     .style("border-radius", "5px")
     //     .style("padding", "10px")
-    // A function that change this tooltip when the user hover a point.
-    // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
+    // // A function that change this tooltip when the user hover a point.
+    // // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
     // var mouseover = function(d) {
     // tooltip
     //     .style("opacity", 1)
     // }
     // var mousemove = function(d) {
     // tooltip
-    //     .html("Year: " + d['year'] + " <br>" + xValue + ": d[xValue] <br> " + yValue + ": d[yValue]")
+    //     .html("Year: " + d['year'] + " <br>" + xFilter + ": d[xFilter] <br> " + yFilter + ": d[yFilter]")
     //     .style("left", (d3.mouse(this)[0]+90) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
     //     .style("top", (d3.mouse(this)[1]) + "px")
     // }
@@ -187,8 +260,8 @@ function ScatterPlot() {
         .data(data)
         .enter()
         .append("circle")
-        .attr("cx", function (d) { return x(d[xValue]); } )
-        .attr("cy", function (d) { return y(d[yValue]); } )
+        .attr("cx", function (d) { return x(d[xFilter]); } )
+        .attr("cy", function (d) { return y(d[yFilter]); } )
         .attr("r", 2.5)
         .style("fill", "#1DB954")
         // .on("mouseover", mouseover )
@@ -198,10 +271,49 @@ function ScatterPlot() {
     return (
         <div className="scatterplot_container centered">
             <h1 className="centered">React and D3 Interactive Scatter Plot Visualization #2</h1>
-            {/* <svg id="scatterplot-vis" className="svg-canvas" width={width} height={height + margin.top * 6} /> */}
-            <div id="scatterplot-vis">
-            {/* This causes duplicate things to show up. But works well with the tooltip */}
+            {/* <div id="scatterplot-vis"> */}
+            <div className="filters centered" >
+            <h2>Change Filters</h2>
+                    <InputLabel className={classes.label} >X-Axis</InputLabel>
+                    <Select
+                        value={xFilter}
+                        onChange={handleXFilter}
+                        variant="outlined"
+                        className={classes.select}
+                    >
+                        <MenuItem value="danceability" >Danceability</MenuItem>
+                        <MenuItem value="acousticness" >Acousticness</MenuItem>
+                        <MenuItem value="liveness" >Liveness</MenuItem>
+                        <MenuItem value="popularity" >Popularity</MenuItem>
+                        <MenuItem value="tempo" >Tempo</MenuItem>
+                        <MenuItem value="valence" >Valence</MenuItem>
+                        <MenuItem value="speechiness" >Speechiness</MenuItem>
+                        <MenuItem value="instrumentalness" >Instrumentalness</MenuItem>
+                        <MenuItem value="energy" >Energy</MenuItem>
+                        <MenuItem value="duration_ms" >Duration(ms)</MenuItem>
+                    </Select>
+                    <InputLabel className={classes.label}>Y-Axis</InputLabel>
+                    <Select
+                        value={yFilter}
+                        onChange={handleYFilterChange}
+                        variant="outlined"
+                        className={classes.select}
+                    >
+                        <MenuItem value="danceability" >Danceability</MenuItem>
+                        <MenuItem value="acousticness" >Acousticness</MenuItem>
+                        <MenuItem value="liveness" >Liveness</MenuItem>
+                        <MenuItem value="popularity" >Popularity</MenuItem>
+                        <MenuItem value="tempo" >Tempo</MenuItem>
+                        <MenuItem value="valence" >Valence</MenuItem>
+                        <MenuItem value="speechiness" >Speechiness</MenuItem>
+                        <MenuItem value="instrumentalness" >Instrumentalness</MenuItem>
+                        <MenuItem value="energy" >Energy</MenuItem>
+                        <MenuItem value="duration_ms" >Duration(ms)</MenuItem>
+                    </Select>
             </div>
+            <svg id="scatterplot-vis" className="svg-canvas" width={width} height={height + margin.top * 6} />
+            {/* This causes duplicate things to show up. But works well with the tooltip */}
+            
         </div>
     );
 }

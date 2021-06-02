@@ -76,3 +76,12 @@ button:hover{
 .tabbed{
     margin-left:15px;
 }
+
+.switch-label {
+    font-size: 3rem;
+}
+
+.scatter-filters {
+    margin: 5%;
+    display: inline;
+}
