@@ -122,8 +122,8 @@ function ScatterPlot() {
         console.log("change x filter: " + e.target.value);
 
         setXFilter(e.target.value);
-        console.log(xFilter)
-        console.log(yFilter)
+        console.log(xFilter);
+        console.log(yFilter);
         var tempArr = [];
         for (var t = 0; t < data.length; t++) {
             tempArr.push(data[t][e.target.value]);
@@ -136,8 +136,8 @@ function ScatterPlot() {
         console.log("change y filter: " + e.target.value);
         
         setYFilter(e.target.value);
-        console.log(xFilter)
-        console.log(yFilter)
+        console.log(xFilter);
+        console.log(yFilter);
         var tempArr = [];
         for (var t = 0; t < data.length; t++) {
             tempArr.push(data[t][e.target.value]);
@@ -179,6 +179,7 @@ function ScatterPlot() {
         height = 400 - margin.top - margin.bottom;
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
+    d3.select("#scatterplot-vis").selectAll("*").remove();
     const svg = d3.select("#scatterplot-vis")
         .append("g")
         .attr("width", width + margin.left + margin.right)
@@ -200,7 +201,7 @@ function ScatterPlot() {
         .attr('class', 'axis-label')
         .attr('stroke', 'white')
         .attr('fill', 'white')
-        .attr('x', innerWidth / 2 + margin.left/2)
+        .attr('x', innerWidth / 2 + margin.left / 2)
         .attr('y', 390)
         .text(xFilter);
     svg.append("g")
@@ -217,13 +218,40 @@ function ScatterPlot() {
         .attr('stroke', 'white')
         .attr('fill', 'white')
         .attr('x', -innerHeight / 2 - margin.top)
-        .attr('y', -40)
+        .attr('y', -48)
         .attr('transform', `rotate(-90)`)
         .style('text-anchor', 'middle')
         .text(yFilter);
     svg.append("g")
         .call(d3.axisLeft(y));
+    // Add the tooltip container to the vis container
+    // it's invisible and its position/contents are defined during mouseover
+    d3.select(".tooltip").remove();
+    var tooltip = d3.select("#vis_container").append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
 
+    // tooltip mouseover event handler
+    var tipMouseover = function(event, d) {
+        var html  = "year: " + d.year + "<br/>" + xFilter + ": " + d[xFilter] + "<br/>" + yFilter + ": " + d[yFilter];
+        d3.select(this).attr("r", 5).style("fill", "white");
+        tooltip.html(html)
+            .style("left", (event.pageX + 15) + "px")
+            .style("top", (event.pageY - 28) + "px")
+            .style("position", "absolute")
+            .style("pointer-events", "none")
+            .transition()
+            .duration(350)
+            .style("opacity", 1);
+
+    };
+    // tooltip mouseout event handler
+    var tipMouseout = function(event, d) {
+        d3.select(this).attr("r", 2.5).style("fill", "#1DB954");
+        tooltip.transition()
+            .duration(250)
+            .style("opacity", 0);
+    };
     // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
     // Its opacity is set to 0: we don't see it by default.
     // var tooltip = d3.select("#scatterplot-vis")
@@ -255,21 +283,23 @@ function ScatterPlot() {
     //     .style("opacity", 0)
     // }
     // // Add dots
-    svg.append('g')
-        .selectAll("dot")
+    //console.log(svg.selectAll(".dot").data(data).enter());
+    svg.selectAll(".dot")
         .data(data)
         .enter()
         .append("circle")
+        .attr("class", "dot")
         .attr("cx", function (d) { return x(d[xFilter]); } )
         .attr("cy", function (d) { return y(d[yFilter]); } )
         .attr("r", 2.5)
         .style("fill", "#1DB954")
-        // .on("mouseover", mouseover )
+        .on("mouseover", tipMouseover)
+        .on("mouseout", tipMouseout);
         // .on("mousemove", mousemove )
         // .on("mouseleave", mouseleave )
         
     return (
-        <div className="scatterplot_container centered">
+        <div className="scatterplot_container" id="vis_container">
             <h1 className="centered">React and D3 Interactive Scatter Plot Visualization #2</h1>
             {/* <div id="scatterplot-vis"> */}
             <div className="filters centered" >
