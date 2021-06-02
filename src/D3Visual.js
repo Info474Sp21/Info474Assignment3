@@ -179,24 +179,9 @@ function D3Visual() {
     const axisTextAlignmentFactor = 10;
     const _bins = bin().thresholds(10); //call bin i guess?
     const tmaxBins = _bins(
-    // bin takes an array: aka map of the csv.
     data.map((d) => {
       return +d.year;
     }));
-    // var tip = d3.tip()
-    //     .attr('class', 'd3-tip')
-    //     .offset([-10, 0])
-    //     .html(function(d) {
-    //         return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
-    //     })
-    var tip = d3Tip().attr('class', 'd3-tip').offset([-12,0])
-        .html(function(d) {
-            console.log(d);
-            return "<strong>Frequency:</strong> <span style='color:red'>" + d + "</span>";
-        });
-    var svg = d3.select("#svg-vis");
-    svg.call(tip);
-
     return (
         <div className="histogram">
             <h1 className="centered">React and D3 Interactive Visualization</h1>

@@ -95,6 +95,19 @@ const filters = {
     }
 }
 
+const yearColors = {
+    192:"#74ff4f",
+    193:"#36ff00",
+    194:"#34eb03",
+    195:"#00ff5a",
+    196:"#00d44b",
+    197:"#00ba42",
+    198:"#009836",
+    199:"#00782b",
+    200:"#026325",
+    201:"#096028",
+    202:"#0a5424"
+}
 
 
 function ScatterPlot() {
@@ -175,7 +188,7 @@ function ScatterPlot() {
     // var yFilter = yFilter;
     var screenWidth = window.innerWidth;
     var margin = {top: 10, right: 30, bottom: 30, left: 60},
-        width = screenWidth * .8 - margin.left - margin.right,
+        width = screenWidth * .6 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
     const innerWidth = width - margin.left - margin.right;
     const innerHeight = height - margin.top - margin.bottom;
@@ -189,7 +202,6 @@ function ScatterPlot() {
     
     // Add X axis
     var x = d3.scaleLinear()
-        //.domain([yFilters[xFilter]["minVal"]*.98, yFilters[xFilter]["maxVal"]*1.02])
         .domain([minOfXCat, maxOfXCat])
         .range([ 0, width ]);
     // Add X Axis Label
@@ -205,7 +217,6 @@ function ScatterPlot() {
         .call(d3.axisBottom(x));
     // Add Y axis
     var y = d3.scaleLinear()
-       // .domain([yFilters[yFilter]["minVal"]*.98, yFilters[yFilter]["maxVal"]*1.02])
         .domain([maxOfYCat, minOfYCat])
         .range([ height, 0]);
     // Add y Xxis Label
@@ -226,7 +237,6 @@ function ScatterPlot() {
     var tooltip = d3.select("#vis_container").append("div")
         .attr("class", "tooltip")
         .style("opacity", 0);
-
     // tooltip mouseover event handler
     var tipMouseover = function(event, d) {
         var html  = "year: " + d.year + "<br/>" + xFilter + ": " + d[xFilter] + "<br/>" + yFilter + ": " + d[yFilter];
@@ -248,7 +258,6 @@ function ScatterPlot() {
             .duration(250)
             .style("opacity", 0);
     };
-   
     svg.selectAll(".dot")
         .data(data)
         .enter()
@@ -257,16 +266,33 @@ function ScatterPlot() {
         .attr("cx", function (d) { return x(d[xFilter]); } )
         .attr("cy", function (d) { return y(d[yFilter]); } )
         .attr("r", 2.5)
-        .style("fill", "#1DB954")
+        .style("fill", d=>yearColors[Math.round(d.year/10)])
         .on("mouseover", tipMouseover)
         .on("mouseout", tipMouseout);
         
     return (
         <div className="scatterplot_container" id="vis_container">
             <h1 className="centered">React and D3 Interactive Scatter Plot Visualization #2</h1>
-            {/* <div id="scatterplot-vis"> */}
-            <div className="filters centered" >
-            <h2>Change Filters</h2>
+            <div className="flexed">
+                <div className="filters centered" >
+                    <div className="flexed justified">
+                        <p style={{color: yearColors["192"]}}>1920's </p>
+                        <p style={{color: yearColors["193"]}}>1930's </p>
+                        <p style={{color: yearColors["194"]}}>1940's </p>
+                    </div>
+                    <div className="flexed justified">
+                        <p style={{color: yearColors["195"]}}>1950's </p>
+                        <p style={{color: yearColors["196"]}}>1960's </p>
+                        <p style={{color: yearColors["197"]}}>1970's </p>
+                    </div>
+                    <div className="flexed justified">
+                        <p style={{color: yearColors["198"]}}>1980's </p>
+                        <p style={{color: yearColors["199"]}}>1990's </p>
+                        <p style={{color: yearColors["200"]}}>2000's </p>
+                        <p style={{color: yearColors["200"]}}>2010+ </p>
+                    </div>
+                    <h2>Change Filters</h2>
+                    <br></br>
                     <InputLabel className={classes.label} >X-Axis</InputLabel>
                     <Select
                         value={xFilter}
@@ -284,29 +310,30 @@ function ScatterPlot() {
                         <MenuItem value="instrumentalness" >Instrumentalness</MenuItem>
                         <MenuItem value="energy" >Energy</MenuItem>
                         <MenuItem value="duration_ms" >Duration(ms)</MenuItem>
-                    </Select>
-                    <InputLabel className={classes.label}>Y-Axis</InputLabel>
-                    <Select
-                        value={yFilter}
-                        onChange={handleYFilterChange}
-                        variant="outlined"
-                        className={classes.select}
-                    >
-                        <MenuItem value="danceability" >Danceability</MenuItem>
-                        <MenuItem value="acousticness" >Acousticness</MenuItem>
-                        <MenuItem value="liveness" >Liveness</MenuItem>
-                        <MenuItem value="popularity" >Popularity</MenuItem>
-                        <MenuItem value="tempo" >Tempo</MenuItem>
-                        <MenuItem value="valence" >Valence</MenuItem>
-                        <MenuItem value="speechiness" >Speechiness</MenuItem>
-                        <MenuItem value="instrumentalness" >Instrumentalness</MenuItem>
-                        <MenuItem value="energy" >Energy</MenuItem>
-                        <MenuItem value="duration_ms" >Duration(ms)</MenuItem>
-                    </Select>
+                </Select>
+                <br></br>
+                <InputLabel className={classes.label}>Y-Axis</InputLabel>
+                <Select
+                    value={yFilter}
+                    onChange={handleYFilterChange}
+                    variant="outlined"
+                    className={classes.select}
+                >
+                    <MenuItem value="danceability" >Danceability</MenuItem>
+                    <MenuItem value="acousticness" >Acousticness</MenuItem>
+                    <MenuItem value="liveness" >Liveness</MenuItem>
+                    <MenuItem value="popularity" >Popularity</MenuItem>
+                    <MenuItem value="tempo" >Tempo</MenuItem>
+                    <MenuItem value="valence" >Valence</MenuItem>
+                    <MenuItem value="speechiness" >Speechiness</MenuItem>
+                    <MenuItem value="instrumentalness" >Instrumentalness</MenuItem>
+                    <MenuItem value="energy" >Energy</MenuItem>
+                    <MenuItem value="duration_ms" >Duration(ms)</MenuItem>
+                </Select>
             </div>
             <svg id="scatterplot-vis" className="svg-canvas" width={width} height={height + margin.top * 6} />
-            
         </div>
+    </div>
     );
 }
 export default ScatterPlot;
