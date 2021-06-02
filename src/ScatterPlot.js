@@ -187,10 +187,6 @@ function ScatterPlot() {
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
     
-            //need to delete previous plot before it rerenders
-            // const svg = d3.select('.svg-canvas')
-            // svg.selectAll("*").remove()
-    
     // Add X axis
     var x = d3.scaleLinear()
         //.domain([yFilters[xFilter]["minVal"]*.98, yFilters[xFilter]["maxVal"]*1.02])
@@ -252,38 +248,7 @@ function ScatterPlot() {
             .duration(250)
             .style("opacity", 0);
     };
-    // Add a tooltip div. Here I define the general feature of the tooltip: stuff that do not depend on the data point.
-    // Its opacity is set to 0: we don't see it by default.
-    // var tooltip = d3.select("#scatterplot-vis")
-    //     .append("div")
-    //     .style("opacity", 0)
-    //     .attr("class", "tooltip")
-    //     .style("background-color", "#E0E0E0")
-    //     .style("border", "solid")
-    //     .style("border-width", "1px")
-    //     .style("border-radius", "5px")
-    //     .style("padding", "10px")
-    // // A function that change this tooltip when the user hover a point.
-    // // Its opacity is set to 1: we can now see it. Plus it set the text and position of tooltip depending on the datapoint (d)
-    // var mouseover = function(d) {
-    // tooltip
-    //     .style("opacity", 1)
-    // }
-    // var mousemove = function(d) {
-    // tooltip
-    //     .html("Year: " + d['year'] + " <br>" + xFilter + ": d[xFilter] <br> " + yFilter + ": d[yFilter]")
-    //     .style("left", (d3.mouse(this)[0]+90) + "px") // It is important to put the +90: other wise the tooltip is exactly where the point is an it creates a weird effect
-    //     .style("top", (d3.mouse(this)[1]) + "px")
-    // }
-    // // A function that change this tooltip when the leaves a point: just need to set opacity to 0 again
-    // var mouseleave = function(d) {
-    // tooltip
-    //     .transition()
-    //     .duration(200)
-    //     .style("opacity", 0)
-    // }
-    // // Add dots
-    //console.log(svg.selectAll(".dot").data(data).enter());
+   
     svg.selectAll(".dot")
         .data(data)
         .enter()
@@ -295,8 +260,6 @@ function ScatterPlot() {
         .style("fill", "#1DB954")
         .on("mouseover", tipMouseover)
         .on("mouseout", tipMouseout);
-        // .on("mousemove", mousemove )
-        // .on("mouseleave", mouseleave )
         
     return (
         <div className="scatterplot_container" id="vis_container">
@@ -342,7 +305,6 @@ function ScatterPlot() {
                     </Select>
             </div>
             <svg id="scatterplot-vis" className="svg-canvas" width={width} height={height + margin.top * 6} />
-            {/* This causes duplicate things to show up. But works well with the tooltip */}
             
         </div>
     );
