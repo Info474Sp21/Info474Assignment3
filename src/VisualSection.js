@@ -1,27 +1,24 @@
 import D3Visual from "./D3Visual";
 import ScatterPlot from "./ScatterPlot"
 import Switch from "react-switch";
-import React, { Component } from "react";
+import React, { useState } from "react";
 
-export default class VisualSection extends Component {
-    constructor() {
-      super();
-      this.state = { checked: false };
-      this.handleChange = this.handleChange.bind(this);
-    }
+function VisualSection() {
+
+  const [checked, setChecked] = useState(false)
   
-    handleChange(checked) {
-      this.setState({ checked });
-    }
+  return (
+    <div id="visual-section">
+      <div className="switchdiv centered">
+        <label className="switch-label">Scatterplot </label>
+        <Switch color="primary" onChange={e => setChecked(!checked)} checked={checked} uncheckedIcon={false} checkedIcon={false}/>
+        <label className="switch-label"> Bar Chart</label>
+      </div>
+      <br></br>
+      {checked ? <D3Visual /> : <ScatterPlot />}
+    </div>
+  );
   
-    render() {
-      return (
-          <div id="visual-section">
-            <label>
-            <span>Switch with default style</span>
-            <Switch onChange={this.handleChange} checked={this.state.checked} />
-            </label>
-          </div>
-      );
-    }
-  }
+}
+
+export default VisualSection;

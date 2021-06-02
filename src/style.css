@@ -1,17 +1,3 @@
-/* MLB PALETTE
-BLUE: #002D72;
-RED: #D50032;
-
-MARINERS->
-NAVY BLUE: #0C2C56;
-NORTHWEST GREEN: #005C5C;
-SILVER: #C4CED4;
-RED: #D50032;
-
-RETRO BLUE: #002878;
-RETRO YELLOW: #FFCC00;
-
-*/
 *{
     margin: 0;
     padding: 0;
@@ -66,7 +52,9 @@ button:hover{
 }
 
 .filters {
-    margin: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top:1%;
     display: inline-block;
 }
 
@@ -75,4 +63,16 @@ button:hover{
 }
 .tabbed{
     margin-left:15px;
+}
+
+.switch-label {
+    font-size: 3rem;
+}
+
+.scatter-filters {
+    margin: 5%;
+    display: inline;
+}
+.justified{
+    justify-content: space-evenly;
 }
