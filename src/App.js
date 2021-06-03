@@ -13,9 +13,9 @@ const App = () => {
             <Intro/>
             <div>
                 <br></br>
-                {/* <D3Visual/>
-                <ScatterPlot/> */}
-                <VisualSection/>
+                <D3Visual/>
+                {/* <ScatterPlot/> */}
+                {/* <VisualSection/> */}
             </div>
             <Conclusion/>
         </div>
